@@ -8,9 +8,14 @@ class Hokuriku extends MX_Controller {
 
 	public function index(){
 		$data = array(
-			'tempplate' => 'frontend/home/hokuriku',
-			'prefecture' => $this->muser->get_prefecture('北海道・東北')
+			'prefecture' => $this->muser->get_prefecture('甲信越・北陸'),
+			'tempplate' => 'frontend/home/kanto',
+			'meta_title' => '甲信越・北陸',
+			'count' =>$this->muser->get_count_work(),
+			'feature' => $this->muser->get_feature(),
+			'gwork'=> $this->muser->get_gwork(),
+			'ninki_area'=>$this->muser->getninki_station()
 					);
-		$this->load->view('frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('frontend/layouts/home_prefecture',isset($data)?$data:NULL);
 	}
 }

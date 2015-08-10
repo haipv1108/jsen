@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <title><?php if(isset($meta_title)) echo $meta_title; else echo "j-sen.jp";?></title>
     <base href="http://localhost/ci3/">
 	<meta http-equiv="content-type" content="text/html" />
 	<meta name="author" content="Persiden.C.Kid" />
@@ -115,15 +116,32 @@
                     <div class="upperArea">
                         <p class="update"><?php echo strftime("%m/%d", time());?>更新</p>
                         <p class="headerNum clearfix">
-                        <!-- Doan nay chen code vao de update cac so, o duoi chi lam vi du -->
-                            <span class="num1">1</span>
-                            <span class="num1">1</span>
-                            <span class="num8">8</span>
-                            <span class="num2">2</span>
-                            <span class="num9">9</span>
-                            <span class="num7">7</span>
+                        <!-- hien thi count work tren top -->
+                        <?php if(isset($count['work'])){?>    
+                            <?php while ($count['work']) { 
+                                $i[] = $count['work']%10;
+                                $count['work'] = floor($count['work']/10);
+                                ?>
+                             
+                            <?php };
+                            $j=12;
+                            while($j--){
+                            if(!isset($i[$j]))
+                                continue;
+                            else ?>
+                            <span class = "num<?php echo $i[$j];?>"><?php echo $i[$j];?></span>    
+                            <?php }} else{?>
+                            <span class = "num0">0</span>
+                            <span class = "num0">0</span>
+                            <span class = "num0">0</span>
+                            <span class = "num0">0</span>
+                            <span class = "num0">0</span>
+                            <span class = "num0">0</span>
+                            <?php }?>
                             <span class="end">件</span>
                         </p>
+
+                        <!-- xong hien thi count work -->
                         <ul>
                             <li class="historyBtn"><a rel="nofollow" title="" href="#">最近見たバイト</a></li>
                             <li class="favorireBtn"><a rel="nofollow" title="" href="#">キープしたバイト</a></li>
@@ -150,7 +168,7 @@
                                 <a title="鳥取、島根、岡山、広島、山口、徳島、香川、愛媛、高知" href="<?php echo base_url();?>user/chugoku">中国・四国</a>
                             </li>
                             <li id="naviKyusyu">
-                                <a title="福岡、佐賀、長崎、熊本、大分、宮崎、鹿児島、沖縄" href="<?php echo base_url();?>user  /kyusyu">九州・沖縄</a>
+                                <a title="福岡、佐賀、長崎、熊本、大分、宮崎、鹿児島、沖縄" href="<?php echo base_url();?>user/kyusyu">九州・沖縄</a>
                             </li>
                         </ul>
                     </div>
@@ -159,9 +177,9 @@
             <div id="searchArea" class="clearfix">
                 <ul>
                     <li class="searchNavi01"><a href="<?php echo base_url();?>user/guide_area">エリアから探す</a></li>
-                    <li class="searchNavi02"><a href="<?php echo base_url();?>user/user/index/guide_line">路線から探す</a></li>
-                    <li class="searchNavi03"><a href="<?php echo base_url();?>user/user/index/guide_job">職種から探す</a></li>
-                    <li class="searchNavi04"><a href="<?php echo base_url();?>user/user/index/guide_feature">特徴から探す</a></li>
+                    <li class="searchNavi02"><a href="<?php echo base_url();?>user/guide_line">路線から探す</a></li>
+                    <li class="searchNavi03"><a href="<?php echo base_url();?>user/guide_job">職種から探す</a></li>
+                    <li class="searchNavi04"><a href="<?php echo base_url();?>user/guide_feature">特徴から探す</a></li>
                 </ul>
                 <div class="freeword">
                     <form method="GET" action="/search/">

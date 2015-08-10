@@ -42,4 +42,15 @@ class Mscanner extends CI_Model{
 				return true;
 			}
 	}
+
+	public function line(){
+		$query = $this->db->query("
+			SELECT DISTINCT * FROM `line_check`");
+		return $query->result_array();
+	}
+
+
+	public function swork(){
+		$query = $this->db->query("");
+	}
 }

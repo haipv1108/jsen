@@ -19,25 +19,25 @@
                                 <h3>エリアから探す</h3>
                                 <ul class="idTabs menu">
                                     <li class="jm01">
-                                        <a href="<?php echo base_url();?>user/user/index/tohoku">北海道・東北</a>
+                                        <a href="<?php echo base_url();?>user/tohoku">北海道・東北</a>
                                     </li>
                                     <li class="jm02">
-                                        <a href="<?php echo base_url();?>user/user/index/kanto">関東</a>
+                                        <a href="<?php echo base_url();?>user/kanto">関東</a>
                                     </li>
                                     <li class="jm03">
-                                        <a href="<?php echo base_url();?>user/user/index/hokuriku">甲信越・北陸</a>
+                                        <a href="<?php echo base_url();?>user/hokuriku">甲信越・北陸</a>
                                     </li>
                                     <li class="jm04">
-                                        <a href="<?php echo base_url();?>user/user/index/tokai">東海</a>
+                                        <a href="<?php echo base_url();?>user/tokai">東海</a>
                                     </li>
                                     <li class="jm05">
-                                        <a href="<?php echo base_url();?>user/user/index/kansai">関西</a>
+                                        <a href="<?php echo base_url();?>user/kansai">関西</a>
                                     </li>
                                     <li class="jm06">
-                                        <a href="<?php echo base_url();?>user/user/index/chugoku">中国・四国</a>
+                                        <a href="<?php echo base_url();?>user/chugoku">中国・四国</a>
                                     </li>
                                     <li class="jm07">
-                                        <a href="<?php echo base_url();?>user/user/index/kyusyu">九州・沖縄</a>
+                                        <a href="<?php echo base_url();?>user/kyusyu">九州・沖縄</a>
                                     </li>
                                 </ul>
                             </div>
@@ -71,25 +71,25 @@
                                 <h3>路線から探す</h3>
                                 <ul class="idTabs menu">
                                     <li class="jm01">
-                                        <a class="defaultLineSetter" href="/tohoku/index.htm">北海道・東北</a>
+                                        <a class="defaultLineSetter" href="/tohoku">北海道・東北</a>
                                     </li>
                                     <li class="jm02">
-                                        <a class="defaultLineSetter" href="/kanto/index.htm">関東</a>
+                                        <a class="defaultLineSetter" href="/kanto">関東</a>
                                     </li>
                                     <li class="jm03">
-                                        <a class="defaultLineSetter" href="/hokuriku/index.htm">甲信越・北陸</a>
+                                        <a class="defaultLineSetter" href="/hokuriku">甲信越・北陸</a>
                                     </li>
                                     <li class="jm04">
-                                        <a class="defaultLineSetter" href="/tokai/index.htm">東海</a>
+                                        <a class="defaultLineSetter" href="/tokai">東海</a>
                                     </li>
                                     <li class="jm05">
-                                        <a class="defaultLineSetter" href="/kansai/index.htm">関西</a>
+                                        <a class="defaultLineSetter" href="/kansai">関西</a>
                                     </li>
                                     <li class="jm06">
-                                        <a class="defaultLineSetter" href="/chugoku/index.htm">中国・四国</a>
+                                        <a class="defaultLineSetter" href="/chugoku">中国・四国</a>
                                     </li>
                                     <li class="jm07">
-                                        <a class="defaultLineSetter" href="/kyusyu/index.htm">九州・沖縄</a>
+                                        <a class="defaultLineSetter" href="/kyusyu">九州・沖縄</a>
                                     </li>
                                     <script type="text/javascript">
                                         $$('.defaultLineSetter').each(function(elem) {
@@ -103,74 +103,30 @@
                                     </script>
                                 </ul>
                             </div>
-                            <div class="jList">
+
+
+
+                             <div class="jList">
+
+                                <?php foreach ($area as $ka => $va) {   ?>
                                 <dl>
                                     <dt>
-                                    <span>北海道・東北</span>
+                                        <span><?php echo $va['area_name']; ?></span>
                                     </dt>
                                     <dd>
                                         <ul>
+                                        
+                                             <?php foreach ($prefecture[$va['area_name']] as $kp => $vp) {?>
                                             <li>
-                                                <a href="/guide_area1_line.htm">北海道</a>
+                                                <a href="/guide_area<?php echo $vp['id'];?>"><?php echo $vp['name'];?></a>
                                             </li>
-                                            <li>
-                                                <a href="/guide_area2_line.htm">青森</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area3_line.htm">岩手</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area4_line.htm">宮城</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area5_line.htm">秋田</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area6_line.htm">山形</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area7_line.htm">福島</a>
-                                            </li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-                                
-                                <dl>
-                                    <dt>
-                                        <span>関東</span>
-                                    </dt>
-                                    <dd>
-                                        <ul>
-                                            <li>
-                                                <a href="/guide_area8.htm">東京</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area9.htm">神奈川</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area10.htm">埼玉</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area11.htm">千葉</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area12.htm">茨城</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area13.htm">栃木</a>
-                                            </li>
-                                            <li>
-                                                <a href="/guide_area14.htm">群馬</a>
-                                            </li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-                                
-                                <dl>
-                                    <dt><span>甲信越・北陸</span></dt>
-                                    <dd></dd>
-                                </dl>
-                                <!-- Moi viet vi du 2 cai, con lai m viet chen code php vao cho no in het ra nha, co 7 cai tat ca-->
+                                            <?php }
+
+                                        echo "</ul>";
+                                    echo "</dd>";
+                                echo "</dl>";
+                                }?>       
+
                                 
                             </div>
                         </div>
@@ -198,27 +154,27 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <a href="/tohoku/index.htm">北海道・東北</a>
+                                        <a href="user/tohoku">北海道・東北</a>
                                         (7590)
                                     </li>
                                     <li>
-                                        <a href="/hokuriku/index.htm">甲信越・北陸</a>
+                                        <a href="user/hokuriku">甲信越・北陸</a>
                                         (5467)
                                     </li>
                                     <li>
-                                        <a href="/tokai/index.htm">東海</a>
+                                        <a href="user/tokai">東海</a>
                                         (11379)
                                     </li>
                                     <li>
-                                        <a href="/kansai/index.htm">関西</a>
+                                        <a href="user/kansai">関西</a>
                                         (14606)
                                     </li>
                                     <li>
-                                        <a href="/chugoku/index.htm">中国・四国</a>
+                                        <a href="user/chugoku">中国・四国</a>
                                         (5259)
                                     </li>
                                     <li>
-                                        <a href="/kyusyu/index.htm">九州・沖縄</a>
+                                        <a href="user/kyusyu">九州・沖縄</a>
                                         (5816)
                                     </li>
                                 </ul>
@@ -231,22 +187,13 @@
                         <!-- Phan list nay viet code vao de in ra nha, t viet vi du vai cai thoi, cu viet code giong vi du la no tu in ra dung -->
                         <div class="pickuplist">
                             <ul>
+                            <?php foreach ($feature as $key => $value) { ?>
                                 <li>
-                                    <a href="/kanto/feature_short_work.htm">短期バイト</a>
-                                    (1964)
-                                </li>
-                                <li>
-                                    <a href="/kanto/feature_day_saraly.htm">日払いOK</a>
-                                    (1836)
-                                </li>
-                                <li>
-                                    <a href="/kanto/feature_week_saraly.htm">週払いOK</a>
-                                    (5753)
-                                </li>
-                                <li>
-                                    <a href="/kanto/feature_school.htm">高校生OK</a>
-                                    (3404)
-                                </li>
+                                    <a href="/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                    (c_w)
+                                </li>                                
+                            <?php }?>
+
                             </ul>
                         </div>
                     </div>
@@ -256,8 +203,14 @@
                         <a href="/guide_kanto_job/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
-                            <u>
-                            </u>
+                            <ul>
+                                <?php foreach ($gwork as $key => $value) { ?>
+                                <li>
+                                    <a href="user/kanto/special_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                    (c_w)
+                                </li>
+                            <?php }?>
+                            </ul>
                         </div>
                     </div>
                     <div class="pickup03">
@@ -266,8 +219,16 @@
                         <a href="/guide_kanto_area/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
-                            <u>
-                            </u>
+                            <ul>
+                            <?php foreach ($ninki_area as $key => $value) { ?>
+                                <li>
+                                    <a href="user/kanto/station_<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
+                                    (c_w)
+                                </li>
+                            <?php }?>
+
+                                
+                            </ul>
                         </div>
                     </div>
                     <div class="pickup04">

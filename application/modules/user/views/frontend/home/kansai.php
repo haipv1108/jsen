@@ -50,24 +50,10 @@
                             <div class="aMap">
                                 <ul class="idTabs">
                                     <ul class="idTabs">
-                                        <li class="am25">
-                                            <a href="/guide_area25.htm">大阪</a>
-                                        </li>
-                                        <li class="am26">
-                                            <a href="/guide_area26.htm">兵庫</a>
-                                        </li>
-                                        <li class="am27">
-                                            <a href="/guide_area27.htm">京都</a>
-                                        </li>
-                                        <li class="am28">
-                                            <a href="/guide_area28.htm">滋賀</a>
-                                        </li>
-                                        <li class="am29">
-                                            <a href="/guide_area29.htm">奈良</a>
-                                        </li>
-                                        <li class="am30">
-                                            <a href="/guide_area30.htm">和歌山</a>
-                                        </li>
+                                        <?php foreach ($prefecture as $key => $value) {?>
+                                    <li class="am0<?php echo $value['id'];?>"></li>
+                                        <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                        <?php }?>
                                     </ul>
                                 </ul>
                             </div>
@@ -82,24 +68,10 @@
                             <div class="aMap">
                                 <ul>
                                     <ul>
-                                        <li class="am25">
-                                            <a href="/guide_area25_line.htm">大阪</a>
-                                        </li>
-                                        <li class="am26">
-                                            <a href="/guide_area26_line.htm">兵庫</a>
-                                        </li>
-                                        <li class="am27">
-                                            <a href="/guide_area27_line.htm">京都</a>
-                                        </li>
-                                        <li class="am28">
-                                            <a href="/guide_area28_line.htm">滋賀</a>
-                                        </li>
-                                        <li class="am29">
-                                            <a href="/guide_area29_line.htm">奈良</a>
-                                        </li>
-                                        <li class="am30">
-                                            <a href="/guide_area30_line.htm">和歌山</a>
-                                        </li>
+                                        <?php foreach ($prefecture as $key => $value) {?>
+                                            <li class="am0<?php echo $value['id'];?>"></li>
+                                            <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                        <?php }?>   
                                     </ul>
                                 </ul>
                             </div>
@@ -116,90 +88,15 @@
                                 <form method="get" action="/search/">
                                     <input type="hidden" value="kansai" name="area">
                                     <ul>
+                                        <?php $i=1; foreach ($gwork as $key => $value) {?>
                                         <li>
                                             <label>
-                                                <input type="checkbox" value="office" name="job[]">
-                                                <a id="iconType01" href="/kansai/job_office.htm">オフィス系</a>
+                                                <input type="checkbox" value="<?php echo $value['name'];?>" name="job[]">
+                                                <a id="iconType<?php echo ($i++>=10)?$i:"0".$i;?>" href="/kanto/job_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
                                             </label>
                                             <span>└ 営業、事務、受付...</span>
                                         </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="digital" name="job[]">
-                                                <a id="iconType02" href="/kansai/job_digital.htm">デジタル・クリエイティブ系</a>
-                                            </label>
-                                            <span>└ web、システム、デザイン...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="enter" name="job[]">
-                                                <a id="iconType03" href="/kansai/job_enter.htm">エンターテインメント系</a>
-                                            </label>
-                                            <span>└ イベント、アミューズメント...</span>
-                                        </li>
-                                        <li>
-                                        <label>
-                                            <input type="checkbox" value="mass" name="job[]">
-                                                <a id="iconType04" href="/kansai/job_mass.htm">マスコミ系</a>
-                                            </label>
-                                            <span>└ 取材、制作、モデル、タレント...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="food" name="job[]">
-                                                <a id="iconType05" href="/kansai/job_food.htm">フード系</a>
-                                            </label>
-                                            <span>└ 居酒屋、レストラン、カフェ...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="sales" name="job[]">
-                                                <a id="iconType06" href="/kansai/job_sales.htm">販売・ファッション系</a>
-                                            </label>
-                                            <span>└ デパート、アパレル、インテリア...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="institution" name="job[]">
-                                                <a id="iconType07" href="/kansai/job_institution.htm">施設・サービス系</a>
-                                            </label>
-                                            <span>└ 駅、空港、ホテル、ジム...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="transport" name="job[]">
-                                                <a id="iconType08" href="/kansai/job_transport.htm">配送・物流系</a>
-                                            </label>
-                                            <span>└ 在庫管理、梱包、郵便、宅配便...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="create" name="job[]">
-                                                <a id="iconType09" href="/kansai/job_create.htm">軽作業・製造系</a>
-                                            </label>
-                                            <span>└ 工事、引っ越し、警備、清掃...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="medical" name="job[]">
-                                                <a id="iconType10" href="/kansai/job_medical.htm">医療・福祉系</a>
-                                            </label>
-                                            <span>└ 看護師、歯科助手、介護...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="teacher" name="job[]">
-                                                <a id="iconType11" href="/kansai/job_teacher.htm">塾講師・インストラクター系</a>
-                                            </label>
-                                            <span>└ 塾・家庭教師、語学講師...</span>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" value="beauty" name="job[]">
-                                                <a id="iconType12" href="/kansai/job_beauty.htm">ビューティー系</a>
-                                            </label>
-                                            <span>└ エステ、マッサージ、美容師...</span>
-                                        </li>
+                                    <?php }?>
                                     </ul>
                                     
                                     <p class="searchBtn">
@@ -223,174 +120,17 @@
                                 <form method="get" action="/search/">
                                     <input type="hidden" value="kansai" name="area">
                                     <ul>
+                                        <?php $i=14;foreach ($feature as $key => $value) { ?>
                                         <li>
                                             <label>
                                                 <input class="c_box" type="checkbox" value="short_work" name="feature[]">
-                                                <a id="iconType13" href="/kansai/feature_short_work.htm">短期OK</a>
-                                                (1913)
+                                                <a id="iconType<?php echo $i++;?>" href="/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name']; ?></a>
+                                                (c_w)
+
                                             </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="week_saraly" name="feature[]">
-                                                <a id="iconType25" href="/kansai/feature_week_saraly.htm">週払いOK</a>
-                                                (5744)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="day_saraly" name="feature[]">
-                                                <a id="iconType14" href="/kansai/feature_day_saraly.htm">日払いOK</a>
-                                                (1804)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="choose_shift" name="feature[]">
-                                                <a id="iconType26" href="/kansai/feature_choose_shift.htm">曜日や時間が選べる</a>
-                                                (15752)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                            <input class="c_box" type="checkbox" value="school" name="feature[]">
-                                            <a id="iconType15" href="/kansai/feature_school.htm">高校生OK</a>
-                                            (2930)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="day_shift" name="feature[]">
-                                                <a id="iconType27" href="/kansai/feature_day_shift.htm">週1日からOK</a>
-                                                (3457)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="touroku" name="feature[]">
-                                                <a id="iconType16" href="/kansai/feature_touroku.htm">登録制</a>
-                                                (7917)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="use_language" name="feature[]">
-                                                <a id="iconType28" href="/kansai/feature_use_language.htm">語学力を生かせる</a>
-                                                (10356)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="color_pierced" name="feature[]">
-                                                <a id="iconType17" href="/kansai/feature_color_pierced.htm">茶髪・ピアスOK</a>
-                                                (6615)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="no_age" name="feature[]">
-                                                <a id="iconType29" href="/kansai/feature_no_age.htm">年齢不問</a>
-                                                (4968)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="traffic" name="feature[]">
-                                                <a id="iconType18" href="/kansai/feature_traffic.htm">交通費支給</a>
-                                                (34238)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="free_style" name="feature[]">
-                                                <a id="iconType30" href="/kansai/feature_free_style.htm">服装自由</a>
-                                                (9025)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="uniform" name="feature[]">
-                                                <a id="iconType19" href="/kansai/feature_uniform.htm">制服あり</a>
-                                                (31028)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="meet" name="feature[]">
-                                                <a id="iconType31" href="/kansai/feature_meet.htm">食事付き</a>
-                                                (4828)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="close_man" name="feature[]">
-                                                <a id="iconType20" href="/kansai/feature_close_man.htm">人と接する</a>
-                                                (40578)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="active" name="feature[]">
-                                                <a id="iconType32" href="/kansai/feature_active.htm">体を動かす</a>
-                                                (10839)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="skill" name="feature[]">
-                                                <a id="iconType21" href="/kansai/feature_skill.htm">スキルが身に付く</a>
-                                                (35316)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="bike" name="feature[]">
-                                                <a id="iconType33" href="/kansai/feature_bike.htm">バイク通勤OK</a>
-                                                (3826)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="car" name="feature[]">
-                                                <a id="iconType22" href="/kansai/feature_car.htm">車通勤OK</a>
-                                                (7598)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="no_smoking" name="feature[]">
-                                                <a id="iconType34" href="/kansai/feature_no_smoking.htm">職場禁煙</a>
-                                                (21545)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="smoking_time" name="feature[]">
-                                                <a id="iconType23" href="/kansai/feature_smoking_time.htm">煙草休憩あり</a>
-                                                (1521)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="unexperienced" name="feature[]">
-                                                <a id="iconType35" href="/kansai/feature_unexperienced.htm">未経験可</a>
-                                                (48162)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="permanent" name="feature[]">
-                                                <a id="iconType24" href="/kansai/feature_permanent.htm">正社員登用あり</a>
-                                                (24398)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input class="c_box" type="checkbox" value="temporary" name="feature[]">
-                                                <a id="iconType36" href="/kansai/feature_temporary.htm">契約社員登用あり</a>
-                                                (15373)
-                                            </label>
-                                        </li>
+                                        </li>                  
+                                        <?php }?> 
+
                                     </ul>
 
                                     <p class="searchBtn">
@@ -489,24 +229,10 @@
                             </div>
                             <div class="aMap">
                                 <ul>
-                                    <li class="am25">
-                                        <a href="/guide_area25_map.htm">大阪</a>
-                                    </li>
-                                    <li class="am26">
-                                        <a href="/guide_area26_map.htm">兵庫</a>
-                                    </li>
-                                    <li class="am27">
-                                        <a href="/guide_area27_map.htm">京都</a>
-                                    </li>
-                                    <li class="am28">
-                                        <a href="/guide_area28_map.htm">滋賀</a>
-                                    </li>
-                                    <li class="am29">
-                                        <a href="/guide_area29_map.htm">奈良</a>
-                                    </li>
-                                    <li class="am30">
-                                        <a href="/guide_area30_map.htm">和歌山</a>
-                                    </li>
+                                     <?php foreach ($prefecture as $key => $value) {?>
+                                    <li class="am<?php echo $value['id']>10?$value['id']:"0".$value['id'];?>"></li>
+                                        <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                    <?php }?>
                                 </ul>
                             </div>
                         </div>
@@ -534,27 +260,27 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <a href="/tohoku/index.htm">北海道・東北</a>
-                                        (7590)
-                                    </li>
-                                    <li>
-                                        <a href="/hokuriku/index.htm">甲信越・北陸</a>
-                                        (5467)
-                                    </li>
-                                    <li>
-                                        <a href="/tokai/index.htm">東海</a>
-                                        (11379)
-                                    </li>
-                                    <li>
-                                        <a href="/kansai/index.htm">関西</a>
+                                        <a href="user/kanto">関東</a>
                                         (14606)
                                     </li>
                                     <li>
-                                        <a href="/chugoku/index.htm">中国・四国</a>
+                                        <a href="user/tohoku">北海道・東北</a>
+                                        (7590)
+                                    </li>
+                                    <li>
+                                        <a href="user/hokuriku">甲信越・北陸</a>
+                                        (5467)
+                                    </li>
+                                    <li>
+                                        <a href="user/tokai">東海</a>
+                                        (11379)
+                                    </li>
+                                    <li>
+                                        <a href="user/chugoku">中国・四国</a>
                                         (5259)
                                     </li>
                                     <li>
-                                        <a href="/kyusyu/index.htm">九州・沖縄</a>
+                                        <a href="user/kyusyu">九州・沖縄</a>
                                         (5816)
                                     </li>
                                 </ul>
@@ -567,22 +293,12 @@
                         <!-- Phan list nay viet code vao de in ra nha, t viet vi du vai cai thoi, cu viet code giong vi du la no tu in ra dung -->
                         <div class="pickuplist">
                             <ul>
+                            <?php foreach ($feature as $key => $value) { ?>
                                 <li>
-                                    <a href="/kansai/feature_short_work.htm">短期バイト</a>
-                                    (1964)
-                                </li>
-                                <li>
-                                    <a href="/kansai/feature_day_saraly.htm">日払いOK</a>
-                                    (1836)
-                                </li>
-                                <li>
-                                    <a href="/kansai/feature_week_saraly.htm">週払いOK</a>
-                                    (5753)
-                                </li>
-                                <li>
-                                    <a href="/kansai/feature_school.htm">高校生OK</a>
-                                    (3404)
-                                </li>
+                                    <a href="user/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                    (c_w)
+                                </li>                                
+                            <?php }?>
                             </ul>
                         </div>
                     </div>
@@ -592,8 +308,15 @@
                         <a href="/guide_kansai_job/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
-                            <u>
-                            </u>
+                            <ul>
+                            <?php foreach ($gwork as $key => $value) { ?>
+                                <li>
+                                    <a href="user/kanto/special_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                    (c_w)
+                                </li>
+                            <?php }?>
+
+                            </ul>
                         </div>
                     </div>
                     <div class="pickup03">
@@ -602,8 +325,15 @@
                         <a href="/guide_kansai_area/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
-                            <u>
-                            </u>
+                             <ul>
+                                <?php foreach ($ninki_area as $key => $value) { ?>
+                                    <li>
+                                        <a href="user/kanto/station_<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
+                                        (c_w)
+                                    </li>
+                                <?php }?>
+
+                            </ul>
                         </div>
                     </div>
                     <div class="pickup04">
@@ -856,156 +586,5 @@
             
             <div id="aside">Quang cao</div>
         </div>
-        
-        
-        <div class="footerGoTop">
-            <p><a href="#topNavi">ページトップへ戻る</a></p>
-        </div>
-        <div id="footerBread">
-            <ul class="clearfix">
-                <li class="home">バイトTOP</li>
-            </ul>
-        </div>
-        
-        <div id="footerLink">
-            <div id="footerInner" class="clearfix">
-                <div class="footLeft">
-                    <div class="inner">
-                        <h3>ジョブセンスについて</h3>
-                        <ul>
-                            <li>
-                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/info/corp.htm">求人広告掲載のお申し込み</a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="file:///C:/wamp/www/J-sen/j-sen.jp/contents/faq/index.htm">お問い合わせ</a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="file:///C:/wamp/www/J-sen/j-sen.jp/info/privacy.htm">個人情報保護方針</a>
-                            </li>
-                            <li>
-                                <a target="blank" rel="nofollow" href="http://www.livesense.co.jp/company/overview.htm">会社概要</a>
-                            </li>
-                            <li>
-                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/sitemap/index.htm">サイトマップ</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footCenter">
-                    <div class="inner">
-                        <h3>運営サイト</h3>
-                        <ul>
-                            <li>
-                                <a target="_blank" href="http://job.j-sen.jp/">転職の求人ならジョブセンスリンク</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://haken.j-sen.jp/">派遣の求人ならジョブセンス派遣</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://jobtalk.jp/">転職のクチコミなら転職会議</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://chintai.door.ac/">賃貸情報ならdoor賃貸</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://imitsu.jp/">BtoBの業者比較・評判ならimitsu</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footRight">
-                    <div class="inner">
-                        <h3>こだわり特集</h3>
-                        <ul class="clearfix">
-                            <li>
-                                <dl>
-                                    <dt class="fBnr12">
-                                        <span>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_haken.htm">派遣のアルバイト特集</a>
-                                        </span>
-                                    </dt>
-                                    <dd>
-                                    <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_haken.htm">派遣のアルバイト特集</a>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="fBnr02">
-                                        <span>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_highwage.htm">高収入のアルバイト特集</a>
-                                        </span>
-                                    </dt>
-                                    <dd>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_highwage.htm">高収入のアルバイト特集</a>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="fBnr08">
-                                        <span>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_nurse.htm">看護師のアルバイト特集</a>
-                                        </span>
-                                    </dt>
-                                    <dd>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_nurse.htm">看護師のアルバイト特集</a>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="fBnr09">
-                                        <span>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_kaigo.htm">介護のアルバイト特集</a>
-                                        </span>
-                                    </dt>
-                                    <dd>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_kaigo.htm">介護のアルバイト特集</a>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="fBnr06">
-                                        <span>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_short.htm">短期・単発のアルバイト特集</a>
-                                        </span>
-                                    </dt>
-                                    <dd>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_short.htm">短期・単発のアルバイト特集</a>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="fBnr03">
-                                        <span>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_school.htm">高校生OKのアルバイト特集</a>
-                                        </span>
-                                    </dt>
-                                    <dd>
-                                        <a href="file:///C:/wamp/www/J-sen/j-sen.jp/pickup_school.htm">高校生OKのアルバイト特集</a>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                        <div class="freeword">
-                            <form>
-                                <input type="hidden" value="1" name="from_top"/>
-                                <input type="hidden" value="kansai" name="area"/>
-                                <input class="searchBox inputTxt" type="text" onblur="if (!this.value) { this.value='フリーワード検索';}" onfocus="if (this.value == 'フリーワード検索') { this.value='' }" name="freeword" value="フリーワード検索"/>
-                                <input class="searchBtn" type="image" src="image/header_search_btn.png" onmouseout="this.src='image/header_search_btn.png'" onmouseover="this.src='image/header_search_btn.png'" alt="検索"/>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>Copyright © Livesense Inc. All rights reserved.<br/>
-                アルバイト/バイト募集情報サイト『ジョブセンス』
-            </p>
-        </div>
+
     </div>

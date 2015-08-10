@@ -22,4 +22,26 @@ class Scanner extends MX_Controller{
 		if($check) echo 'Thanh cmn cong roi.';
 		else echo 'co loi xay cmna roi.';
 	}
+
+	public function line(){
+		$result = $this->mscanner->line();
+		$data = array(
+				'result' => $result
+			);
+		// foreach ($result as $key => $value) {
+		// 	$data = array(
+		// 			'line_id'=>$value['line_id'],
+		// 			'line_name'=>$value['line_name'],
+		// 			'area_line_id'=>$value['area_line_id']
+		// 		);
+		$this->load->view('line',$data);
+		
+	}
+	public function swork(){
+		$result = $this->mscanner->swrok();
+		$data = array(
+				'result' =>$result
+			);
+	}
+		$this->load->view('swork',$data);
 }
