@@ -8,6 +8,7 @@ class Kanto extends MX_Controller {
 
 	public function index(){
 		$data = array(
+			'id_body' => 'p-kanto',
 			'prefecture' => $this->muser->get_prefecture('関東'),
 			'tempplate' => 'frontend/home/kanto'
 					);

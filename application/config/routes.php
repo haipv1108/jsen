@@ -91,13 +91,18 @@ $router['kyusyu'] = 'kyusyu/index';
 $router['tokai'] = 'tokai/index';
 $router['kanto'] = 'kanto/index';
 
+// area
+$router['guide_area'] = 'guide_area/guide_area/index';
+$router['guide_area/city'] = 'guide_area/guide_area/city';
 
 
+// line
+$router['guide_line'] = 'guide_line/guide_line/index';
+$router['guide_line/line'] = 'guide_line/guide_line/line';
+$router['guide_line/station'] = 'guide_line/guide_line/station';
 
-
-
-
-
+//job
+$router['guide_job'] = 'guide_job/guide_job/index';
 
 
 

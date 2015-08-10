@@ -8,6 +8,7 @@ class Hokuriku extends MX_Controller {
 
 	public function index(){
 		$data = array(
+			'id_body' => 'p-hokuriku',
 			'tempplate' => 'frontend/home/hokuriku',
 			'prefecture' => $this->muser->get_prefecture('北海道・東北')
 					);

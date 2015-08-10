@@ -8,6 +8,7 @@ class Kyusyu extends MX_Controller {
 
 	public function index(){
 		$data = array(
+			'id_body' => 'p-kyusyu',
 			'tempplate' => 'frontend/home/kyusyu'
 					);
 		$this->load->view('frontend/layouts/home',isset($data)?$data:NULL);

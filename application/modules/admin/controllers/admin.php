@@ -98,8 +98,6 @@ class Admin extends MX_Controller {
 											'level' => $this->input->post('level'),
 											'active' => 0
 										);
-					
-
 					$passconf= $this->input->post('passconf');
 					if($a_Userinfo['password'] == $passconf){// xu ly voi model
                 		$mail = array();
@@ -153,7 +151,7 @@ class Admin extends MX_Controller {
 						'template' => 'backend/home/edit_user'
 						);
 			if($this->madmin->search_user($id) == false){
-				$data['error'] = 'User not found in database.';
+				$data['message'] = 'User not found in database.';
 				$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
 			}
 			else{

@@ -8,6 +8,7 @@ class Chugoku extends MX_Controller {
 
 	public function index(){
 		$data = array(
+			'id_body' => 'p-chugoku',
 			'tempplate' => 'frontend/home/chugoku'
 					);
 		$this->load->view('frontend/layouts/home',isset($data)?$data:NULL);

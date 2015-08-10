@@ -46,7 +46,7 @@
    
 </head>
 
-<body>
+<body id="<?php echo isset($id_body)? $id_body: '';?>">
 	<?php if(isset($keisaiHeaderBar)){?>
     <div id="keisaiHeaderBar">
         <div class="inner">
@@ -150,7 +150,7 @@
                                 <a title="鳥取、島根、岡山、広島、山口、徳島、香川、愛媛、高知" href="<?php echo base_url();?>user/chugoku">中国・四国</a>
                             </li>
                             <li id="naviKyusyu">
-                                <a title="福岡、佐賀、長崎、熊本、大分、宮崎、鹿児島、沖縄" href="<?php echo base_url();?>user  /kyusyu">九州・沖縄</a>
+                                <a title="福岡、佐賀、長崎、熊本、大分、宮崎、鹿児島、沖縄" href="<?php echo base_url();?>user/kyusyu">九州・沖縄</a>
                             </li>
                         </ul>
                     </div>
@@ -158,10 +158,10 @@
             </div>
             <div id="searchArea" class="clearfix">
                 <ul>
-                    <li class="searchNavi01"><a href="<?php echo base_url();?>user/guide_area">エリアから探す</a></li>
-                    <li class="searchNavi02"><a href="<?php echo base_url();?>user/user/index/guide_line">路線から探す</a></li>
-                    <li class="searchNavi03"><a href="<?php echo base_url();?>user/user/index/guide_job">職種から探す</a></li>
-                    <li class="searchNavi04"><a href="<?php echo base_url();?>user/user/index/guide_feature">特徴から探す</a></li>
+                    <li class="searchNavi01"><a href="<?php echo base_url();?>guide_area">エリアから探す</a></li>
+                    <li class="searchNavi02"><a href="<?php echo base_url();?>guide_line">路線から探す</a></li>
+                    <li class="searchNavi03"><a href="<?php echo base_url();?>guide_job">職種から探す</a></li>
+                    <li class="searchNavi04"><a href="<?php echo base_url();?>guide_feature">特徴から探す</a></li>
                 </ul>
                 <div class="freeword">
                     <form method="GET" action="/search/">

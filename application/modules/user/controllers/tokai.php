@@ -8,6 +8,7 @@ class Tokai extends MX_Controller {
 
 	public function index(){
 		$data = array(
+			'id_body' => 'p-tokai',
 			'tempplate' => 'frontend/home/tokai'
 					);
 		$this->load->view('frontend/layouts/home',isset($data)?$data:NULL);

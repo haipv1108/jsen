@@ -12,6 +12,7 @@ class User extends MX_Controller {
 		foreach ($area as $key => $value) {
 			$prefecture[$value['area_name']] = $this->muser->get_prefecture($value['area_name']);
 		}
+		//$data['id_body'] = $area;
 		$data['area'] = $area;
 		$data['prefecture'] = $prefecture;						
 		$data['tempplate'] = 'frontend/home/index';		

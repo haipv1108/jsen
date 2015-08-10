@@ -8,6 +8,7 @@ class Kansai extends MX_Controller {
 
 	public function index(){
 		$data = array(
+			'id_body' => 'p-kansai',
 			'tempplate' => 'frontend/home/kansai'
 					);
 		$this->load->view('frontend/layouts/home',isset($data)?$data:NULL);

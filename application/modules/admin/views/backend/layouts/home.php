@@ -21,7 +21,7 @@
 			<h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
 			<a href="#"><img id="logo" src="template/backend/simpla-admin/resources/images/logo.png" alt="Simpla Admin logo" /></a>
 			<div id="profile-links">
-				Hello, <a href="#" title="Edit your profile"><?php echo (isset($user))? htmlspecialchars($user['username']) : 'Member';?></a>, you have <a href="#messages" rel="modal" title="3 Messages">3 Messages</a><br />
+				Hello, <a href="" title="Edit your profile"><?php echo isset($user)? htmlspecialchars($user['username']):'Member';?></a>, you have <a href="#messages" rel="modal" title="3 Messages">3 Messages</a><br />
 				<br />
 				<a href="#" title="View the Site">View the Site</a> | <a href="<?php echo base_url();?>home/logout" title="Sign Out">Sign Out</a>
 			</div>        
