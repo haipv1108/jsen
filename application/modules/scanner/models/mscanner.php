@@ -53,4 +53,8 @@ class Mscanner extends CI_Model{
 	public function swork(){
 		$query = $this->db->query("");
 	}
+	
+	public function add($que){
+		$query = $this->db->query($que);
+	}
 }

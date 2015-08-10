@@ -29,7 +29,6 @@
                                 </ul>
                             </div>
 
-                            <!-- test -->
 
                             <div id="freewordBox">
                                 <div class="fwArea">
