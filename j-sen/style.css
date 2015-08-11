@@ -986,7 +986,7 @@ a:link{
 #mainPanel #selectMenu ul li.cb06 a{ background-position: -170px -265px;}
 
 #mainPanel #selectMenu ul li.cb01 a:hover,
-#mainPanel #selectMenu ul li.cb01 a.selected{ background-position: -401px -53px;}
+#mainPanel #selectMenu ul li.cb01 a.selected{ background-position: -401px 0px;}
 #mainPanel #selectMenu ul li.cb02 a:hover,
 #mainPanel #selectMenu ul li.cb02 a.selected{ background-position: -401px -53px;}
 #mainPanel #selectMenu ul li.cb03 a:hover,
@@ -3129,3 +3129,401 @@ ul.guideList3 li a, ul.guideList4 li a {
 #joinUs_base a:hover{
 	background: rgba(0, 0, 0, 0) url("image/joinUs_batton.png") no-repeat scroll -435px 0;
 }
+/*------------start y.html---------------*/
+
+#main{
+    width: 786px;
+    margin: 0 auto;
+}
+
+#searchDetailBox{
+    width:  786px;
+}
+
+#searchDetailBox .iwaikin {
+  float: right;
+  margin: 0;
+  padding: 0 5px 2px 0;
+}
+
+#searchDetailBox .baito .bnr5000 {
+  background-position: 0 -1305px;
+}
+
+#searchDetailBox .iwaikin span {
+  display: inline-block;
+  width: 339px;
+  height: 0;
+  margin-right: 12px;
+  padding-top: 45px;
+  background: url(image/img_iwaikin_parts.png) no-repeat 0 -45px;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+#searchDetailBox .iwaikin a {
+  display: inline-block;
+  padding: 0 0 4px 10px;
+  background: url(image/img_detailbox_parts.png) no-repeat 0 -271px;
+  line-height: 1.5;
+  vertical-align: bottom;
+}
+
+#searchDetailBox h2 {
+  clear: both;
+  height: 31px;
+  background: url(image/img_detailbox_parts.png) no-repeat 0 0;
+  font-size: 116%;
+  line-height: 31px;
+  width: 786px;
+  margin 0;
+}
+
+#searchDetailBox h2 a {
+  display: inline-block;
+  max-width: 580px;
+  padding: 0 12px 0 10px;
+  color: #fff !important;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+#searchDetailBox .icon {
+  display: inline-block;
+  height: 0;
+  padding-top: 20px;
+  background: url(image/img_result_parts.png) no-repeat 0 0;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+#searchDetailBox #siteShare li {
+    float: left;
+    padding-left: 10px;
+}
+
+
+.fb_iframe_widget {
+    display: inline-block;
+    position: relative;
+}
+
+.fb_iframe_widget span {
+    display: inline-block;
+    position: relative;
+    text-align: justify;
+}
+
+#searchDetailBox .iconPickup {
+  width: 40px;
+  background-position: -55px 0;
+}
+
+#headerPopup, #headerBread, .clearfix {
+    display: block;
+}
+#searchDetailBox #siteShare {
+    background-color: #fff;
+    background-image: linear-gradient(#ffffff 60%, #f9faf9 100%);
+    background-size: 100% auto;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 25px;
+    padding: 8px 0 3px;
+}
+
+#headerPopup::after, #headerBread::after, .clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+ul::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+#searchDetailBox #siteShare ul {
+    float: right;
+    padding-left: 40px;
+}
+
+
+#searchDetailBox #column {
+    margin-bottom: 20px;
+	height: 360px;
+	
+}
+
+#searchDetailBox  #column .colR {
+    float: right;
+    width: 357px;
+}
+
+#searchDetailBox #infoPoint {
+    padding: 0 0 0 9px;
+}
+#searchDetailBox .box {
+    margin-bottom: 15px;
+    padding: 0 12px;
+}
+
+
+#searchDetailBox #infoPoint h3 {
+    margin: 0 0 10px -9px;
+}
+#searchDetailBox .box h3 {
+    background: rgba(0, 0, 0, 0) url("image/img_detailbox_parts.png") no-repeat scroll 0 -166px;
+    display: block;
+    height: 0;
+    line-height: normal;
+    margin: 0 -12px 10px;
+    overflow: hidden;
+    padding-top: 20px;
+    width: 357px;
+}
+
+
+#searchDetailBox #infoPoint li {
+    background: rgba(0, 0, 0, 0) url("image/icon_detailbox_parts.png") no-repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 0;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-top: 26px;
+    width: 174px;
+}
+
+
+#searchDetailBox #infoPoint li.age {
+    background-position: 0 -80px;
+}
+#searchDetailBox #infoPoint li.school {
+    background-position: 0 -520px;
+} 	
+
+#searchDetailBox #infoPoint li.people {
+    background-position: 0 -320px;
+}
+
+#searchDetailBox #infoPoint li.uniform {
+    background-position: 0 -280px;
+}
+
+#searchDetailBox #infoPoint li.unexperienced {
+    background-position: 0 -160px;
+}
+
+
+#searchDetailBox .box {
+    margin-bottom: 15px;
+    padding: 0 12px;
+}
+
+#searchDetailBox .box h3 {
+    background: rgba(0, 0, 0, 0) url("image/img_detailbox_parts.png") no-repeat scroll 0 -166px;
+    display: block;
+    height: 0;
+    line-height: normal;
+    margin: 0 -12px 10px;
+    overflow: hidden;
+    padding-top: 20px;
+    width: 357px;
+}
+
+
+#searchDetailBox #infoJobs h3 {
+    background-position: 0 -241px;
+}
+
+
+#searchDetailBox #infoJobs dt {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+
+#searchDetailBox #infoJobs dt span {
+    background: rgba(0, 0, 0, 0) url("image/img_result_parts.png") no-repeat scroll -262px 2px;
+    padding-left: 14px;
+}
+
+
+#searchDetailBox #infoJobs dd {
+    margin-left: 14px;
+    padding-bottom: 0.35em;
+}
+
+
+#searchDetailBox #infoJobs dd em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+#searchDetailBox #infoArea h3 {
+    background-position: 0 -216px;
+}
+
+
+#searchDetailBox  #column .colL {
+    float: left;
+    padding: 0 5px;
+    width: 401px;
+}
+
+
+#searchDetailBox .colL .pct {
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    height: 310px;
+    margin: 0 -5px;
+    overflow: hidden;
+    text-align: center;
+    width: 410px;
+}
+
+
+#searchDetailBox .colL .pct img {
+    height: 300px;
+    margin: 5px;
+    overflow: hidden;
+    width: 400px;
+}	
+
+
+#searchDetailBox .colL p strong {
+    color: #f25111;
+}
+
+.btnEntryWrap {
+  width: 786px;
+  margin: 0 auto 30px;
+}
+
+.btnEntryV03 {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #eff4fa;
+    background-image: linear-gradient(#eff4fa, #fbfdfe);
+    background-size: 100% auto;
+    border-color: #e5e5e5 #e5e5e5 #dfeaf7;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 0 0 1px #fff inset;
+    padding: 0 10px;
+}
+
+
+.btnEntryV03 .bListA, .btnEntryV03 .bListDelA, .btnEntryV03 .bListLinkA {
+    float: left;
+    padding-top: 20px;
+}
+
+.bListA a, .bListDelA a, .bListLinkA a {
+    padding-top: 29px;
+    width: 177px;
+}
+
+.bListA a:hover {
+  background-position: 0 -34px;
+}
+
+.btnEntryV03 a {
+    background: rgba(0, 0, 0, 0) url("image/detail_btn_parts.png") no-repeat scroll 0 0;
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.btnEntryV03 .bWeb55sec {
+    float: right;
+}
+
+
+.bWeb55sec a {
+    background-position: -182px 0;
+    padding-top: 67px;
+    width: 295px;
+}
+
+.bWeb55sec a:hover {
+    background-position: -182px -66px;
+    padding-top: 67px;
+    width: 295px
+}
+
+#photoBox {
+  margin-bottom: 5px;
+}
+
+#photoBox h3 {
+  position: relative;
+  width: 786px;
+  height: 31px;
+  margin-bottom: 10px;
+  padding-left: 0;
+  background: none;
+  margin-left: 0;
+}
+
+#photoBox h3 span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(image/h_photo.gif) no-repeat 0 0;
+}
+
+
+
+
+
+
+
+
+.infoBox {
+  width: 746px;
+  margin: 0 auto 20px;
+  padding: 15px 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+.infoBox h3 {
+  margin: 0 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #9a9a9a;
+  color: #666;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.infoBox p {
+  font-size: 11px;
+}
+
+.infoBox p:last-child {
+  margin-bottom: 0;
+}
+
+.infoBox .hedge {
+  color: #333;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 11px;
+}
+
+/*------------end y.html---------------*/
