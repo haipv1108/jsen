@@ -10,6 +10,7 @@ class Scanner extends MX_Controller{
 	public function load_file(){
 	set_time_limit(15000);
 	$MyFile = file_get_contents(base_url()."data_system_work.sql");
+	$MyFile = file_get_contents(base_url()."data_apply.sql");
 	$data = explode(';', $MyFile);
 	foreach ($data as $key => $value) {
 		if($this->mscanner->add($value)==false)

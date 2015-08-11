@@ -91,12 +91,30 @@ $router['kyusyu'] = 'kyusyu/index';
 $router['tokai'] = 'tokai/index';
 $router['kanto'] = 'kanto/index';
 
+// area_page
+$router['area_page'] = "area_page/area_page/index";
+$router['area_page/kanto'] = "area_page/area_page/kanto";
+$router['area_page/tokai'] = "area_page/area_page/tokai";
+$router['area_page/kansai'] = "area_page/area_page/kansai";
+$router['area_page/tohoku'] = "area_page/area_page/tohoku";
+$router['area_page/chugoku'] = "area_page/area_page/chugoku";
+$router['area_page/hokuriku'] = "area_page/area_page/hokuriku";
+$router['area_page/kyusyu'] = "area_page/area_page/kyusyu";
 
 
 
+// guide_area
+$router['guide_area'] = 'guide_area/guide_area/index';
+$router['guide_area/city'] = 'guide_area/guide_area/city';
 
 
+// line
+$router['guide_line'] = 'guide_line/guide_line/index';
+$router['guide_line/line'] = 'guide_line/guide_line/line';
+$router['guide_line/station'] = 'guide_line/guide_line/station';
 
+//job
+$router['guide_job'] = 'guide_job/guide_job/index';
 
 
 
