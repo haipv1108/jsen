@@ -105,6 +105,10 @@ $router['guide_line/station'] = 'guide_line/guide_line/station';
 //job
 $router['guide_job'] = 'guide_job/guide_job/index';
 
+//feature
+$router['guide_feature'] = 'guide_feature/guide_feature/index';
+$router['guide_feature/feature'] = 'guide_feature/guide_feature/feature';
+
 
 
 
