@@ -81,6 +81,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 //scanner
 $router['scanner'] = "scanner/scanner/index";
+$router['scanner/load_file'] = "scanner/scanner/load_file";
 
 
 //user

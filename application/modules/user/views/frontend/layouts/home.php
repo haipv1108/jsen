@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <title><?php if(isset($meta_title)) echo $meta_title; else echo "j-sen.jp";?></title>
     <base href="http://localhost/ci3/">
 	<meta http-equiv="content-type" content="text/html" />
 	<meta name="author" content="Persiden.C.Kid" />
@@ -124,10 +125,29 @@
                             <span class="num7">7</span>
                             <span class="end">件</span>
                         </p>
-                        <ul>
+						<ul>
                             <li class="historyBtn"><a rel="nofollow" title="" href="#">最近見たバイト</a></li>
                             <li class="favorireBtn"><a rel="nofollow" title="" href="#">キープしたバイト</a></li>
                         </ul>
+                        <!-- hien thi count work tren top -->
+                        <?php if(isset($count['work'])){?>    
+                            <?php while ($count['work']) { 
+                                $i[] = $count['work']%10;
+                                $count['work'] = floor($count['work']/10);
+                                ?>
+                             
+                            <?php };
+                            $j=12;
+                            while($j--){
+                            if(!isset($i[$j]))
+                                continue;
+                            else ?>
+                            <span class = "num<?php echo $i[$j];?>"><?php echo $i[$j];?></span>    
+                            <?php }} else{?>
+                            <?php }?>
+                        </p>
+
+                        <!-- xong hien thi count work -->
                     </div>
                     <div class="naviArea">
                         <ul class="clearfix">

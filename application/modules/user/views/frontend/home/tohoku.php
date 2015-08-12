@@ -58,6 +58,11 @@
                                         <li class="am06"><a href="/guide_area6.htm">山形</a></li>
                                         <li class="am07"><a href="/guide_area7.htm">福島</a></li>
                                     </ul>
+
+                                <?php foreach ($prefecture as $key => $value) {?>
+                                    <li class="am0<?php echo $value['id'];?>"></li>
+                                        <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                <?php }?>
                                 </ul>
                             </div>
                         </div>
@@ -79,6 +84,12 @@
                                         <li class="am06"><a href="/guide_area6_line.htm">山形</a></li>
                                         <li class="am07"><a href="/guide_area7_line.htm">福島</a></li>
                                     </ul>
+                                    <ul class="idTabs">
+                                    <?php foreach ($prefecture as $key => $value) {?>
+                                    <li class="am0<?php echo $value['id'];?>"></li>
+                                    <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                    <?php }?>
+                                </ul>
                                 </ul>
                             </div>
                         </div>
@@ -94,10 +105,13 @@
                                 <form method="get" action="/search/">
                                     <input type="hidden" value="tohoku" name="area">
                                     <ul>
+                                    <?php $i=1; foreach ($gwork as $key => $value) {?>
                                         <li>
                                             <label>
                                                 <input type="checkbox" value="office" name="job[]">
                                                 <a id="iconType01" href="/tohoku/job_office.htm">オフィス系</a>
+                                                <input type="checkbox" value="<?php echo $value['name'];?>" name="job[]">
+                                                <a id="iconType<?php echo ($i++>=10)?$i:"0".$i;?>" href="/kanto/job_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
                                             </label>
                                             <span>└ 営業、事務、受付...</span>
                                         </li>
@@ -178,6 +192,7 @@
                                             </label>
                                             <span>└ エステ、マッサージ、美容師...</span>
                                         </li>
+                                    <?php }?> 
                                     </ul>
                                     
                                     <p class="searchBtn">
@@ -201,6 +216,7 @@
                                 <form method="get" action="/search/">
                                     <input type="hidden" value="tohoku" name="area">
                                     <ul>
+                                    <?php $i=14;foreach ($feature as $key => $value) { ?>
                                         <li>
                                             <label>
                                                 <input class="c_box" type="checkbox" value="short_work" name="feature[]">
@@ -283,6 +299,8 @@
                                                 <input class="c_box" type="checkbox" value="free_style" name="feature[]">
                                                 <a id="iconType30" href="/tohoku/feature_free_style.htm">服装自由</a>
                                                 (9025)
+                                                <a id="iconType<?php echo $i++;?>" href="/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name']; ?></a>
+                                                (c_w)
                                             </label>
                                         </li>
                                         <li>
@@ -369,6 +387,8 @@
                                                 (15373)
                                             </label>
                                         </li>
+                                        </li>                  
+                                    <?php }?>          
                                     </ul>
 
                                     <p class="searchBtn">
@@ -474,6 +494,10 @@
                                     <li class="am05"><a href="/guide_area5_map.htm">秋田</a></li>
                                     <li class="am06"><a href="/guide_area6_map.htm">山形</a></li>
                                     <li class="am07"><a href="/guide_area7_map.htm">福島</a></li>
+                                    <?php foreach ($prefecture as $key => $value) {?>
+                                    <li class="am<?php echo $value['id']>10?$value['id']:"0".$value['id'];?>"></li>
+                                        <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                    <?php }?>
                                 </ul>
                             </div>
                         </div>
@@ -502,26 +526,32 @@
                                 <ul>
                                     <li>
                                         <a href="/kanto/index.htm">関東</a>
+                                        <a href="user/kanto">関東</a>
                                         (63788)
                                     </li>
                                     <li>
                                         <a href="/hokuriku/index.htm">甲信越・北陸</a>
+                                        <a href="user/hokuriku">甲信越・北陸</a>
                                         (5467)
                                     </li>
                                     <li>
                                         <a href="/tokai/index.htm">東海</a>
+                                        <a href="user/tokai">東海</a>
                                         (11379)
                                     </li>
                                     <li>
                                         <a href="/kansai/index.htm">関西</a>
+                                        <a href="user/kansai">関西</a>
                                         (14606)
                                     </li>
                                     <li>
                                         <a href="/chugoku/index.htm">中国・四国</a>
+                                        <a href="user/chugoku">中国・四国</a>
                                         (5259)
                                     </li>
                                     <li>
                                         <a href="/kyusyu/index.htm">九州・沖縄</a>
+                                        <a href="user/kyusyu">九州・沖縄</a>
                                         (5816)
                                     </li>
                                 </ul>
@@ -534,6 +564,7 @@
                         <!-- Phan list nay viet code vao de in ra nha, t viet vi du vai cai thoi, cu viet code giong vi du la no tu in ra dung -->
                         <div class="pickuplist">
                             <ul>
+                            <?php foreach ($feature as $key => $value) { ?>
                                 <li>
                                     <a href="/tohoku/feature_short_work.htm">短期バイト</a>
                                     (1964)
@@ -550,6 +581,10 @@
                                     <a href="/tohoku/feature_school.htm">高校生OK</a>
                                     (3404)
                                 </li>
+                                    <a href="user/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                    (c_w)
+                                </li>                                
+                            <?php }?>
                             </ul>
                         </div>
                     </div>
@@ -561,6 +596,14 @@
                         <div class="pickuplist">
                             <u>
                             </u>
+                           <ul>
+                            <?php foreach ($gwork as $key => $value) { ?>
+                                <li>
+                                    <a href="user/kanto/special_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                    (c_w)
+                                </li>
+                            <?php }?>
+                            </ul>
                         </div>
                     </div>
                     <div class="pickup03">
@@ -571,6 +614,14 @@
                         <div class="pickuplist">
                             <u>
                             </u>
+                            <ul>
+                                <?php foreach ($ninki_area as $key => $value) { ?>
+                                    <li>
+                                        <a href="user/kanto/station_<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
+                                        (c_w)
+                                    </li>
+                                <?php }?>
+                            </ul>
                         </div>
                     </div>
                     <div class="pickup04">

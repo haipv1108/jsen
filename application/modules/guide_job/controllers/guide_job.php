@@ -18,4 +18,7 @@ class Guide_job extends MX_Controller{
 		$data['tempplate'] = 'guide_job';		
 		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
 	}
+	public function job(){
+		
+	}
 }

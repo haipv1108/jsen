@@ -11,13 +11,18 @@ class Guide_area extends MX_Controller{
 	public function index(){
 		$data = array();
 		$area = $this->mguide_area->get_area();
-		if(isset($area))
+		if(isset($area)){
 			foreach ($area as $key => $value) {
 				$prefecture[$value['area_name']] = $this->mguide_area->get_prefecture($value['area_name']);
 				
+			}				
+			if(isset($prefecture)){
+				$data['area'] = $area;
+				$data['prefecture'] = $prefecture;						
 			}
-		$data['area'] = $area;
-		$data['prefecture'] = $prefecture;						
+		}else{
+			$data['message'] = 'Data not found';
+		}
 		$data['tempplate'] = 'guide_area';		
 		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
 	}

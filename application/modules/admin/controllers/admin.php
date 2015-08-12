@@ -98,6 +98,11 @@ class Admin extends MX_Controller {
 											'level' => $this->input->post('level'),
 											'active' => 0
 										);
+<<<<<<< HEAD
+=======
+					
+
+>>>>>>> 882cb451ee3fc236875b2979321146f0d27ce5c7
 					$passconf= $this->input->post('passconf');
 					if($a_Userinfo['password'] == $passconf){// xu ly voi model
                 		$mail = array();
@@ -151,7 +156,11 @@ class Admin extends MX_Controller {
 						'template' => 'backend/home/edit_user'
 						);
 			if($this->madmin->search_user($id) == false){
+<<<<<<< HEAD
 				$data['message'] = 'User not found in database.';
+=======
+				$data['error'] = 'User not found in database.';
+>>>>>>> 882cb451ee3fc236875b2979321146f0d27ce5c7
 				$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
 			}
 			else{

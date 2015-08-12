@@ -3,6 +3,7 @@
 class Scanner extends MX_Controller{
 	public function __construct(){
 		parent::__construct();
+		$this->load->helper('url');
 		$this->load->model('mscanner');
 	}
 	// Chuc nang: in ra du lieu len trinh duyet
@@ -21,5 +22,40 @@ class Scanner extends MX_Controller{
 		}
 		if($check) echo 'Thanh cmn cong roi.';
 		else echo 'co loi xay cmna roi.';
+	}
+	public function line(){
+		$result = $this->mscanner->line();
+		$data = array(
+				'result' => $result
+			);
+		// foreach ($result as $key => $value) {
+		// 	$data = array(
+		// 			'line_id'=>$value['line_id'],
+		// 			'line_name'=>$value['line_name'],
+		// 			'area_line_id'=>$value['area_line_id']
+		// 		);
+		$this->load->view('line',$data);
+		
+	}
+	public function swork(){
+		$result = $this->mscanner->swrok();
+		$data = array(
+				'result' =>$result
+			);
+		$this->load->view('swork',$data);
+	}
+	
+	public function load_file($file=""){
+		set_time_limit(15000);
+		$siteaddressAPI = "http://localhost/ci3/database/" . $file;
+		$myfile = file_get_contents($siteaddressAPI);
+		$data = explode(');', $myfile);
+		$i = 0;
+		foreach($data as $k=>$v){
+			$this->mscanner->add($v);
+			$i++;
+		}
+		echo 'Successfully';
+		echo $i;
 	}
 }

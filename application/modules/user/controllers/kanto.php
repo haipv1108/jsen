@@ -10,8 +10,13 @@ class Kanto extends MX_Controller {
 		$data = array(
 			'id_body' => 'p-kanto',
 			'prefecture' => $this->muser->get_prefecture('関東'),
-			'tempplate' => 'frontend/home/kanto'
+			'tempplate' => 'frontend/home/kanto',
+			'meta_title' => '関東',
+			'count' =>$this->muser->get_count_work(),
+			'feature' => $this->muser->get_feature(),
+			'gwork'=> $this->muser->get_gwork(),
+			'ninki_area'=>$this->muser->getninki_station()
 					);
-		$this->load->view('frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('frontend/layouts/home_prefecture',isset($data)?$data:NULL);
 	}
 }

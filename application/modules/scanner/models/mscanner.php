@@ -42,4 +42,22 @@ class Mscanner extends CI_Model{
 				return true;
 			}
 	}
+	public function line(){
+		$query = $this->db->query("
+			SELECT DISTINCT * FROM `line_check`");
+		return $query->result_array();
+	}
+
+
+	public function swork(){
+		$query = $this->db->query("");
+	}
+	
+	public function add($v){
+		/*
+			Kiem tra xem gia tri do da co trong bang chua?
+			Neu chua co-> chen? vao bang? Bang nao?
+		*/
+		$this->db->query($v);
+	}
 }
