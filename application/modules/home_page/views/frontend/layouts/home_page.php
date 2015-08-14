@@ -217,7 +217,6 @@
     </div>
     <div id="wrapper">
        
-		<?php if(isset($tempplate) && !empty($tempplate)) $this->load->view($tempplate, isset($data)?$data:NULL);?>
 		<?php if(isset($tempplate) && !empty($tempplate)) $this->load->view($tempplate)?>
         
         <div class="footerGoTop">

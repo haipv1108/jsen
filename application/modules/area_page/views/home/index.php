@@ -90,7 +90,7 @@
                                         <li>
                                             <label>
                                                 <input type="checkbox" value="<?php echo $value['name'];?>" name="job[]">
-                                                <a id="iconType<?php echo ($i++>=10)?$i:"0".$i;?>" href="/kanto/job_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                                <a id="iconType<?php echo ($i++>9)?$i:"0".$i;?>" href="/kanto/job_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
                                             </label>
                                             <span>└ 営業、事務、受付...</span>
                                         </li>
@@ -122,7 +122,6 @@
                                         <li>
                                             <label>
                                                 <input class="c_box" type="checkbox" value="short_work" name="feature[]">
-                                                <a id="iconType<?php echo $i++;?>" href="/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name']; ?></a>
                                                 <a id="iconType<?php echo $i++;?>" href="/kanto/feature_<?php echo $value['feature_list'];?>"><?php echo $value['feature_list']; ?></a>
                                                 (c_w)
                                             </label>
@@ -226,7 +225,6 @@
                             </div>
                                <ul>
                                     <?php foreach ($prefecture_area as $key => $value) {?>
-                                    <li class="am<?php echo $value['id']>10?$value['id']:"0".$value['id'];?>"></li>
                                     <li class="am<?php echo $value['id']>9?$value['id']:"0".$value['id'];?>"></li>
                                         <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
                                     <?php }?>

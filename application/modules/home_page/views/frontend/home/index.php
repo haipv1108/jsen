@@ -140,14 +140,11 @@
                         <div class="pickuplist">
                             <ul>
 
-                            <?php foreach ($feature as $key => $value) { ?>
-                                <li>
-                                    <a href="/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                            <?php foreach ($feature as $key => $value) { ?> 
                                <li>
                                     <a href="/kanto/feature_<?php echo $value['feature_list'];?>"><?php echo $value['feature_list'];?></a>
                                     (c_w)
-                                </li>                                
-                                </li>                     
+                                </li>                                                  
                             <?php }?>
 
                             </ul>

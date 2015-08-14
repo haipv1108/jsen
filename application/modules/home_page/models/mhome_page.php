@@ -22,7 +22,6 @@ class Mhome_page extends CI_Model{
 
 
 	public function get_feature(){
-		$query = $this->db->query('SELECT DISTINCT `feature_name` FROM `feature`LIMIT 12');
 		$query = $this->db->query('SELECT DISTINCT `feature_list` FROM `feature`LIMIT 12');
 		if($query->row_array()>0)
 			return $query->result_array();
