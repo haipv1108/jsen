@@ -93,8 +93,6 @@ $router['area_page/chugoku'] = "area_page/area_page/chugoku";
 $router['area_page/hokuriku'] = "area_page/area_page/hokuriku";
 $router['area_page/kyusyu'] = "area_page/area_page/kyusyu";
 
-
-
 // guide_area
 $router['guide_area'] = 'guide_area/guide_area/index';
 $router['guide_area/city'] = 'guide_area/guide_area/city';
@@ -107,9 +105,11 @@ $router['guide_line/station'] = 'guide_line/guide_line/station';
 
 //job
 $router['guide_job'] = 'guide_job/guide_job/index';
+$router['guide_job/job'] = 'guide_job/guide_job/job';
 
-
-
+//feature
+$router['guide_feature'] = 'guide_feature/guide_feature/index';
+$router['guide_feature/feature'] = 'guide_feature/guide_feature/feature';
 
 
 
