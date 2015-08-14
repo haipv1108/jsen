@@ -74,22 +74,14 @@ $route['member/add'] = "member/member/add";
 $route['member/edit'] = "member/member/edit"; 
 $route['member/delete'] = "member/member/delete"; 
 
-$route['default_controller'] = 'user/user/index';
+// home page
+$route['default_controller'] = 'home_page/home_page/index';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //scanner
 $router['scanner'] = "scanner/scanner/index";
-
-
-//user
-$router['chugoku'] = 'chugoku/index';
-$router['hokuriku'] = 'hokuriku/index';
-$router['kansai'] = 'kansai/index';
-$router['kyusyu'] = 'kyusyu/index';
-$router['tokai'] = 'tokai/index';
-$router['kanto'] = 'kanto/index';
 
 // area_page
 $router['area_page'] = "area_page/area_page/index";
