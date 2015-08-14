@@ -20,7 +20,6 @@ class Home_page extends MX_Controller {
 			'meta_title' => 'Home',
 			'feature' => $this->mhome_page->get_feature(),
 			'count' => $this->mhome_page->get_count_work(),
-			'feature' => $this->mhome_page->get_feature(),
 			'gwork'=> $this->mhome_page->get_gwork(),
 			'ninki_area'=>$this->mhome_page->getninki_station()
 				);

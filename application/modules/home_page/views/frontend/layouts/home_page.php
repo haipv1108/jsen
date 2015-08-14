@@ -152,15 +152,6 @@
                     </div>
                     <div class="naviArea">
                         <ul class="clearfix">
-                        <?php foreach ($area as $ka => $va) {?>
-                            <li id="navi<?php echo ucfirst($va['area_name_furi']);?>">
-                                <a title="
-                                <?php foreach ($prefecture[$va['area_name']] as $kp => $vp) {
-                                    echo $vp['name']." . ";
-                                }?>
-                                " href="<?php echo base_url()."area_page/".$va['area_name_furi'];?>"><?php echo $va['area_name'];?></a>
-                            </li>    
-                        <?php }?>
 						<?php if(isset($area)){?>
 							<?php foreach ($area as $ka => $va) {?>
 								<li id="navi<?php echo ucfirst($va['area_name_furi']);?>">

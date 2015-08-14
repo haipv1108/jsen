@@ -67,7 +67,6 @@
                             <div class="aMap">
                                 <ul>
                                     <?php foreach ($prefecture_area as $key => $value) {?>
-                                    <li class="am<?php echo $value['id']>10?$value['id']:"0".$value['id'];?>"></li>
                                     <li class="am<?php echo $value['id']>9?$value['id']:"0".$value['id'];?>"></li>
                                         <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
                                     <?php }?>
@@ -270,7 +269,6 @@
                             <ul>
                             <?php foreach ($feature as $key => $value) { ?>
                                 <li>
-                                    <a href="user/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
                                     <a href="user/kanto/feature_<?php echo $value['feature_list'];?>"><?php echo $value['feature_list'];?></a>
                                     (c_w)
                                 </li>                                
