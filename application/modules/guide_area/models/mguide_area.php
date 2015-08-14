@@ -14,7 +14,7 @@ class Mguide_area extends CI_Model{
 	}
 	
 	public function get_area(){
-		$query = $this->db->query('SELECT DISTINCT `area_name` FROM `prefecture`');
+		$query = $this->db->query('SELECT `area_name` ,`area_name_furi`,`id`  FROM `area`');
 		if($query->row_array()>0)
 			return $query->result_array();
 		else return false;

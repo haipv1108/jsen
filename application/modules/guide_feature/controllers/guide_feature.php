@@ -15,14 +15,14 @@ class Guide_feature extends MX_Controller{
 		$data['area'] = $area;
 		$data['prefecture'] = $prefecture;						
 		$data['tempplate'] = 'guide_feature';		
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function feature($id = 0){
 		$data = array(
 					'feature'=>$this->mguide_feature->get_feature($id),
 					'tempplate'=>'feature'
 					);
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	
 }

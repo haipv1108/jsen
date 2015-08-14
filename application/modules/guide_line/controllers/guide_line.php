@@ -16,7 +16,7 @@ class Guide_line extends MX_Controller{
 		$data['area'] = $area;
 		$data['prefecture'] = $prefecture;						
 		$data['tempplate'] = 'guide_line';		
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function line($id = 0){
 		$line = $this->mguide_line->get_line($id);
@@ -30,7 +30,7 @@ class Guide_line extends MX_Controller{
 						'line_name' => $line_name,
 						'tempplate' =>'line'
 					);
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function station($id = 0){
 		$station = $this->mguide_line->get_station($id);
@@ -38,6 +38,6 @@ class Guide_line extends MX_Controller{
 			$data['station'] = $station;
 		}
 		$data['tempplate'] = 'station';
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }

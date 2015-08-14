@@ -4,7 +4,7 @@
 			<h2 class="areaTTL">全国のエリアから探す</h2>
 			<div class="inner">
 				<p class="blueTTL">都道府県を選択してください</p>
-				<?php if(isset($message) && !empty($message)) echo $message; die;?>
+
 				<?php foreach ($area as $ka => $va) {	?>
 					<h3 class="guideTTLh3"><?php echo $va['area_name']; ?></h3>
 					<ul class="guideList1">

@@ -14,9 +14,9 @@ class Guide_job extends MX_Controller{
 				$prefecture[$value['area_name']] = $this->mguide_job->get_prefecture($value['area_name']);
 			}
 		$data['area'] = $area;
-		$data['prefecture'] = $prefecture;
-		$data['tempplate'] = 'guide_job';
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$data['prefecture'] = $prefecture;						
+		$data['tempplate'] = 'guide_job';		
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function job($id = 0){
 		$job = $this->mguide_job->get_job($id);
@@ -24,6 +24,6 @@ class Guide_job extends MX_Controller{
 			$data['job'] = $job;
 		}
 		$data['tempplate'] = 'job';
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }

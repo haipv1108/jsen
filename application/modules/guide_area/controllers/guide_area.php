@@ -9,17 +9,15 @@ class Guide_area extends MX_Controller{
 	}
 	
 	public function index(){
-		$data = array();
 		$area = $this->mguide_area->get_area();
 		if(isset($area))
 			foreach ($area as $key => $value) {
 				$prefecture[$value['area_name']] = $this->mguide_area->get_prefecture($value['area_name']);
-				
 			}
 		$data['area'] = $area;
 		$data['prefecture'] = $prefecture;						
 		$data['tempplate'] = 'guide_area';		
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	
 	public function city($id =0){
@@ -34,6 +32,6 @@ class Guide_area extends MX_Controller{
 			$data['message'] = 'Data not found';
 		}
 		$data['tempplate'] = 'city';
-		$this->load->view('user/frontend/layouts/home',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }
