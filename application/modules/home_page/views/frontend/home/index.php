@@ -1,4 +1,5 @@
  <div id="mainContents">
+<div id="mainContents">
     <base href="http://localhost/ci3/">
             <div id="article">
                 <div id="arbeitSearchBox">
@@ -138,11 +139,15 @@
                         <!-- Phan list nay viet code vao de in ra nha, t viet vi du vai cai thoi, cu viet code giong vi du la no tu in ra dung -->
                         <div class="pickuplist">
                             <ul>
+
                             <?php foreach ($feature as $key => $value) { ?>
                                 <li>
                                     <a href="/kanto/feature_<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                               <li>
+                                    <a href="/kanto/feature_<?php echo $value['feature_list'];?>"><?php echo $value['feature_list'];?></a>
                                     (c_w)
                                 </li>                                
+                                </li>                     
                             <?php }?>
 
                             </ul>

@@ -22,6 +22,7 @@ class Area_page extends MX_Controller {
 			'prefecture' => $prefecture,
 			'prefecture_area' => $this->marea_page->get_prefecture('関東'),
 			'tempplate' => 'home/index',
+			'tempplate' => 'area_page/home/index',
 			'meta_title' => '関東',
 			'count' =>$this->marea_page->get_count_work(),
 			'feature' => $this->marea_page->get_feature(),
@@ -29,6 +30,7 @@ class Area_page extends MX_Controller {
 			'ninki_area'=>$this->marea_page->getninki_station()
 					);
 		$this->load->view('layouts/area_page',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function tokai(){
 		$data = array();
@@ -49,6 +51,7 @@ class Area_page extends MX_Controller {
 			'ninki_area'=>$this->marea_page->getninki_station()
 					);
 		$this->load->view('layouts/area_page',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
 	public function kansai(){
@@ -63,6 +66,7 @@ class Area_page extends MX_Controller {
 			'prefecture' => $prefecture,
 			'prefecture_area' => $this->marea_page->get_prefecture('関西'),
 			'tempplate' => 'home/index',
+			'tempplate' => 'area_page/home/index',
 			'meta_title' => '関西',
 			'count' =>$this->marea_page->get_count_work(),
 			'feature' => $this->marea_page->get_feature(),
@@ -70,6 +74,7 @@ class Area_page extends MX_Controller {
 			'ninki_area'=>$this->marea_page->getninki_station()
 					);
 		$this->load->view('layouts/area_page',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
 	public function tohoku(){
@@ -84,6 +89,7 @@ class Area_page extends MX_Controller {
 			'prefecture' => $prefecture,
 			'prefecture_area' => $this->marea_page->get_prefecture('北海道・東北'),
 			'tempplate' => 'home/index',
+			'tempplate' => 'area_page/home/index',
 			'meta_title' => '北海道・東北',
 			'count' =>$this->marea_page->get_count_work(),
 			'feature' => $this->marea_page->get_feature(),
@@ -91,6 +97,7 @@ class Area_page extends MX_Controller {
 			'ninki_area'=>$this->marea_page->getninki_station()
 					);
 		$this->load->view('layouts/area_page',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
 	public function chugoku(){
@@ -105,6 +112,7 @@ class Area_page extends MX_Controller {
 			'prefecture' => $prefecture,
 			'prefecture_area' => $this->marea_page->get_prefecture('中国・四国'),
 			'tempplate' => 'home/index',
+			'tempplate' => 'area_page/home/index',
 			'meta_title' => '中国・四国',
 			'count' =>$this->marea_page->get_count_work(),
 			'feature' => $this->marea_page->get_feature(),
@@ -112,6 +120,7 @@ class Area_page extends MX_Controller {
 			'ninki_area'=>$this->marea_page->getninki_station()
 					);
 		$this->load->view('layouts/area_page',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
 	public function hokuriku(){
@@ -126,6 +135,7 @@ class Area_page extends MX_Controller {
 			'prefecture' => $prefecture,
 			'prefecture_area' => $this->marea_page->get_prefecture('甲信越・北陸'),
 			'tempplate' => 'home/index',
+			'tempplate' => 'area_page/home/index',
 			'meta_title' => '甲信越・北陸',
 			'count' =>$this->marea_page->get_count_work(),
 			'feature' => $this->marea_page->get_feature(),
@@ -133,6 +143,7 @@ class Area_page extends MX_Controller {
 			'ninki_area'=>$this->marea_page->getninki_station()
 					);
 		$this->load->view('layouts/area_page',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function kyusyu(){
 		$data = array();
@@ -146,6 +157,7 @@ class Area_page extends MX_Controller {
 			'prefecture' => $prefecture,
 			'prefecture_area' => $this->marea_page->get_prefecture('九州・沖縄'),
 			'tempplate' => 'home/index',
+			'tempplate' => 'area_page/home/index',
 			'meta_title' => '九州・沖縄',
 			'count' =>$this->marea_page->get_count_work(),
 			'feature' => $this->marea_page->get_feature(),
@@ -153,5 +165,6 @@ class Area_page extends MX_Controller {
 			'ninki_area'=>$this->marea_page->getninki_station()
 					);
 		$this->load->view('layouts/area_page',isset($data)?$data:NULL);
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }

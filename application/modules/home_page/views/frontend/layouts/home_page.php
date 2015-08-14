@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <html>
 <head>
     <title><?php if(isset($meta_title)) echo $meta_title; else echo "j-sen.jp";?></title>
@@ -48,6 +49,7 @@
 </head>
 
 <body id="<?php echo isset($id_body)? $id_body: '';?>">
+<body id="<?php if(isset($id_body)) echo $id_body;?>">
 	<?php if(isset($keisaiHeaderBar)){?>
     <div id="keisaiHeaderBar">
         <div class="inner">
@@ -159,6 +161,17 @@
                                 " href="<?php echo base_url()."area_page/".$va['area_name_furi'];?>"><?php echo $va['area_name'];?></a>
                             </li>    
                         <?php }?>
+						<?php if(isset($area)){?>
+							<?php foreach ($area as $ka => $va) {?>
+								<li id="navi<?php echo ucfirst($va['area_name_furi']);?>">
+									<a title="
+									<?php foreach ($prefecture[$va['area_name']] as $kp => $vp) {
+										echo $vp['name']." . ";
+									}?>
+									" href="<?php echo base_url()."area_page/".$va['area_name_furi'];?>"><?php echo $va['area_name'];?></a>
+								</li>    
+							<?php }?>
+						<?php }?>
                         </ul>
                     </div>
                 </div>
@@ -205,6 +218,7 @@
     <div id="wrapper">
        
 		<?php if(isset($tempplate) && !empty($tempplate)) $this->load->view($tempplate, isset($data)?$data:NULL);?>
+		<?php if(isset($tempplate) && !empty($tempplate)) $this->load->view($tempplate)?>
         
         <div class="footerGoTop">
             <p><a href="#topNavi">ページトップへ戻る</a></p>
