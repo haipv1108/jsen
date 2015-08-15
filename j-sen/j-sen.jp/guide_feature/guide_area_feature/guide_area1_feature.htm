@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
-		<meta name="author" content="Persiden.C.Kid" />
+		<meta name="chinhnc" content="Persiden.C.Kid" />
 
-		<title>北海道から検索 - アルバイト・バイト募集情報ジョブセンス</title>
+		<title>北海道の特徴から検索 - アルバイト・バイト募集情報ジョブセンス</title>
 		<link rel="stylesheet" type="text/css" href="../../../style.css"/>
 	</head>
 
-	<body>
+	<body id="p-tohoku">
 		<div id="keisaiHeaderBar">
 			<div class="inner">
 				<div class="col-1">掲載をお考えの企業様は<a href="/info/corp.htm">こちら</a></div>
@@ -32,7 +32,7 @@
 				</div>
 				<div id="midArea" class="clearfix">
 					<div id="logoArea">
-						<a class="logo" href="index/index.htm">ジョブセンス</a>
+						<a class="logo" href="../../../index.htm">ジョブセンス</a>
 						<!-- type của ảnh dùng hàm random để cho hiển thị ngẫu nhiên 1-6 -->
 						<span class="type02">ジョブせんすけ</span>
 					</div>
@@ -66,7 +66,7 @@
 									<a title="大阪、兵庫、京都、滋賀、奈良、和歌山" href="https://j-sen.jp/kansai/index.htm">関西</a>
 								</li>
 								<li id="naviTohoku">
-									<a title="北海道、青森、岩手、宮城、秋田、山形、福島" href="https://j-sen.jp/tohoku/index.htm">北海道・東北</a>
+									<a title="北海道、青森、岩手、宮城、秋田、山形、福島" href="https://j-sen.jp../../tohoku/index.htm">北海道・東北</a>
 								</li>
 								<li id="naviHokuriku">
 									<a title="山梨、新潟、長野、富山、石川、福井" href="https://j-sen.jp/hokuriku/index.htm">甲信越・北陸</a>
@@ -86,7 +86,7 @@
 						<li class="searchNavi01"><a href="../../guide_area/guide_area.html">エリアから探す</a></li>
 						<li class="searchNavi02"><a href="../../guide_line/guide_line.html">路線から探す</a></li>
 						<li class="searchNavi03"><a href="../../guide_job/guide_job.html">職種から探す</a></li>
-						<li class="searchNavi04"><a href="../../guide_feature/guide_feature.html">特徴から探す</a></li>
+						<li class="searchNavi04"><a href="../guide_feature.html">特徴から探す</a></li>
 					</ul>
 					<div class="freeword">
 						<form method="GET" action="/search/">
@@ -113,148 +113,155 @@
 						<a href="../index.html">バイトTOP</a>
 					</li>
                     <li>
-						<a href="guide_area.html">全国のエリアから探す</a>
+						<a href="../guide_feature.html">全国のバイトを特徴から探す</a>
 					</li>
 					<li>
-						<span>北海道から探す</span>
+						<span>北海道の特徴から探す</span>
 					</li>
 				</ul>
 			</div>
         </div>
 		<div id="wapper">
 			<div id="content">
-                <div id="guideBox">
-                    <div id="guideTTLArea">
-                        <div class="inner">
-                            <div class="idTabs clearfix">
-                                <h2 id="h2Title" class="area">北海道の市区町村から探す</h2>
-                                <ul class="clearfix">
-                                    <li class="citySelect">
-                                        <a class="selected" href="#selectCity">市区町村から選ぶ</a>
+				<div id="guideBox">
+					<div id="guideTTLArea">
+						<div class="inner">
+			                <h2 class="feature">北海道のバイトを特徴から探す</h2>
+			                <div class="searchIF clearfix">
+			                    <p>検索条件を変更</p>
+			                    <ul class="clearfix">
+			                        <li>
+			                        	<a href="/guide_area1.htm">北海道のエリアから探す</a>
+			                        </li>
+			                        <li>
+			                        	<a href="/guide_area1_line.htm">北海道の路線から探す</a>
+			                        </li>
+			                        <li>
+			                        	<a href="/guide_area1_job.htm">北海道の職種から探す</a>
+			                        </li>
+			                    </ul>
+
+				            </div>
+				        </div>
+					</div><!--guideTTLArea-->
+					<div class="inner">
+						<p class="blueTTL">
+							特徴を選択してください
+							<span class="orangeTxt">※特徴は２つまで選択可能です</span>
+						</p>
+						<form action="/search/" method="get" onsubmit="return Lvs.Guide.alert(document.getElementsByName('feature[]'), '特徴');">
+                			<input type="hidden" name="area" value="tohoku">
+                			<input type="hidden" name="city[]" value="1">
+                			<div class="blueBox">
+                    			<ul class="featureList">
+                                    <li id="iconFeature01">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="traffic">
+                                    	<a href="../../tohoku/city_1_feature_traffic.htm">交通費支給</a>(1927)
                                     </li>
-                                    <li class="townSelect">
-                                        <a class="" href="#selectTown">町名まで選ぶ</a>
+                                    <li id="iconFeature02">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="week_saraly">
+                                    	<a href="../../tohoku/city_1_feature_week_saraly.htm">週払いOK</a>(287)
+                                    </li>
+                                    <li id="iconFeature03">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="day_saraly">
+                                    	<a href="../../tohoku/day_city_1.htm">日払いOK</a>(95)
+                                    </li>
+                                    <li id="iconFeature04">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="free_style">
+                                    	<a href="../../tohoku/city_1_feature_free_style.htm">服装自由</a>(327)
+                                    </li>
+                                    <li id="iconFeature05">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="uniform">
+                                    	<a href="../../tohoku/city_1_feature_uniform.htm">制服あり</a>(1719)
+                                    </li>
+                                    <li id="iconFeature06">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="choose_shift">
+                                    	<a href="../../tohoku/city_1_feature_choose_shift.htm">シフト自由(自己申告制)</a>(438)</li>
+                                    <li id="iconFeature07">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="no_age">
+                                    	<a href="../../tohoku/city_1_feature_no_age.htm">年齢不問</a>(560)
+                                    </li>
+                                    <li id="iconFeature08">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="school">
+                                    	<a href="../../tohoku/school_city_1.htm">高校生OK</a>(79)
+                                    </li>
+                                    <li id="iconFeature09">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="meet">
+                                    	<a href="../../tohoku/city_1_feature_meet.htm">食事、まかない付き</a>(65)
+                                    </li>
+                                    <li id="iconFeature10">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="close_man">
+                                    	<a href="../../tohoku/city_1_feature_close_man.htm">人と接する</a>(1871)
+                                    </li>
+                                    <li id="iconFeature11">
+	                                    <input type="checkbox" class="limitCheckbox" name="feature[]" value="active">
+	                                    <a href="../../tohoku/city_1_feature_active.htm">体を動かす</a>(616)
+                                    </li>
+                                    <li id="iconFeature12">
+	                                    <input type="checkbox" class="limitCheckbox" name="feature[]" value="use_language">
+	                                    <a href="../../tohoku/city_1_feature_use_language.htm">語学力(英語他)を生かせる</a>(130)
+	                                </li>
+                                    <li id="iconFeature13">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="skill">
+                                    	<a href="../../tohoku/city_1_feature_skill.htm">スキルが身に付く</a>(1042)
+                                    </li>
+                                    <li id="iconFeature14">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="bike">
+                                    	<a href="../../tohoku/city_1_feature_bike.htm">バイク通勤OK</a>(232)
+                                    </li>
+                                    <li id="iconFeature15">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="car">
+                                    	<a href="../../tohoku/city_1_feature_car.htm">車通勤OK</a>(966)
+                                    </li>
+                                    <li id="iconFeature16">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="no_smoking">
+                                    	<a href="../../tohoku/city_1_feature_no_smoking.htm">職場禁煙</a>(638)
+                                    </li>
+                                    <li id="iconFeature17">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="smoking_time">
+                                    	<a href="../../tohoku/city_1_feature_smoking_time.htm">煙草休憩あり</a>(60)
+                                    </li>
+                                    <li id="iconFeature18">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="day_shift">
+                                    	<a href="../../tohoku/city_1_feature_day_shift.htm">週1日からOK</a>(93)
+                                    </li>
+                                    <li id="iconFeature19">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="color_pierced">
+                                    	<a href="../../tohoku/city_1_feature_color_pierced.htm">茶髪・ピアスOK</a>(309)
+                                    </li>
+                                    <li id="iconFeature20">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="short_work">
+                                    	<a href="../../tohoku/short_city_1.htm">短期・単発OK</a>(72)
+                                    </li>
+                                    <li id="iconFeature21">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="touroku">
+                                    	<a href="../../tohoku/regist_city_1.htm">登録制</a>(564)
+                                    </li>
+                                    <li id="iconFeature22">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="unexperienced">
+                                    	<a href="../../tohoku/city_1_feature_unexperienced.htm">未経験可</a>(2308)
+                                    </li>
+                                    <li id="iconFeature23">
+	                                    <input type="checkbox" class="limitCheckbox" name="feature[]" value="permanent">
+	                                    <a href="../../tohoku/permanent_city_1.htm">正社員登用あり</a>(760)
+                                    </li>
+                                    <li id="iconFeature24">
+                                    	<input type="checkbox" class="limitCheckbox" name="feature[]" value="temporary">
+                                    	<a href="../../tohoku/city_1_feature_temporary.htm">契約社員登用あり</a>(326)
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="searchIF clearfix">
-                                <p>検索条件を変更</p>
-                                <ul class="clearfix">
-                                    <li>
-                                        <a href="guide_area1_line.html">北海道の路線から探す</a>
-                                    </li>
-                                    <li>
-                                        <a href="guide_area1_job.html">北海道の職種から探す</a>
-                                    </li>
-                                    <li>
-                                        <a href="guide_area1_feature.html">北海道の特徴から探す</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div><!--inner-->
-                    </div><!--guideTTLArea-->
-                    <div id="selectCity" class="inner" style="display: block;">
-                        <form id="searchForm" onsubmit="return Lvs.Guide.alert(document.getElementsByName('city[]'), 'エリア');" method="get" action="https://j-sen.jp/search/">
-                            <input id="area" type="hidden" value="tohoku" name="area"/>
-                            <h3 class="guideTTLh3">
-                                <input id="parent1" class="parentCheckbox" type="checkbox" value="1" name="city[]"/>
-                                <a href="#">北海道</a>
-                            </h3>
-                            <ul class="guideList4">
-                                <li>
-                                    <input id="city_" class="childCheckbox1" type="checkbox" value="2" name="city[]"/>
-                                    <a href="tohoku/city_2.html">札幌市</a>
-                                    (1600)
-                                </li>
-                                <li>
-                                    <input id="city_" class="childCheckbox1" type="checkbox" value="5" name="city[]"/>
-                                    <a href="sorry/toobusy.html">旭川市</a>
-                                    (186)
-                                </li>
-                                <li>
-                                    <input id="city_" class="childCheckbox1" type="checkbox" value="14" name="city[]"/>
-                                    <a href="tohoku/city_14.html">苫小牧市</a>
-                                    (141)
-                                </li>
-                                <li>
-                                    <input id="city_" class="childCheckbox1" type="checkbox" value="3" name="city[]"/>
-                                    <a href="tohoku/city_3.html">函館市</a>
-                                    (100)
-                                </li>
-                                <li>
-                                    <input id="city_" class="childCheckbox1" type="checkbox" value="25" name="city[]"/>
-                                    <a href="tohoku/city_25.html">千歳市</a>
-                                    (95)
-                                </li>
-                                <li>
-                                    <input id="city_" class="childCheckbox1" type="checkbox" value="8" name="city[]"/>
-                                    <a href="tohoku/city_8.html">帯広市</a>
-                                    (93)
-                                </li>
-                                <li>
-                                    <input id="city_" class="childCheckbox1" type="checkbox" value="34" name="city[]"/>
-                                    <a href="tohoku/city_34.html">北広島市</a>
-                                    (81)
-                                </li>
-                                <li>
-                                    <input id="city_" class="childCheckbox1" type="checkbox" value="4" name="city[]"/>
-                                    <a href="tohoku/city_4.html">小樽市</a>
-                                    (64)
-                                </li>
-                            </ul>
-                            <div class="guideSearchBtn">
-                                <p>
-                                <input type="image" src="../../../image/guide_search_btn.png" onmouseover="this.src='../../../image/guide_search_btn_o.png'" onmouseout="this.src='../../../image/guide_search_btn.png'" alt="この条件で探す"/>
-                                </p>
-                            </div>
-                        </form>
-                    </div><!--selectCity-->
-                    <div id="selectTown" class="inner" stype="display: none;">
-						<form id="searchForm">
-							<h3 class="guideTTLh3">北海道</h3>
-							<ul class="guideList4">
-								<li>
-									<a href="#">苫小牧市</a>
-									(88)
-								</li>
-								<li>
-									<a href="#">函館市</a>
-									(76)
-								</li>
-								<li>
-									<a href="#">旭川市</a>
-									(61)
-								</li>
-								<li>
-									<a href="#">千歳市</a>
-									(59)
-								</li>
-								<li>
-									<a href="#">北広島市</a>
-									(50)
-								</li>
-								<li>
-									<a href="#">小樽市</a>
-									(48)
-								</li>
-								<li>
-									<a href="#">釧路市</a>
-									(46)
-								</li>
-								<li>
-									<a href="#">帯広市</a>
-									(36)
-								</li>
-							</ul>
-						</form>
-					</div><!--selectTown-->
-                </div><!--guideBox-->
-                
-            </div><!-- content-->
+                </div>
+
+                			<div id="searchBtn" class="guideSearchBtn">
+			                    <p>
+			                    	<input type="image" alt="この条件で探す" onmouseover="this.src='../../../image/guide_search_btn_o.png'" onmouseout="this.src='/img/guide/guide_search_btn.png'" src="../../../image/guide_search_btn.png">
+			                    </p>
+			                </div>
+                		</form>
+					</div><!--inner-->
+				</div>
+			</div><!-- content-->
         </div> <!-- wapper-->
-        
-        
-		</div>
 		<div class="footerGoTop">
 				<p><a href="#topNavi">ページトップへ戻る</a></p>
 			</div>
@@ -265,10 +272,10 @@
                         <a href="index.htm">バイトTOP</a>
 					</li>
 					<li>
-						<a href="guide_area.html">全国のエリアから探す</a>
+						<a href="../guide_feature.html">全国のバイトを特徴から探す</a>
 					</li>
 					<li>
-						<span>北海道から探す</span>
+						<span>北海道の特徴から探す</span>
 					</li>
 				</ul>
 			</div>

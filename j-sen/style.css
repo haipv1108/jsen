@@ -3963,10 +3963,6 @@ table {
   padding: 8px 0 0;
 }
 
-h3.inner{
-    background: url(123);
-}
-
 #line80 p, #line130 p, #line145 p {
     display: block;
     font-size: 1.17em;
@@ -4011,3 +4007,183 @@ ul.guideList3 li {
   padding: 0 0 0 13px;
 }
 /*-------------end guide_area1_line-----------*/
+/*-------------beagin guide_area1_feature-----------*/
+#guideTTLArea h2.feature {
+  background: url(image/guide_icon_feature.png) no-repeat 0 center;
+}
+.orangeTxt {
+  color: #F60;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.blueBox {
+  padding: 10px 20px;
+  background: #FDFEFF;
+  border: 1px solid #D0DEF4;
+  margin-bottom: 20px;
+}
+.blueBox ul.featureList li {
+  padding: 0 0 0 20px;
+  margin-bottom: 10px;
+  width: 235px;
+  float: left;
+}
+#iconFeature01 {
+  background: url(image/icon_search.gif) no-repeat 0 -200px;
+}
+  #iconFeature02 {
+  background: url(image/icon_search.gif) no-repeat 0 -480px;
+}
+#iconFeature03 {
+  background: url(image/icon_search.gif) no-repeat 0 -40px;
+}
+#iconFeature04 {
+  background: url(image/icon_search.gif) no-repeat 0 -680px;
+}
+#iconFeature05 {
+  background: url(image/icon_search.gif) no-repeat 0 -240px;
+}
+#iconFeature06 {
+  background: url(image/icon_search.gif) no-repeat 0 -520px;
+}
+#iconFeature07 {
+  background: url(image/icon_search.gif) no-repeat 0 -640px;
+}
+#iconFeature08 {
+  background: url(image/icon_search.gif) no-repeat 0 -80px;
+}
+#iconFeature09 {
+  background: url(image/icon_search.gif) no-repeat 0 -720px;
+}
+#iconFeature10 {
+  background: url(image/icon_search.gif) no-repeat 0 -280px;
+}
+#iconFeature11 {
+  background: url(image/icon_search.gif) no-repeat 0 -760px;
+}
+#iconFeature12 {
+  background: url(image/icon_search.gif) no-repeat 0 -600px;
+}
+#iconFeature13 {
+  background: url(image/icon_search.gif) no-repeat 0 -320px;
+}
+#iconFeature14 {
+  background: url(image/icon_search.gif) no-repeat 0 -800px;
+}
+#iconFeature15 {
+  background: url(image/icon_search.gif) no-repeat 0 -360px;
+}
+#iconFeature16 {
+  background: url(image/icon_search.gif) no-repeat 0 -840px;
+}
+#iconFeature17 {
+  background: url(image/icon_search.gif) no-repeat 0 -400px;
+}
+#iconFeature18 {
+  background: url(image/icon_search.gif) no-repeat 0 -560px;
+}
+#iconFeature19 {
+  background: url(image/icon_search.gif) no-repeat 0 -160px;
+}
+#iconFeature20 {
+  background: url(image/icon_search.gif) no-repeat 0 0px;
+}
+#iconFeature21 {
+  background: url(image/icon_search.gif) no-repeat 0 -120px;
+}
+#iconFeature22 {
+  background: url(image/icon_search.gif) no-repeat 0 -880px;
+}
+#iconFeature23 {
+  background: url(image/icon_search.gif) no-repeat 0 -440px;
+}
+#iconFeature24 {
+  background: url(image/icon_search.gif) no-repeat 0 -920px;
+}
+
+/*-------------end guide_area1_feature-----------*/
+/*-------------begin guide_area1_job-----------*/
+#guideTTLArea h2.job {
+  background: url(image/guide_icon_job.png) no-repeat 0 center;
+  float: left;
+  width: 200px;
+}
+
+.blueBox ul.jobList li {
+  float: left;
+  width: 360px;
+  margin-bottom: 10px;
+}
+.searchBox_txt_type {
+  color: #888;
+  font-size: 11px;
+  display: block;
+  padding-top: 5px;
+}
+
+#iconType01 {
+  background: url(image/icon_search.gif) no-repeat 0 -960px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType02 {
+  background: url(image/icon_search.gif) no-repeat 0 -1200px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType03 {
+  background: url(image/icon_search.gif) no-repeat 0 -1160px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType04 {
+  background: url(image/icon_search.gif) no-repeat 0 -1240px;
+  padding-left: 25px;
+  padding-top: 3px; 
+}
+#iconType05 {
+  background: url(image/icon_search.gif) no-repeat 0 -1000px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType06 {
+  background: url(image/icon_search.gif) no-repeat 0 -1280px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType07 {
+  background: url(image/icon_search.gif) no-repeat 0 -1080px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType08 {
+  background: url(image/icon_search.gif) no-repeat 0 -1320px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType09 {
+  background: url(image/icon_search.gif) no-repeat 0 -1120px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType10 {
+  background: url(image/icon_search.gif) no-repeat 0 -1360px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType11 {
+  background: url(image/icon_search.gif) no-repeat 0 -1040px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+#iconType12 {
+  background: url(image/icon_search.gif) no-repeat 0 -1400px;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+/*-------------begin guide_area1_job-----------*/
+
+/*-------------begin guide_tohoku_feature/index.htm-----------*/
+
+/*-------------end guide_tohoku_feature/index.htm-----------*/
+
