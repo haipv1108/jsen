@@ -2909,10 +2909,6 @@ ul.listType2 li a {
     background-position: 0 -177px;
 }
 
-#guideBox .inner {
-    padding: 0 10px;
-}
-
 .blueTTL {
     border-left: 4px solid #6ca6e4;
     font-size: 13px;
@@ -3030,9 +3026,6 @@ ul.guideList1 li a {
     padding: 0;
 }
 
-#guideBox .inner {
-    padding: 0 10px;
-}
 
 form {
     margin: 0;
@@ -3958,3 +3951,63 @@ table {
 }
 
 /*------------end y.html---------------*/
+/*-------------begin guide_area1_line-----------*/
+#guideTTLArea h2.station {
+  background: url(image/guide_icon_sta.png) no-repeat 0 center;
+  float: left;
+  width: 200px;
+}
+
+#guideTTLArea ul {
+  float: right;
+  padding: 8px 0 0;
+}
+
+h3.inner{
+    background: url(123);
+}
+
+#line80 p, #line130 p, #line145 p {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+ul.guideList3 li {
+  float: left;
+  width: 265px;
+  padding: 5px 0;
+}
+
+ul.guideList3 li a, ul.guideList4 li a {
+  padding: 0 3px 0 0;
+}
+
+ul.guideList3 li {
+  float: left;
+  width: 265px;
+  padding: 5px 0;
+}
+
+.yellowBox {
+  background: #FFFFD3;
+  padding: 10px;
+  border: 1px solid #FFDBB8;
+  margin-bottom: 20px;
+}
+
+.yellowBox ul li {
+  float: left;
+  width: 265px;
+  padding: 5px 0;
+}
+
+.yellowBox ul li a {
+  background: url(image/guide_arrow_yellow.png) no-repeat 0 center;
+  padding: 0 0 0 13px;
+}
+/*-------------end guide_area1_line-----------*/
