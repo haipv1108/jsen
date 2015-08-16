@@ -2892,6 +2892,8 @@ ul.listType2 li a {
     overflow: hidden;
     padding: 0 0 0 40px;
 	color: #313131;
+    margin-left: 0;
+    width: 840px;
 }
 
 
@@ -2926,7 +2928,9 @@ ul.listType2 li a {
     padding: 2px 8px 2px;
     position: relative;
 	font-size: 12px;
-    margin: 0;
+    width: 790px;
+    height: 30px;
+    margin-left: 10px
 }
 
 ul.guideList1 {
@@ -4181,9 +4185,28 @@ ul.guideList3 li {
   padding-left: 25px;
   padding-top: 3px;
 }
-/*-------------begin guide_area1_job-----------*/
+/*-------------end guide_area1_job-----------*/
 
-/*-------------begin guide_tohoku_feature/index.htm-----------*/
 
-/*-------------end guide_tohoku_feature/index.htm-----------*/
+/*-------------begin guide_city1.htm-----------*/
+.guideTTLh3 p a {
+  background: url(image/guide_under_btn.png) no-repeat 0 0;
+  width: 145px;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  padding: 21px 0 0;
+  float: right;
+  margin-top: 5px;
+}
+.guideTTLh3 p a:hover {
+  background-position: -145px 0;
+}
+.guideTTLh3 p.p1 {
+    width: 300px;
+    float: left;
+    font-weight: bold;  
+    margin-top: 10px;
+}
+/*-------------end guide_city1.htm-----------*/
 
