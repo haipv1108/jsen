@@ -1,4 +1,4 @@
- <div id="mainContents">
+<div id="mainContents">
 <div id="mainContents">
     <base href="http://localhost/ci3/">
             <div id="article">
@@ -28,7 +28,12 @@
                                 </ul>
                             </div>
                             <div class="jList">
-
+                            <!-- check isset area vs prefecture -->
+                                <?php
+                                    if(isset($area) && !empty($area)){
+                                        if(isset($prefecture) && !empty($prefecture)){
+                                ?>
+                            <!-- print all prefect in any feature -->
                                 <?php foreach ($area as $ka => $va) {   ?>
                                 <dl>
                                     <dt>
@@ -39,15 +44,18 @@
                                         
                                              <?php foreach ($prefecture[$va['area_name']] as $kp => $vp) {?>
                                             <li>
-                                                <a href="<?php echo base_url();?>guide_area<?php echo $vp['id'];?>"><?php echo $vp['name'];?></a>
+                                                <a href="<?php echo base_url();?>guide_area/<?php echo $vp['id'];?>"><?php echo $vp['name'];?></a>
                                             </li>
-                                            <?php }
+                                            <?php }?>
 
-                                        echo "</ul>";
-                                    echo "</dd>";
-                                echo "</dl>";
-                                }?>       
-                                
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <?php }?>       
+                            <?php 
+                                }else{echo "can't load prefecture";}
+                                }else{echo "can't load area name";} 
+                            ?>
                             </div>
                         </div>
                     </div>
@@ -56,6 +64,10 @@
                             <div class="jMap">
                                 <h3>路線から探す</h3>
                                 <ul class="idTabs menu">
+                                <?php 
+                                if(isset($area) && !empty($area)){
+                                    if(isset($prefecture) && !empty($prefecture)){
+                                ?>
                                 <?php foreach ($area as $key => $value) { ?>
                                      <li class="jm0<?php echo $value['id'];?>">
                                         <a class="defaultLineSetter" href="<?php echo "area_page/".$value['area_name_furi'];?>"><?php echo $value['area_name'];?></a>
@@ -72,6 +84,10 @@
                                             });
                                         });
                                     </script>
+                                    <?php 
+                                        }else{echo "can't load prefecture";}
+                                        }else{echo "can't load area";}
+                                    ?>
                                 </ul>
                             </div>
 
@@ -79,6 +95,9 @@
 
                              <div class="jList">
 
+                                <?php if(isset($area) && !empty($area)){
+                                    if(isset($prefecture) && !empty($area)){
+                                ?>
                                 <?php foreach ($area as $ka => $va) {   ?>
                                 <dl>
                                     <dt>
@@ -89,15 +108,19 @@
                                         
                                              <?php foreach ($prefecture[$va['area_name']] as $kp => $vp) {?>
                                             <li>
-                                                <a href="<?php echo base_url();?>guide_area<?php echo $vp['id'];?>"><?php echo $vp['name'];?></a>
+                                                <a href="<?php echo base_url();?>guide_area/<?php echo $vp['id'];?>"><?php echo $vp['name'];?></a>
                                             </li>
-                                            <?php }
+                                            <?php }?>
 
-                                        echo "</ul>";
-                                    echo "</dd>";
-                                echo "</dl>";
-                                }?>       
-                            
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <?php }?>       
+                            <?php 
+                                }else{echo "can't load prefect";}
+                                }else{echo "can't load area";}
+                            ?> 
+
                             </div>
                     
                     </div>
@@ -124,8 +147,8 @@
                                 <ul>
                                 <?php foreach ($area as $key => $value) { ?>
                                     <li>
-                                        <a href="<?php echo base_url().$value['area_name_furi'];?>"><?php echo $value['area_name'];?></a>
-                                        (c_w)
+                                        <a href="<?php echo base_url()."area_page/".$value['area_name_furi'];?>"><?php echo $value['area_name'];?></a>
+                                        (123)
                                     </li>
                                 <?php }?> 
                                    
@@ -138,16 +161,21 @@
                         <p class="more"><a href="/guide_kanto_feature/">もっと見る</a></p>
                         <!-- Phan list nay viet code vao de in ra nha, t viet vi du vai cai thoi, cu viet code giong vi du la no tu in ra dung -->
                         <div class="pickuplist">
-                            <ul>
-
-                            <?php foreach ($feature as $key => $value) { ?> 
-                               <li>
-                                    <a href="/kanto/feature_<?php echo $value['feature_list'];?>"><?php echo $value['feature_list'];?></a>
-                                    (c_w)
-                                </li>                                                  
-                            <?php }?>
-
-                            </ul>
+                        <ul>
+                        <?php 
+                            if(isset($feature_name) && !empty($feature_name)){
+                                if(isset($count_work_feature) && !empty($count_work_feature)){
+                        ?>
+                            <?php foreach ($feature_name as $key => $value) { ?>
+                           <li>
+                                <a href="/kanto/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                (<?php echo $count_work_feature[$value['feature_name']];?>)                             
+                            </li>                                                  
+                                <?php }?>
+                            <?php 
+                                }else{echo "can't count work follow feature";}
+                            }else{echo "can't load feature";}?>
+                        </ul>
                         </div>
                     </div>
                     <div class="pickup02">
@@ -157,12 +185,19 @@
                         </p>
                         <div class="pickuplist">
                             <ul>
+                            <?php 
+                                if(isset($gwork) && !empty($gwork)){
+                            ?>
                                 <?php foreach ($gwork as $key => $value) { ?>
                                 <li>
-                                    <a href="user/kanto/special_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
-                                    (c_w)
+                                    <a href="user/kanto/special/<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                    (<?php echo $value['count_work'];?>)
                                 </li>
                             <?php }?>
+                            <?php 
+                                }else{echo "can't load group work";}
+                            ?>
+
                             </ul>
                         </div>
                     </div>
@@ -173,12 +208,20 @@
                         </p>
                         <div class="pickuplist">
                             <ul>
+                            <?php 
+                                if(isset($ninki_area) && !empty($ninki_area)){
+                                    if(isset($count_work_ninkiarea) && !empty($count_work_ninkiarea)){
+                            ?>
                             <?php foreach ($ninki_area as $key => $value) { ?>
                                 <li>
-                                    <a href="user/kanto/station_<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
-                                    (c_w)
+                                    <a href="user/kanto/station/<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
+                                    (<?php print_r($count_work_ninkiarea[$value['id']])?>)                           
                                 </li>
                             <?php }?>                             
+                            <?php
+                                }else{echo "can't count work follow ninki area";} 
+                                }else{echo "can't load ninki area";}
+                            ?>
                             </ul>
                         </div>
                     </div>
@@ -188,8 +231,28 @@
                         <a href="/guide_kanto_landmark/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
-                            <u>
-                            </u>
+                            <ul>
+                            <?php 
+                                if(isset($shop_name) && !empty($shop_name) && isset($feature_name) &&!empty($feature_name)){
+                                if(isset($count_work_feature) && !empty($count_work_feature) && isset($count_work_shop) && !empty($count_work_shop)){
+                            ?>
+                            <li>
+                                <a href="/kanto/feature/<?php echo $shop_name[0]['feature_name'];?>"><?php echo $shop_name[0]['feature_name']?></a>
+                                (<?php echo $count_work_shop[$shop_name[0]['feature_name']];?>)                             
+                            </li>
+                            <li>
+                                <a href="/kanto/feature/<?php echo $shop_name[6]['feature_name'];?>"><?php echo $shop_name[6]['feature_name']?></a>
+                                (<?php echo $count_work_shop[$shop_name[6]['feature_name']];?>)                             
+                            </li>
+                            <li>
+                                <a href="/kanto/feature/<?php echo $feature_name[9]['feature_name'];?>"><?php echo $feature_name[9]['feature_name']?></a>
+                                (<?php echo $count_work_feature[$feature_name[9]['feature_name']];?>)                             
+                            </li>                                                  
+                            <?php 
+                                }else{echo "can't count work follow biru to basyo";}
+                            }else{echo "can't load biru to basyo";}
+                            ?>
+                            </ul>    
                         </div>
                     </div>
                     <div class="pickup05">
@@ -198,8 +261,22 @@
                         <a href="/guide_kanto_bland/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
-                            <u>
-                            </u>
+                        <ul>
+                        <?php 
+                            if(isset($shop_name) && !empty($shop_name)){
+                            if(isset($count_work_shop) && !empty($count_work_shop)){
+                        ?>
+                            <?php foreach ($shop_name as $key => $value) { ?>
+                           <li>
+                                <a href="/kanto/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                (<?php echo $count_work_shop[$value['feature_name']];?>)                             
+                            </li>                                                  
+                            <?php }?>
+                            <?php 
+                            }else{echo "can't count work follow shop";}
+                            }else{echo "can't load shop, brand";}
+                            ?>
+                        </ul>
                         </div>
                     </div>
                 </div>

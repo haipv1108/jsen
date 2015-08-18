@@ -8,6 +8,9 @@
 	<meta name="author" content="Persiden.C.Kid" />
 
     <link rel="stylesheet" type="text/css" href="template/frontend/style.css"/>
+    <link rel="stylesheet" type="text/css" href="template/frontend/style_city.css"/>
+    <link rel="stylesheet" type="text/css" href="template/frontend/style_new_member.css"/>
+    <link rel="stylesheet" type="text/css" href="template/frontend/style_search.css"/>
     <meta http-equiv="Content-Language" content="ja">
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -152,17 +155,27 @@
                     </div>
                     <div class="naviArea">
                         <ul class="clearfix">
-						<?php if(isset($area)){?>
-							<?php foreach ($area as $ka => $va) {?>
-								<li id="navi<?php echo ucfirst($va['area_name_furi']);?>">
-									<a title="
-									<?php foreach ($prefecture[$va['area_name']] as $kp => $vp) {
-										echo $vp['name']." . ";
-									}?>
-									" href="<?php echo base_url()."area_page/".$va['area_name_furi'];?>"><?php echo $va['area_name'];?></a>
-								</li>    
-							<?php }?>
-						<?php }?>
+                            <li id="naviKanto">
+                                <a title=" 東京 . 神奈川 . 埼玉 . 千葉 . 茨城 . 栃木 . 群馬 ." href="<?php echo base_url();?>kanto">関東</a>
+                            </li>    
+                            <li id="naviTokai">
+                                <a title="愛知 . 岐阜 . 静岡 . 三重 ." href="<?php echo base_url();?>tokai">東海</a>
+                            </li>    
+                            <li id="naviKansai">
+                                <a title="大阪 . 兵庫 . 京都 . 滋賀 . 奈良 . 和歌山 ." href="<?php echo base_url();?>kansai">関西</a>
+                            </li>    
+                            <li id="naviTohoku">
+                                <a title="北海 . 青森 . 岩手 . 宮城 . 秋田 . 山形 . 福島 ." href="<?php echo base_url();?>tohoku">北海道・東北</a>
+                            </li>    
+                            <li id="naviChugoku">
+                                    <a title="鳥取 . 島根 . 岡山 . 広島 . 山口 . 徳島 . 香川 . 愛媛 . 高知 . " href="<?php echo base_url();?>chugoku">中国・四国</a>
+                            </li>    
+                            <li id="naviHokuriku">
+                                <a title="山梨 . 新潟 . 長野 . 富山 . 石川 . 福井 ." href="<?php echo base_url();?>hokuriku">甲信越・北陸</a>
+                            </li>    
+                            <li id="naviKyusyu">
+                                <a title="福岡 . 佐賀 . 長崎 . 熊本 . 大分 . 宮崎 . 鹿児島 . 沖縄 . " href="<?php echo base_url();?>kyusyu">九州・沖縄</a>
+                            </li>    
                         </ul>
                     </div>
                 </div>

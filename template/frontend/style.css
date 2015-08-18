@@ -41,6 +41,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, ol, div, img {
     display: table;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 body {
     color: #313131;
     font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS P Gothic",Verdana,sans-serif;
@@ -49,6 +54,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .clearfix::after{
     clear: both;
     content: "";
@@ -986,7 +992,7 @@ a:link{
 #mainPanel #selectMenu ul li.cb06 a{ background-position: -170px -265px;}
 
 #mainPanel #selectMenu ul li.cb01 a:hover,
-#mainPanel #selectMenu ul li.cb01 a.selected{ background-position: -401px -53px;}
+#mainPanel #selectMenu ul li.cb01 a.selected{ background-position: -401px 0px;}
 #mainPanel #selectMenu ul li.cb02 a:hover,
 #mainPanel #selectMenu ul li.cb02 a.selected{ background-position: -401px -53px;}
 #mainPanel #selectMenu ul li.cb03 a:hover,
@@ -3058,6 +3064,9 @@ ul.guideList3, ul.guideList4 {
     margin-bottom: 5px;
     padding: 0 10px 10px;
 }
+ul.guideList3 li a, ul.guideList4 li a {
+    padding: 0 3px 0 0;
+}
 
 .guideSearchBtn, .timeSearchBtn {
     border-bottom: 1px solid #c1dbf5;
@@ -3126,3 +3135,826 @@ ul.guideList3, ul.guideList4 {
 #joinUs_base a:hover{
 	background: rgba(0, 0, 0, 0) url("image/joinUs_batton.png") no-repeat scroll -435px 0;
 }
+/*------------start y.html---------------*/
+
+#main{
+    width: 786px;
+    margin: 0 auto;
+}
+
+#searchDetailBox{
+    width:  786px;
+}
+
+#searchDetailBox .iwaikin {
+  float: right;
+  margin: 0;
+  padding: 0 5px 2px 0;
+}
+
+#searchDetailBox .baito .bnr5000 {
+  background-position: 0 -1305px;
+}
+
+#searchDetailBox .iwaikin span {
+  display: inline-block;
+  width: 339px;
+  height: 0;
+  margin-right: 12px;
+  padding-top: 45px;
+  background: url(image/img_iwaikin_parts.png) no-repeat 0 -45px;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+#searchDetailBox .iwaikin a {
+  display: inline-block;
+  padding: 0 0 4px 10px;
+  background: url(image/img_detailbox_parts.png) no-repeat 0 -271px;
+  line-height: 1.5;
+  vertical-align: bottom;
+}
+
+#searchDetailBox h2 {
+  clear: both;
+  height: 31px;
+  background: url(image/img_detailbox_parts.png) no-repeat 0 0;
+  font-size: 116%;
+  line-height: 31px;
+  width: 786px;
+  margin 0;
+}
+
+#searchDetailBox h2 a {
+  display: inline-block;
+  max-width: 580px;
+  padding: 0 12px 0 10px;
+  color: #fff !important;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+#searchDetailBox .icon {
+  display: inline-block;
+  height: 0;
+  padding-top: 20px;
+  background: url(image/img_result_parts.png) no-repeat 0 0;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+#searchDetailBox #siteShare li {
+    float: left;
+    padding-left: 10px;
+}
+
+
+.fb_iframe_widget {
+    display: inline-block;
+    position: relative;
+}
+
+.fb_iframe_widget span {
+    display: inline-block;
+    position: relative;
+    text-align: justify;
+}
+
+#searchDetailBox .iconPickup {
+  width: 40px;
+  background-position: -55px 0;
+}
+
+#headerPopup, #headerBread, .clearfix {
+    display: block;
+}
+#searchDetailBox #siteShare {
+    background-color: #fff;
+    background-image: linear-gradient(#ffffff 60%, #f9faf9 100%);
+    background-size: 100% auto;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 25px;
+    padding: 8px 0 3px;
+}
+
+#headerPopup::after, #headerBread::after, .clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+ul::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+#searchDetailBox #siteShare ul {
+    float: right;
+    padding-left: 40px;
+}
+
+
+#searchDetailBox #column {
+    margin-bottom: 20px;
+	height: 360px;
+	
+}
+
+#searchDetailBox  #column .colR {
+    float: right;
+    width: 357px;
+}
+
+#searchDetailBox #infoPoint {
+    padding: 0 0 0 9px;
+}
+#searchDetailBox .box {
+    margin-bottom: 15px;
+    padding: 0 12px;
+}
+
+
+#searchDetailBox #infoPoint h3 {
+    margin: 0 0 10px -9px;
+}
+#searchDetailBox .box h3 {
+    background: rgba(0, 0, 0, 0) url("image/img_detailbox_parts.png") no-repeat scroll 0 -166px;
+    display: block;
+    height: 0;
+    line-height: normal;
+    margin: 0 -12px 10px;
+    overflow: hidden;
+    padding-top: 20px;
+    width: 357px;
+}
+
+
+#searchDetailBox #infoPoint li {
+    background: rgba(0, 0, 0, 0) url("image/icon_detailbox_parts.png") no-repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 0;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-top: 26px;
+    width: 174px;
+}
+
+
+#searchDetailBox #infoPoint li.age {
+    background-position: 0 -80px;
+}
+#searchDetailBox #infoPoint li.school {
+    background-position: 0 -520px;
+} 	
+
+#searchDetailBox #infoPoint li.people {
+    background-position: 0 -320px;
+}
+
+#searchDetailBox #infoPoint li.uniform {
+    background-position: 0 -280px;
+}
+
+#searchDetailBox #infoPoint li.unexperienced {
+    background-position: 0 -160px;
+}
+
+
+#searchDetailBox .box {
+    margin-bottom: 15px;
+    padding: 0 12px;
+}
+
+#searchDetailBox .box h3 {
+    background: rgba(0, 0, 0, 0) url("image/img_detailbox_parts.png") no-repeat scroll 0 -166px;
+    display: block;
+    height: 0;
+    line-height: normal;
+    margin: 0 -12px 10px;
+    overflow: hidden;
+    padding-top: 20px;
+    width: 357px;
+}
+
+
+#searchDetailBox #infoJobs h3 {
+    background-position: 0 -241px;
+}
+
+
+#searchDetailBox #infoJobs dt {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+
+#searchDetailBox #infoJobs dt span {
+    background: rgba(0, 0, 0, 0) url("image/img_result_parts.png") no-repeat scroll -262px 2px;
+    padding-left: 14px;
+}
+
+
+#searchDetailBox #infoJobs dd {
+    margin-left: 14px;
+    padding-bottom: 0.35em;
+}
+
+
+#searchDetailBox #infoJobs dd em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+#searchDetailBox #infoArea h3 {
+    background-position: 0 -216px;
+}
+
+
+#searchDetailBox  #column .colL {
+    float: left;
+    padding: 0 5px;
+    width: 401px;
+}
+
+
+#searchDetailBox .colL .pct {
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    height: 310px;
+    margin: 0 -5px;
+    overflow: hidden;
+    text-align: center;
+    width: 410px;
+}
+
+
+#searchDetailBox .colL .pct img {
+    height: 300px;
+    margin: 5px;
+    overflow: hidden;
+    width: 400px;
+}	
+
+
+#searchDetailBox .colL p strong {
+    color: #f25111;
+}
+
+.btnEntryWrap {
+  width: 786px;
+  margin: 0 auto 30px;
+}
+
+div {
+	display: block;
+}
+
+.btnEntryV03 {
+  padding: 0 10px;
+  border: 1px solid #e5e5e5;
+  border-bottom-color: #dfeaf7;
+  background-color: #eff4fa;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(#eff4fa,#fbfdfe);
+  background-image: -webkit-linear-gradient(#eff4fa,#fbfdfe);
+  background-image: linear-gradient(#eff4fa,#fbfdfe);
+  box-shadow: 0 0 0 1px #fff inset;
+}
+
+.btnEntryV03 .bListA, .btnEntryV03 .bListDelA, .btnEntryV03 .bListLinkA {
+    float: left;
+    padding-top: 20px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.bListA a, .bListDelA a, .bListLinkA a {
+    padding-top: 29px;
+    width: 177px;
+}
+
+.bListA a:hover {
+  background-position: 0 -34px;
+}
+
+.btnEntryV03 a {
+    background: rgba(0, 0, 0, 0) url("image/detail_btn_parts.png") no-repeat scroll 0 0;
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.btnEntryV03 .bWeb55sec {
+    float: right;
+}
+
+
+.bWeb55sec a {
+    background-position: -182px 0;
+    padding-top: 67px;
+    width: 295px;
+}
+
+.bWeb55sec a:hover {
+    background-position: -182px -72px;
+    padding-top: 67px;
+    width: 295px
+}
+
+#headerPopup:after, #headerBread:after, .clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+#photoBox {
+  margin-bottom: 5px;
+}
+
+#photoBox h3 {
+  position: relative;
+  width: 786px;
+  height: 31px;
+  margin-bottom: 10px;
+  padding-left: 0;
+  background: none;
+  margin-left: 0;
+}
+
+#photoBox h3 span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(image/h_photo.gif) no-repeat 0 0;
+}
+
+#photoBox .photoTable {
+  width: 786px;
+  height: 150px;
+  background: url(image/bg_photo.gif) no-repeat 0 0;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th, td {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+td, th {
+  display: table-cell;
+  vertical-align: inherit;
+}
+#photoBox .photoTable th {
+  width: 192px;
+  padding: 5px 5px 10px 5px;
+  background: url(image/bg_photo_bottom.gif) no-repeat 0 100%;
+  vertical-align: middle;
+}
+
+#photoBox .photoTable th table {
+  margin: 0 auto;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+#photoBox .photoTable td.photoTxt {
+  padding: 10px 15px 15px 5px;
+  background: url(image/bg_photo_bottom.gif) no-repeat 100% 100%;
+  vertical-align: middle;
+}
+
+#photoBox .photoTitle {
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  background: url(image/line_dot.gif) repeat-x 0 100%;
+  color: #f34805;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 133%;
+}
+
+#photoBox .photoTitle img {
+  padding-right: 3px;
+}
+
+#entryBox {
+  display: inline-block;
+  width: 786px;
+}
+#entryBox .leftBox {
+  width: 460px;
+}
+.leftBox {
+  float: left;
+}
+
+#entryBox .leftBox h3 {
+  background: url(image/h_job.gif) no-repeat 0 0;
+  width: 460px;
+  margin-left: 0;
+}
+
+h4 {
+  display: block;
+  -webkit-margin-before: 1.33em;
+  -webkit-margin-after: 1.33em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
+#entryBox h4 {
+  width: 445px;
+  height: 19px;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+  padding-top: 3px;
+  padding-left: 18px;
+  background: url(image/bg_h.gif) no-repeat 0 0;
+  font-size: 12px;
+}
+
+#entryBox table {
+  width: 100%;
+  margin-bottom: 15px;
+  border-top: 1px solid #9a9a9a;
+  line-height: 133%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#entryBox .leftBox table th, #entryBox .rightBox table th {
+  width: 78px;
+}
+
+#entryBox table th {
+  width: 110px;
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid #9a9a9a;
+  background: #f0f0f0 url(image/line_white.gif) repeat-x 0 0;
+  font-weight: bold;
+  text-align: right;
+}
+
+#entryBox table td {
+  padding: 8px;
+  border-bottom: 1px solid #9a9a9a;
+}
+
+
+#entryBox::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rightBox {
+  float: right;
+  width: 310px;
+}
+
+#entryBox .rightBox h3 {
+  width: 310px;
+  background: url(image/h_entry.gif) no-repeat 0 0;
+  margin-left: 0;
+}
+
+#entryBox td.iwaikinCel span {
+  display: block;
+  float: left;
+  padding-top: 5px;
+  color: #ff3200;
+  font-weight: bold;
+}
+
+#entryBox td.iwaikinCel a {
+  float: right;
+  min-height: 20px;
+  padding: 6px 0 0 35px;
+  background: url(image/img_detailbox_parts.png) no-repeat 0 -334px;
+}
+
+.sliderBoxOne {
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+}
+
+#wapper .sliderBoxOne h3.otherArbeitTTL {
+  display: block;
+  width: auto;
+  min-height: 35px;
+  margin: 20px 0 0;
+  padding: 10px 0 0 45px;
+  border-bottom: 1px dotted #ccc;
+  background: url(image/icon_check.png) no-repeat 0 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sliderBoxOne .sliderDetails {
+  width: 710px;
+  height: 265px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.sliderBoxOne .sliderDetails ul {
+  width: 720px;
+  height: 265px;
+  overflow: hidden;
+}
+
+.sliderBoxOne .sliderDetails li {
+  float: left;
+  width: 720px;
+  height: 265px;
+  overflow: hidden;
+}
+
+.sliderDetails .inner {
+  margin-bottom: 15px;
+}
+
+.sliderDetails .companyBox {
+  display: block;
+  float: left;
+  width: 134px;
+  margin: 0 5px 0 4px;
+  padding: 0;
+}
+
+.sliderDetails .companyBox .photo a img {
+  width: 130px;
+  border: 1px solid #ccc;
+}
+.sliderDetails .companyBox .photo img {
+  padding: 1px;
+}
+
+.sliderDetails .companyBox dl.type {
+  width: 134px;
+  height: 23px;
+  margin: 0;
+  padding: 0;
+  background: #e0eefc;
+}
+
+.sliderDetails .companyBox dl.type dt {
+  float: left;
+  width: 70px;
+  margin: 0;
+  padding: 3px 5px;
+  font-size: 10px;
+}
+
+.sliderDetails .companyBox dl.type dt span {
+  padding: 3px 0 3px 15px;
+  background: url(image/detail_slider.png) no-repeat -148px -453px;
+}
+
+.sliderDetails .companyBox dl.type dd {
+  float: right;
+  width: 45px;
+  margin: 0;
+  padding: 3px 5px 3px 0;
+  font-size: 10px;
+}
+
+.sliderDetails .detail p {
+  height: 17px;
+  margin: 5px 0;
+  font-size: 10px;
+  overflow: hidden;
+}
+
+.sliderDetails .detail .shop {
+  height: 33px;
+  padding: 0 0 0 16px;
+  border-bottom: 1px solid #ddd;
+  background: url(image/detail_slider.png) no-repeat -148px 0;
+  overflow: hidden;
+}
+
+.sliderDetails .detail .jikyu {
+  padding: 0 0 0 16px;
+  border-bottom: 1px solid #ddd;
+  background: url(/img/detail/detail_slider.png) no-repeat -148px -113px;
+}
+
+.sliderDetails .detail .area {
+  padding: 0 0 0 16px;
+  border-bottom: 1px solid #ddd;
+  background: url(/img/detail/detail_slider.png) no-repeat -148px -226px;
+}
+
+.sliderDetails .detail .sta {
+  padding: 0 0 0 16px;
+  border-bottom: 1px solid #ddd;
+  background: url(/img/detail/detail_slider.png) no-repeat -148px -339px;
+}
+
+
+#connectionBox {
+  width: 786px;
+  margin: 0 auto 15px;
+  padding-top: 28px;
+  background: url(image/bg_connection.gif) no-repeat 0 0;
+}
+
+#connectionBoxBottom {
+  width: 786px;
+  padding-bottom: 6px;
+  background: url(image/bg_connection.gif) no-repeat 0 100%;
+}
+#connectionBox #connectionArbeit {
+  width: 773px;
+  margin: 0 auto 5px auto;
+  background: url(image/bg_jsen_nologo.gif) no-repeat 0 100%;
+}
+
+#connectionBox #connectionArbeit h4 {
+  background: url(image/bg_jsen.gif) no-repeat 0 0;
+}
+
+#connectionBox h4 {
+  width: 749px;
+  height: 32px;
+  margin: 0;
+  padding-top: 11px;
+  padding-left: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 110%;
+}
+
+#connectionBox ul {
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding: 0 12px 10px;
+}
+
+#connectionBox li {
+  display: inline;
+  padding-right: 8px;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+#connectionBox li img {
+  padding-right: 2px;
+  padding-bottom: 3px;
+  vertical-align: middle;
+}
+
+#bottomBox {
+  width: 786px;
+  margin: 0 auto;
+  padding: 10px 0 20px;
+  background: url(image/line_dot_blue.gif) repeat-x 0 0;
+}
+#bottomLayout {
+  width: 786px;
+  margin: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#leftLayout {
+  width: 111px;
+  padding: 0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#bottomLogo {
+  width: 100px;
+}
+#bottomLogo td {
+  width: 100px;
+  height: 100px;
+  background: url(image/bg_logo.gif) no-repeat 0 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#bottomBox h4 {
+  margin: 0 0 5px 0;
+  padding: 0;
+  color: #389ef3 !important;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 120%;
+  text-decoration: none;
+  cursor: default;
+}
+
+#bottomBox h4 a {
+  color: #389ef3 !important;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 120%;
+  text-decoration: none;
+  cursor: default;
+}
+
+#bottomBox table.bottomTable {
+  width: 675px;
+  border-top: 1px solid #9a9a9a;
+  line-height: 133%;
+}
+
+#bottomBox table.bottomTable th {
+  width: 15%;
+  padding: 6px 8px 6px 0;
+  border-bottom: 1px solid #9a9a9a;
+  background: #f0f0f0 url(image/line_white.gif) repeat-x 0 0;
+  font-size: 11px;
+  text-align: right;
+}
+
+#bottomBox table.bottomTable td {
+  width: 35%;
+  padding: 6px 8px;
+  border-bottom: 1px solid #9a9a9a;
+  font-size: 11px;
+}
+
+
+
+
+
+
+
+.infoBox {
+  width: 746px;
+  margin: 0 auto 20px;
+  padding: 15px 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+.infoBox h3 {
+  margin: 0 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #9a9a9a;
+  color: #666;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.infoBox p {
+  font-size: 11px;
+}
+
+.infoBox p:last-child {
+  margin-bottom: 0;
+}
+
+.infoBox .hedge {
+  color: #333;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 11px;
+}
+
+/*------------end y.html---------------*/
