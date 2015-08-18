@@ -3090,6 +3090,13 @@ ul.guideList3 li a, ul.guideList4 li a {
     margin-bottom: 0;
     padding: 15px 0;
 }
+#resultBox3 p {
+    border-bottom: 2px solid #29a1ec;
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 15px 0;
+}
 
 #joinUs_base {
     background: rgba(0, 0, 0, 0) url("image/joinUs_brandNew_bg.png") no-repeat scroll 0 0;
@@ -4210,3 +4217,1265 @@ ul.guideList3 li {
 }
 /*-------------end guide_city1.htm-----------*/
 
+/*-------------begin city3.html-------------*/
+#searchPanel {
+    background: url("image/search_outer_mid.png") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+    width: 840px;
+}
+
+#searchPanel .searchPanelInner {
+    background: url("image/search_outer_top.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    padding-top: 7px;
+}
+
+#searchPanel .searchPanelInner2 {
+    background: url("image/search_outer_bottom.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
+    padding: 0 8px 12px;
+}
+.searchWhiteBox {
+    background: url("image/panel_white_mid.png") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.searchWhiteBox .bgTop {
+    background: url("image/panel_white_top.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding-top: 7px;
+}
+
+.searchWhiteBox .inner {
+    background: url("image/panel_white_btm.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
+    border: medium none;
+    padding: 0 12px 3px;
+}
+
+#topSection {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+#topSection .jobStaSelect {
+    float: left;
+    width: 560px;
+}
+
+#topSection .jobStaSelect ul li {
+    float: left;
+}
+
+#topSection .jobStaSelect ul li.jobSelect p {
+    background-position: 0 -178px;
+}
+
+#topSection .jobStaSelect ul li.jobSelect p, #topSection .jobStaSelect ul li.staSelect p, #topSection .jobStaSelect ul li.timeSelect p {
+    background: url("image/search_panel_ttl.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding: 28px 0 0;
+    width: 93px;
+}
+
+#topSection .jobStaSelect ul li a.selectBtn {
+    background: url("image/search_panel_btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 0;
+    margin: 3px 10px 0 0;
+    overflow: hidden;
+    padding: 20px 0 0;
+    width: 73px;
+}
+
+#topSection .jobStaSelect2 .staTTL, #topSection .jobStaSelect2 .jobAreaTTL, #topSection .jobStaSelect2 .timeAreaTTL {
+    float: left;
+    width: 110px;
+}
+
+
+
+#topSection .jobStaSelect2 .jobAreaTTL p, #topSection .jobStaSelect2 .staTTL p, #topSection .jobStaSelect2 .timeAreaTTL p {
+    background: url("image/search_panel_ttl.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 28px 0 0;
+    width: 93px;
+}
+#topSection #jobCheckTable table th p, #topSection .jobStaSelect2 .jobAreaTTL p{
+    background-position: 0 -178px;
+}
+
+#topSection .jobStaSelect2 .staTTL a, #topSection .jobStaSelect2 .jobAreaTTL a {
+    background: url("image/search_panel_btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 20px 0 0;
+    width: 103px;
+}
+
+#topSection .jobStaSelect2 .jobAreaTTL a, #topSection .jobStaSelect2 a.staBtnSmall {
+    background-position: -263px -50px;
+}
+
+
+#topSection .jobStaSelect2 a.timeBtnSmall {
+    background-position: -582px -50px;
+}
+
+#topSection .jobStaSelect2 .mainListArea {
+    border-left: 1px solid #99BCE3;
+    float: left;
+    min-height: 115px;
+    width: 680px;
+}
+
+#matchNumber {
+    height: 29px;
+    letter-spacing: -0.4em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    white-space: nowrap;
+}
+
+#matchNumber .matchTTL {
+    background: url("image/match_number_back.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 29px 0 0;
+    width: 74px;
+}
+#matchNumber .matchTTL, #matchNumber .matchNum, #matchNumber .matchUnit {
+    display: inline-block;
+    letter-spacing: normal;
+    vertical-align: top;
+}
+#matchNumber .matchNum {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    margin: 0 0 0 4px;
+    text-align: center;
+}
+
+#matchNumber .matchNum span:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+
+#matchNumber .matchNum .num0, #matchNumber .matchNum .num1, #matchNumber .matchNum .num2, #matchNumber .matchNum .num3, #matchNumber .matchNum .num4, #matchNumber .matchNum .num5, #matchNumber .matchNum .num6, #matchNumber .matchNum .num7, #matchNumber .matchNum .num8, #matchNumber .matchNum .num9 {
+    background: url("image/match_number.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding: 27px 0 0;
+    width: 22px;
+}
+
+#matchNumber .matchNum .num0 {
+    background-position: 0 0;
+}
+
+#matchNumber .matchNum .num1 {
+    background-position: 0 -28px;
+}
+
+#matchNumber .matchNum .num2 {
+    background-position: 0 -56px;
+}
+
+#matchNumber .matchNum .num3 {
+    background-position: 0 -84px;
+}
+
+#matchNumber .matchNum .num4 {
+    background-position: 0 -112px;
+}
+
+#matchNumber .matchNum .num5 {
+    background-position: 0 -140px;
+}
+
+#matchNumber .matchNum .num6 {
+    background-position: 0 -168px;
+}
+
+#matchNumber .matchNum .num7 {
+    background-position: 0 -196px;
+}
+
+#matchNumber .matchNum .num8 {
+    background-position: 0 -224px;
+}
+
+#matchNumber .matchNum .num9 {
+    background-position: 0 -252px;
+}
+
+
+#matchNumber .matchNum span:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+
+#matchNumber .matchUnit {
+    font-weight: bold;
+    padding: 13px 0 0 4px;
+}
+
+
+#midSection table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#midSection table th {
+    background: none repeat scroll 0 0 #F3F8FC;
+    border-bottom: 1px solid #99BCE3;
+    border-right: 1px solid #99BCE3;
+    border-top: 1px solid #99BCE3;
+    padding: 6px 10px;
+    text-align: right;
+}
+
+#midSection .jobTTL {
+    background-position: 0 0;
+    margin-left: 30px;
+    width: 48px;
+}
+
+#midSection table th {
+    background: none repeat scroll 0 0 #F3F8FC;
+    border-bottom: 1px solid #99BCE3;
+    border-right: 1px solid #99BCE3;
+    border-top: 1px solid #99BCE3;
+    padding: 6px 10px;
+    text-align: right;
+}
+
+
+#midSection table td {
+    border-bottom: 1px solid #99BCE3;
+    border-top: 1px solid #99BCE3;
+    padding: 6px 5px;
+}
+
+
+#midSection table td ul.li_job li {
+    float: left;
+    padding-bottom: 5px;
+}
+#midSection table td li.li_job01 {
+    width: 125px;
+}
+#midSection table td li.li_job02 {
+    width: 215px;
+}
+#midSection table td li.li_job03 {
+    width: 190px;
+}
+#midSection table td li.li_job04 {
+    width: 125px;
+}
+#midSection .sheet_type {
+    background: url("image/search_sub_dot.png") repeat-x scroll 0 0 #FAFCFE;
+    padding: 5px 10px;
+}
+
+#midSection table td.maneyTD {
+    padding: 6px 5px;
+    width: 18%;
+}
+
+#midSection table th.timeTH {
+    width: 108px;
+}
+
+#midSection .jobTTL, #midSection .priceTTL, #midSection .timeTTL, #midSection .freewordArea dt span {
+    background: url("image/search_panel_ttl.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 13px 0 0;
+}
+#midSection .timeTTL {
+    background-position: 0 -46px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 2px;
+    width: 85px;
+}
+
+#midSection table td.timeTD {
+    padding: 6px 0 6px 10px;
+    width: 52%;
+}
+
+ul.timeCheck li {
+    display: block;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+    width: 65px;
+}
+
+
+ul.timeCheck li label {
+    background: url("image/search_panel_btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding: 20px 0 0;
+    width: 55px;
+}
+
+ul.timeCheck li input {
+    left: -1000px;
+    position: absolute;
+}
+ul.timeCheck li.time1 label {
+    background-position: -263px 0;
+}
+ul.timeCheck li.time2 label {
+    background-position: -318px 0;
+}
+ul.timeCheck li.time3 label {
+    background-position: -373px 0;
+}
+ul.timeCheck li.time4 label {
+    background-position: -428px 0;
+}
+ul.timeCheck li.time5 label {
+    background-position: -483px 0;
+}
+ul.timeCheck li.time6 label {
+    background-position: -538px 0;
+}
+#freeOption {
+    padding: 10px 0;
+}
+
+#freeOption .freewordArea {
+    float: left;
+}
+
+#freeOption .freewordArea dt {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 112px;
+}
+
+#freeOption .freewordArea dt span {
+    background-position: 0 -83px;
+    display: inline-block;
+    width: 85px;
+}
+
+
+#freeOption .freewordArea dd input {
+    background-color: #FFFFFF;
+    border: 1px inset #CCCCCC;
+    border-radius: 2em;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15) inset;
+    line-height: 1;
+    padding: 0.4em 0.75em;
+    width: 170px;
+}
+
+#freeOption .txt {
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 25px;
+    padding-right: 10px;
+}
+
+#freeOption .optionOpenBtn, #freeOption .optionCloseBtn {
+    float: left;
+}
+
+#optionTable {
+    background: url("image/panel_white_top.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding-top: 10px;
+}
+
+
+#optionTable dl dt {
+    border-right: 1px solid #99BCE3;
+    float: left;
+    margin-bottom: 3px;
+    padding: 2px 5px 2px 0;
+}
+
+
+#optionTable dl dd {
+    float: left;
+    margin-bottom: 3px;
+    padding: 0 5px 2px;
+}
+
+.searchSort {
+    display: table;
+    margin-bottom: 7px;
+    padding-top: 10px;
+}
+
+
+#optionTable dl dt .workDayTTL {
+    background-position: 0 -106px;
+    width: 72px;
+}
+.workDayTTL, .workTimeTTL, .featureTTL, .areaTTL {
+    background: url("image/search_panel_ttl.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 13px 0 0;
+}
+
+
+#optionTable dl dd select {
+    width: 135px;
+}
+
+
+#optionTable dl dt .workTimeTTL {
+    background-position: 0 -129px;
+    width: 72px;
+}
+
+
+#optionTable dl dt .featureTTL {
+    background-position: 0 -152px;
+    width: 48px;
+}
+
+#optionTable ul {
+    border-top: 1px solid #99BCE3;
+    padding: 5px 5px 10px;
+    width: 800px;
+}
+
+#optionTable ul li {
+    float: left;
+    padding-right: 10px;
+}
+
+
+#searchPanel .underSection {
+    position: relative;
+}
+
+#searchPanel .underSection p.actionP_02 {
+    background: url("image/actionPointer_02.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    left: 256px;
+    overflow: hidden;
+    padding: 36px 0 0;
+    position: absolute;
+    top: 2px;
+    width: 72px;
+}
+#searchPanel .underSection p {
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+
+#searchPanel .underSection p {
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+
+#searchPanel .underSection p input {
+    text-align: center;
+}
+
+
+#searchPanel .underSection .txtLink {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+}
+
+#searchPanel .underSection .txtLink a {
+    background: url("image/icon_arrow.png") no-repeat scroll 0 50% rgba(0, 0, 0, 0);
+    display: inline-block;
+    line-height: normal;
+    min-height: 19px;
+    padding: 0 0 0 20px;
+}
+
+#topSection .jobStaSelect2 .mainListArea ul.itemList {
+    overflow: hidden;
+    padding-left: 5px;
+}
+
+#topSection .jobStaSelect2 .mainListArea .detailBtnArea {
+    text-align: right;
+}
+
+#topSection .jobStaSelect2 .mainListArea ul.itemList li {
+    float: left;
+    margin-bottom: 5px;
+    width: 162px;
+}
+
+a.reSelectBtnMin {
+    background: url("image/search_panel_btn.png") no-repeat scroll -324px -225px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    padding: 19px 0 0;
+    vertical-align: bottom;
+    width: 60px;
+}
+
+#topSection .jobStaSelect2 .mainListArea .selectedArea {
+    margin: 10px 0 15px;
+    padding-left: 10px;
+}
+#topSection .jobStaSelect2 .mainListArea .selectedArea a {
+    color: #7292C5;
+}
+
+#topSection .jobStaSelect2 .mainListArea .selectedArea strong {
+    font-size: 117%;
+}
+#topSection .jobStaSelect2 .mainListArea .detailBtnArea a.moreDetail, #topSection .jobStaSelect2 .mainListArea .detailBtnArea a.closeDetail {
+    background: url("image/search_panel_btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 18px;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+#topSection .jobStaSelect2 .mainListArea .detailBtnArea a.moreDetail {
+    background-position: 0 -294px;
+}
+
+
+#freeOption .freewordArea dd {
+    border-left: 1px solid #99BCE3;
+    display: table-cell;
+    height: 23px;
+    padding-left: 7px;
+    vertical-align: middle;
+}
+#freeOption .optionBtnArea {
+    float: right;
+}
+
+#freeOption .optionCloseBtn a {
+    background: url("image/search_panel_btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 25px 0 0;
+    width: 170px;
+}
+
+#freeOption .optionCloseBtn a {
+    background-position: 0 -50px;
+}
+
+ /*tam ngung o day*/
+.searchSort .txt {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+    padding: 0.5em 1em 0.4em 0.75em;
+    text-align: center;
+}
+.searchSort .txt, .searchSort .tabs, .searchSort .tabs li {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.searchSort .tabs {
+    border-left: 1px dotted #ccc;
+}
+.searchSort .txt, .searchSort .tabs, .searchSort .tabs li {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.searchSort .tabs li {
+    border-right: 1px dotted #ccc;
+    padding: 0 10px;
+}
+.searchSort .txt, .searchSort .tabs, .searchSort .tabs li {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.searchSort .tabs li a:hover, .searchSort .tabs li a.current {
+    background-color: #31b0f5;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+}
+.searchSort .tabs li a {
+    color: #31b0f5;
+    display: block;
+    font-size: 14px;
+    padding: 0.5em 1em 0.4em;
+    text-align: center;
+}
+.searchPager {
+    border-top: 1px solid #ddd;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03) inset;
+    display: table;
+    width: 100%;
+}
+
+.searchPager .col1, .searchPager .col2 {
+    display: table-cell;
+    padding-top: 13px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+
+.searchPager .col1 p {
+    font-weight: bold;
+}
+
+.searchPager .col2 {
+    text-align: right;
+}
+
+.searchPager .pagination::after {
+    content: "";
+    display: table;
+}
+
+
+.searchPager .pagination li.current {
+    background-color: #31b0f5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    height: 24px;
+    line-height: normal;
+    min-width: 24px;
+    padding: 0.3em 5px 0;
+    text-align: center;
+}
+.searchPager .pagination li {
+    float: right;
+    margin-left: 3px;
+
+}
+
+
+.searchPager .pagination li > a {
+    box-sizing: border-box;
+    color: #31b0f5;
+    display: block;
+    height: 24px;
+    line-height: normal;
+    min-width: 24px;
+    padding: 0.3em 5px 0;
+    text-align: center;
+}
+.favoriteMeritBox {
+    background: rgba(0, 0, 0, 0) url("image/img_favorite_merit.png") no-repeat scroll 0 0;
+    border: 3px solid #98d7fa;
+    border-radius: 5px;
+    height: 59px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 10px 15px 10px 240px;
+    margin-top: 10px;
+}
+
+
+.favoriteMeritBox .p_h2 {
+    color: #f60;
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.favoriteMeritBox p {
+    margin: 0;
+}
+
+
+.favoriteMeritBox a {
+    color: #31b0f5;
+}
+
+.searchResultBox {
+    border: 3px solid #3d9eea;
+    border-radius: 6px;
+    line-height: 1.4;
+    margin: 30px 0;
+    padding-bottom: 10px;
+}
+.clearfix::after, #afterSearchBox ul li::after, .afterSearchBox2 .plusSearch ul li::after, #topSection .jobStaSelect2 .mainListArea .stationSlider li p::after, .footerExptalk .blueLink::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.searchResultBox #searchResultBox_h2 {
+    background: rgba(0, 0, 0, 0) linear-gradient(#3891e9, #2278d4) repeat scroll 0 0;
+    border-radius: 6px 6px 0 0;
+    font-size: 100%;
+    margin: -2px -2px 15px;
+    padding: 5px 0 5px 15px;
+}
+
+.searchResultBox #searchResultBox_h2 a {
+    color: #fff !important;
+    float: left;
+    font-size: 116%;
+    margin-right: 10px;
+    padding-top: 2px;
+    text-decoration: none;
+}
+
+.searchResultBox .iconPickup {
+    background-position: -55px 0;
+    width: 70px;
+}
+.searchResultBox .icon {
+    background: rgba(0, 0, 0, 0) url("image/img_result_parts.png") no-repeat scroll -55px 0;
+    display: block;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.searchResultBox .lead {
+    background: rgba(0, 0, 0, 0) url("image/line_dashed.gif") repeat-x scroll 0 100%;
+    margin: 0 10px 10px;
+    padding-bottom: 10px;
+}
+.searchResultBox .lead .txt {
+    float: left;
+    font-size: 131%;
+    font-weight: bold;
+    margin: 0;
+    padding: 11px 0 0;
+    width: 687px;
+}
+
+.searchResultBox .lead .txt a {
+    float: left;
+    padding-left: 8px;
+    width: 593px;
+}
+
+.searchResultBox .lead .bnrBaito20000 {
+    background-position: 0 -1276px;
+}
+.searchResultBox .lead .iwaikin {
+    background: rgba(0, 0, 0, 0) url("image/img_iwaikin_parts1.png") no-repeat scroll 0 0;
+    float: right;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 44px;
+    width: 127px;
+}
+
+
+.searchResultBox .lead .bnrBaito20000 {
+    background-position: 0 -1276px;
+}
+
+
+.searchResultBox .info {
+    padding: 0 20px;
+}
+
+.searchResultBox .detail {
+    margin: 0 14px 10px;
+}
+.clearfix, #afterSearchBox ul li, .afterSearchBox2 .plusSearch ul li, #topSection .jobStaSelect2 .mainListArea .stationSlider li p, .footerExptalk .blueLink {
+    display: block;
+}
+
+.searchResultBox .detail table {
+    float: right;
+    width: 560px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.searchResultBox .detail .jobs {
+    padding-left: 28px;
+}
+.searchResultBox .detail th, .searchResultBox .detail td {
+    border-bottom: 1px solid #e7f2fd;
+    padding-right: 0;
+    word-break: break-all;
+}
+.searchResultBox td {
+    padding: 1em 10px;
+}
+th, td {
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+
+.searchResultBox .job {
+    display: table-row;
+}
+
+
+.searchResultBox .job dt {
+    background: rgba(0, 0, 0, 0) url("image/img_result_parts.png") no-repeat scroll -262px 6px;
+    display: table-cell;
+    font-weight: bold;
+    padding: 3px 1em 3px 14px;
+    white-space: nowrap;
+}
+
+.searchResultBox .job dd {
+    display: table-cell;
+    margin-left: 0;
+    padding: 3px 0;
+}
+
+
+.searchResultBox .detail th {
+    width: 110px;
+}
+.searchResultBox .detail th, .searchResultBox .detail td {
+    border-bottom: 1px solid #e7f2fd;
+    padding-right: 0;
+    word-break: break-all;
+}
+
+
+.searchResultBox .photoArea {
+    float: left;
+    padding: 14px 14px 14px 0;
+    width: 184px;
+}
+
+
+.searchResultBox .photoArea .photo {
+    border: 1px solid #c6d8e7;
+    border-radius: 2px;
+    height: 137px;
+    overflow: hidden;
+    text-align: center;
+    width: 182px;
+}
+
+
+.searchResultBox .prArea {
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.mod-horizontal-btns {
+    background-color: #f5fbff;
+    border: 1px solid #ecf4fb;
+    border-radius: 5px;
+    padding: 10px 5px;
+    position: relative;
+}
+
+.mod-horizontal-btns .btns {
+    display: table;
+    margin: 0 auto;
+}
+
+.searchResultBox .favoriteMeritPopup {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #98d7fa;
+    border-radius: 5px;
+    box-shadow: 0 1px 8px #999;
+    display: none;
+    left: 7%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 180px;
+}
+
+i[class*="mod-icon-"]::before {
+    margin-right: 0;
+}
+[class*="mod-icon-"]::before {
+    font-size: 1.4em;
+    margin-right: 5px;
+    vertical-align: -14%;
+}
+.mod-icon-star-o::before {
+    content: "";
+}
+[data-icon]::before, .mod-icon-60s::before, .mod-icon-building::before, .mod-icon-calendar::before, .mod-icon-camera::before, .mod-icon-camera-o::before, .mod-icon-check::before, .mod-icon-check-o::before, .mod-icon-chevron-down::before, .mod-icon-chevron-down-o::before, .mod-icon-chevron-left::before, .mod-icon-chevron-right::before, .mod-icon-chevron-right-o::before, .mod-icon-chevron-up::before, .mod-icon-circle::before, .mod-icon-clock::before, .mod-icon-clock-o::before, .mod-icon-compass::before, .mod-icon-compass-o::before, .mod-icon-envelope::before, .mod-icon-envelope-o::before, .mod-icon-exclamation-triangle::before, .mod-icon-font::before, .mod-icon-heart::before, .mod-icon-heart-o::before, .mod-icon-home::before, .mod-icon-info::before, .mod-icon-iwaikin::before, .mod-icon-line::before, .mod-icon-list::before, .mod-icon-lock::before, .mod-icon-lock-o::before, .mod-icon-map-marker::before, .mod-icon-minus::before, .mod-icon-minus-o::before, .mod-icon-noaddress::before, .mod-icon-phone-o::before, .mod-icon-plus::before, .mod-icon-plus-o::before, .mod-icon-q-o::before, .mod-icon-sandglass::before, .mod-icon-search::before, .mod-icon-sensuke::before, .mod-icon-sign-out::before, .mod-icon-sign-out-o::before, .mod-icon-spinner::before, .mod-icon-star::before, .mod-icon-star-o::before, .mod-icon-step-top::before, .mod-icon-suitcase::before, .mod-icon-suitcase-o::before, .mod-icon-times::before, .mod-icon-times-o::before, .mod-icon-train::before, .mod-icon-train-o::before, .mod-icon-trash-o::before, .mod-icon-user::before, .mod-icon-user-o::before, .mod-icon-volume::before, .mod-icon-volume-o::before, .mod-icon-wrench::before, .mod-icon-yen::before {
+    display: inline-block;
+    font-family: "webfont";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-transform: none;
+}
+.searchResultBox .favoriteMeritPopup i, .searchResultBox .favoriteMeritPopup a {
+    color: #31b0f5;
+}
+
+.mod-horizontal-btns .btns .col1, .mod-horizontal-btns .btns .col2 {
+    display: table-cell;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+
+.modIconStarO01::before {
+    background: rgba(0, 0, 0, 0) url("image/icon_star_o01.png") no-repeat scroll 0 0;
+}
+
+.mod-btn-type05 {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #fc9336 0%, #ff7301 100%) repeat scroll 0 0;
+    border: 1px solid #f60;
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+.mod-font-xxl {
+    font-size: 18px !important;
+}
+
+.modIcon60s::before {
+    background: rgba(0, 0, 0, 0) url("image/icon_60s.png") no-repeat scroll 0 0;
+    height: 58px;
+    margin-top: -29px;
+    width: 57px;
+}
+
+.modIcon60s {
+    padding-left: 62px;
+}
+
+.searchResultBox .relations {
+    background-color: #f3f3f3;
+    border-radius: 6px;
+    display: table;
+    margin-top: 10px;
+    padding: 5px;
+    width: 784px;
+}
+
+.searchResultBox .relations dt {
+    color: #818181;
+    display: table-cell;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    width: 9em;
+}
+
+.searchResultBox .relations dd {
+    background-color: #fff;
+    border-radius: 5px;
+    display: table-cell;
+    padding: 0.5em 10px;
+}
+
+.mod-btn-type04 {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    box-shadow: 0 2px 0 #EEEEEE, 0 -2px 0 #EEEEEE inset;
+    color: #333333 !important;
+}
+[class*="mod-btn-type"] {
+    -moz-appearance: none;
+    -moz-box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: normal;
+    outline: medium none;
+    padding: 15px 40px 14px;
+    text-align: center;
+    transition: box-shadow 0.3s ease 0s, opacity 0.3s ease 0s;
+    white-space: nowrap;
+}
+.mod-font-l {
+    font-size: 14px !important;
+}
+
+.modIconStarO01:before {
+    background: url("image/icon_star_o01.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+[class*="modIcon"]:before {
+    content: "";
+    display: block;
+    height: 24px;
+    left: 0;
+    margin-top: -12px;
+    position: absolute;
+    top: 50%;
+    width: 24px;
+}
+[class*="modIcon"] {
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+}
+
+.modIconChevronRightO01:before {
+    background: url("image/icon_chevron_right_o01.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.multiApplyBox {
+    border: 3px solid #98D7FA;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px 40px;
+}
+
+.multiApplyBox #multiApplyBox_h2{
+    background: url("image/img_sensuke_rest.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FF6600;
+    font-size: 20px;
+    margin: -15px 0 15px -40px;
+    min-height: 35px;
+    padding: 35px 0 0 180px;
+}
+
+.mod-emphasis02 {
+    color: #FF6600;
+}
+
+
+.btnNextPage {
+    margin-bottom: 30px;
+}
+.mod-center {
+    text-align: center !important;
+}
+
+#pagingUnderapply {
+    display: block;
+    height: 56px;
+    margin-bottom: 15px;
+    width: 786px;
+}
+#pagingUnderapply .leftArea {
+    background: url("image/pagingFootbg.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding: 56px 0 0;
+    width: 556px;
+}
+
+#pagingUnderapply .rightArea {
+    display: block;
+    float: right;
+    margin-top: 9px;
+}
+#pagingUnderapply .rightArea a {
+    background: url("image/pagingFootbtn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 35px 0 0;
+    width: 219px;
+}
+#trendword_box h3 {
+    height: 31px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 786px;
+}
+#trendword_box h3 span {
+    background: url("image/h_trendword.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#trendword_box #trendword_bg {
+    background: url("image/bg_keyword.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    position: relative;
+    width: 786px;
+}
+
+#trendword_box #trendword_img {
+    left: 20px;
+    position: absolute;
+    top: 18px;
+}
+
+#trendword_box #trendword_btn {
+    left: 313px;
+    position: absolute;
+    top: 15px;
+}
+
+#trendword_box #trendword_input {
+    left: 147px;
+    position: absolute;
+    top: 15px;
+    width: 152px;
+}
+
+#trendword_box p {
+    left: 362px;
+    margin: 0;
+    position: absolute;
+    top: 18px;
+}
+
+
+ul:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#attentionList {
+    padding: 46px 9px 0 17px;
+    width: 752px;
+}
+
+#attentionList li {
+    display: inline;
+    font-size: 12px;
+    line-height: 220%;
+    padding-right: 3px;
+}
+
+
+#attentionList li a {
+    padding: 1px;
+}
+/*-------------end city3.html---------------*/
+/*------------begin town .htm----------*/
+#pagingUpapply {
+    display: block;
+    margin-bottom: 30px;
+}
+
+#pagingUpapply p.guidanceText {
+    background: url("image/guidanceText.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    margin: auto;
+    overflow: hidden;
+    padding: 193px 0 0;
+    width: 649px;
+}
+
+#pagingUpapply a.guidanceBtn {
+    background: url("image/guidanceBtn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 0;
+    margin: 5px auto 0;
+    overflow: hidden;
+    padding: 111px 0 0;
+    width: 554px;
+}
+
+#pagingUpapply a.guidanceBtn:hover {
+    background: url("image/guidanceBtn.png") no-repeat scroll 0 -111px rgba(0, 0, 0, 0);
+}
+
+/*--------------end town .htm------------*/
+/*--------------start city_1_feature....htm*/
+
+#topSection .jobStaSelect2 .mainListArea .leftArea {
+    float: left;
+    padding: 0 0 0 5px;
+    width: 470px;
+}
+
+#topSection table td .mainTown ul li, #topSection .mainListArea .mainTown ul li {
+    display: inline;
+    padding: 0 10px 5px 0;
+    white-space: nowrap;
+}
+#topSection .jobStaSelect2 .mainListArea ul li {
+    float: left;
+}
+
+#topSection table td .mainTown ul li, #topSection .mainListArea .mainTown ul li {
+    display: inline;
+    padding: 0 10px 5px 0;
+    white-space: nowrap;
+}
+
+a.reSelectBtnMin {
+    background: url("image/search_panel_btn.png") no-repeat scroll -324px -225px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    padding: 19px 0 0;
+    vertical-align: bottom;
+    width: 60px;
+}
+#midSection .beforeSearch {
+    background: none repeat scroll 0 0 #F3F8FC;
+    border-top: 1px solid #99BCE3;
+    padding: 6px 10px;
+}
+
+#midSection .beforeSearch p {
+    background: url("image/before_search.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 0;
+    margin: 2px 5px 0 0;
+    overflow: hidden;
+    padding: 13px 0 0;
+    width: 108px;
+}
+#midSection .beforeSearch ul {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+    width: 80%;
+}
+
+#midSection .beforeSearch ul li {
+    display: inline;
+    margin: 0;
+    padding: 0 5px 0 0;
+}
+/*--------------end city_1_feature....htm*/
