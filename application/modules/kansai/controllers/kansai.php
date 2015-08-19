@@ -49,8 +49,10 @@ class Kansai extends MX_Controller {
 	public function feature($feature_name = 0){
 		if($feature_name == 0) $feature_name = "age";
 		$list_work = $this->mkansai->list_work($feature_name,"関西");
+		if(isset($list_work) && !empty($list_work)){
 		foreach ($list_work as $key => $value) {
 			$work_position[$value['work_id']]  = $this->mkansai->work_position($value['work_id']);
+		}
 		}
 
 		 if(isset($list_work) && !empty($list_work)){
@@ -68,10 +70,11 @@ class Kansai extends MX_Controller {
 	public function special($gwork = 0){
 		if($gwork == 0) $gwork = "beauty";
 		$list_work = $this->mkansai->list_work_follow_group($gwork,"関西");
+		if(isset($list_work) && !empty($list_work)){
 		foreach ($list_work as $key => $value) {
 			$work_position[$value['work_id']]  = $this->mkansai->work_position($value['work_id']);
 		}
-
+	}
 		 if(isset($list_work) && !empty($list_work)){
 		 	$data = array(
 		 					'list_work' => $list_work,
@@ -87,9 +90,11 @@ class Kansai extends MX_Controller {
 	public function station($station_id = 0){
 		if($station_id == 0) $station_id = "69";
 		$list_work = $this->mkansai->list_work_follow_station($station_id);
+		if(isset($list_work) && !empty($list_work)){
 		foreach ($list_work as $key => $value) {
 			$work_position[$value['work_id']]  = $this->mkansai->work_position($value['work_id']);
 		}
+	}
 
 		 if(isset($list_work) && !empty($list_work)){
 		 	$data = array(

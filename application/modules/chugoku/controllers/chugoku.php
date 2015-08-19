@@ -49,10 +49,12 @@ class Chugoku extends MX_Controller {
 	public function feature($feature_name = 0){
 		if($feature_name == 0) $feature_name = "age";
 		$list_work = $this->mchugoku->list_work($feature_name,"中国・四国");
-		foreach ($list_work as $key => $value) {
-			$work_position[$value['work_id']]  = $this->mchugoku->work_position($value['work_id']);
+		// cho nay can kiem tra truoc
+		if(isset($list_work) && !empty($list_work)){
+			foreach ($list_work as $key => $value) {
+				$work_position[$value['work_id']]  = $this->mchugoku->work_position($value['work_id']);
+			}
 		}
-
 		 if(isset($list_work) && !empty($list_work)){
 		 	$data = array(
 		 					'list_work' => $list_work,
@@ -68,10 +70,11 @@ class Chugoku extends MX_Controller {
 	public function special($gwork = 0){
 		if($gwork == 0) $gwork = "beauty";
 		$list_work = $this->mchugoku->list_work_follow_group($gwork,"中国・四国");
+		if(isset($list_work) && !empty($list_work)){
 		foreach ($list_work as $key => $value) {
 			$work_position[$value['work_id']]  = $this->mchugoku->work_position($value['work_id']);
 		}
-
+	}
 		 if(isset($list_work) && !empty($list_work)){
 		 	$data = array(
 		 					'list_work' => $list_work,
@@ -86,10 +89,12 @@ class Chugoku extends MX_Controller {
 
 	public function station($station_id = 0){
 		if($station_id == 0) $station_id = "69";
+		if(isset($list_work) && !empty($list_work)){
 		$list_work = $this->mchugoku->list_work_follow_station($station_id);
 		foreach ($list_work as $key => $value) {
 			$work_position[$value['work_id']]  = $this->mchugoku->work_position($value['work_id']);
 		}
+	}
 
 		 if(isset($list_work) && !empty($list_work)){
 		 	$data = array(

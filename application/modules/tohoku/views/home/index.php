@@ -33,7 +33,7 @@
                             <div id="freewordBox">
                                 <div class="fwArea">
                                     <form method="get" action="https://j-sen.jp/search/">
-                                        <input type="hidden" value="kanto" name="area">
+                                        <input type="hidden" value="tohoku" name="area">
                                         <input type="hidden" value="1" name="from_top">
                                         <input class="fwtext" type="text" onblur="if (!this.value) { this.value='フリーワード検索';}" onfocus="if (this.value == 'フリーワード検索') { this.value='' }" value="フリーワード検索" name="freeword">
                                         <input class="fwBtn" type="image" alt="検索" src="../../image//home/fwsearch_btn.png" onmouseout="this.src='../../image/fwsearch_btn.png'" onmouseover="this.src='../../image/fwsearch_btn_o.png'">
@@ -89,14 +89,14 @@
                             </div>
                             <div class="jobType">
                                 <form method="get" action="/search/">
-                                    <input type="hidden" value="kanto" name="area">
+                                    <input type="hidden" value="tohoku" name="area">
                                     <ul>
                                     <?php if(isset($gwork)&& !empty($gwork)){?>
                                     <?php $i=1; foreach ($gwork as $key => $value) {?>
                                         <li>
                                             <label>
                                                 <input type="checkbox" value="<?php echo $value['name'];?>" name="job[]">
-                                                <a id="iconType<?php echo ($i++>9)?$i:"0".$i;?>" href="/kanto/job_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                                <a id="iconType<?php echo ($i++>9)?$i:"0".$i;?>" href="/tohoku/job_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
                                             </label>
                                             <span>└ 営業、事務、受付...</span>
                                         </li>
@@ -123,7 +123,7 @@
                                     <em class="txtOrange">※特徴は２つまで選択可能です</em>
                                 </p>
                                 <form method="get" action="/search/">
-                                    <input type="hidden" value="kanto" name="area">
+                                    <input type="hidden" value="tohoku" name="area">
                                     <ul>
                                        <?php 
                                         if(isset($feature_name) && !empty($feature_name)){
@@ -131,7 +131,7 @@
                                          ?>
                                                 <?php foreach ($feature_name as $key => $value) { ?>
                                                <li>
-                                                    <a href="/kanto/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                                    <a href="/tohoku/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
                                                     (<?php echo $count_work_feature[$value['feature_name']];?>)                             
                                                 </li>                                                  
                                                     <?php }?>
@@ -283,7 +283,7 @@
                     </div>
                     <div class="pickup01">
                         <h3>特徴から探す</h3>
-                        <p class="more"><a href="/guide_kanto_feature/">もっと見る</a></p>
+                        <p class="more"><a href="/guide_tohoku_feature/">もっと見る</a></p>
                         <div class="pickuplist">
                             <ul>
                             <?php 
@@ -292,7 +292,7 @@
                             ?>
                             <?php foreach ($feature_name as $key => $value) { ?>
                            <li>
-                                <a href="<?php echo base_url();?>kanto/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                <a href="<?php echo base_url();?>tohoku/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
                                 (<?php echo $count_work_feature[$value['feature_name']];?>)                             
                             </li>                                                  
                                 <?php }?>
@@ -306,7 +306,7 @@
                     <div class="pickup02">
                         <h3>人気職種から探す</h3>
                         <p class="more">
-                        <a href="/guide_kanto_job/">もっと見る</a>
+                        <a href="/guide_tohoku_job/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
                             <ul>
@@ -315,7 +315,7 @@
                             ?>
                                 <?php foreach ($gwork as $key => $value) { ?>
                                 <li>
-                                    <a href="kanto/special/<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                    <a href="tohoku/special/<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
                                     (<?php echo $value['count_work'];?>)
                                 </li>
                             <?php }?>
@@ -328,7 +328,7 @@
                     <div class="pickup03">
                         <h3>人気エリアから探す</h3>
                         <p class="more">
-                        <a href="/guide_kanto_area/">もっと見る</a>
+                        <a href="/guide_tohoku_area/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
                             <ul>
@@ -338,7 +338,7 @@
                             ?>
                             <?php foreach ($ninki_area as $key => $value) { ?>
                                 <li>
-                                    <a href="kanto/station/<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
+                                    <a href="tohoku/station/<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
                                     (<?php print_r($count_work_ninkiarea[$value['id']])?>)                           
                                 </li>
                             <?php }?>                             
@@ -352,7 +352,7 @@
                     <div class="pickup04">
                         <h3>ビル名・場所から探す</h3>
                         <p class="more">
-                        <a href="/guide_kanto_landmark/">もっと見る</a>
+                        <a href="/guide_tohoku_landmark/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
                         <ul>
@@ -361,15 +361,15 @@
                                 if(isset($count_work_feature) && !empty($count_work_feature) && isset($count_work_shop) && !empty($count_work_shop)){
                             ?>
                             <li>
-                                <a href="<?php echo base_url();?>kanto/feature/<?php echo $shop_name[0]['feature_name'];?>"><?php echo $shop_name[0]['feature_name']?></a>
+                                <a href="<?php echo base_url();?>tohoku/feature/<?php echo $shop_name[0]['feature_name'];?>"><?php echo $shop_name[0]['feature_name']?></a>
                                 (<?php echo $count_work_shop[$shop_name[0]['feature_name']];?>)                             
                             </li>
                             <li>
-                                <a href="<?php echo base_url();?>kanto/feature/<?php echo $shop_name[6]['feature_name'];?>"><?php echo $shop_name[6]['feature_name']?></a>
+                                <a href="<?php echo base_url();?>tohoku/feature/<?php echo $shop_name[6]['feature_name'];?>"><?php echo $shop_name[6]['feature_name']?></a>
                                 (<?php echo $count_work_shop[$shop_name[6]['feature_name']];?>)                             
                             </li>
                             <li>
-                                <a href="<?php echo base_url();?>kanto/feature/<?php echo $feature_name[9]['feature_name'];?>"><?php echo $feature_name[9]['feature_name']?></a>
+                                <a href="<?php echo base_url();?>tohoku/feature/<?php echo $feature_name[9]['feature_name'];?>"><?php echo $feature_name[9]['feature_name']?></a>
                                 (<?php echo $count_work_feature[$feature_name[9]['feature_name']];?>)                             
                             </li>                                                  
                             <?php 
@@ -382,7 +382,7 @@
                     <div class="pickup05">
                         <h3>ブランド名・ショップから探す</h3>
                         <p class="more">
-                        <a href="/guide_kanto_bland/">もっと見る</a>
+                        <a href="/guide_tohoku_bland/">もっと見る</a>
                         </p>
                         <div class="pickuplist">
                         <ul>
@@ -392,7 +392,7 @@
                             ?>
                             <?php foreach ($shop_name as $key => $value) { ?>
                            <li>
-                                <a href="<?php echo base_url();?>kanto/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                <a href="<?php echo base_url();?>tohoku/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
                                 (<?php echo $count_work_shop[$value['feature_name']];?>)                             
                             </li>                                                  
                             <?php }?>
@@ -570,16 +570,16 @@
                         <ul class="blueLine">
                             <li class="areaTTL">主要都市</li>
                             <li>
-                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/kanto/station_1276.htm">渋谷</a>
+                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/tohoku/station_1276.htm">渋谷</a>
                             </li>
                             <li>
-                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/kanto/station_1279.htm">新宿</a>
+                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/tohoku/station_1279.htm">新宿</a>
                             </li>
                             <li>
-                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/kanto/station_1283.htm">池袋</a>
+                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/tohoku/station_1283.htm">池袋</a>
                             </li>
                             <li>
-                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/kanto/station_1513.htm">横浜</a>
+                                <a href="file:///C:/wamp/www/J-sen/j-sen.jp/tohoku/station_1513.htm">横浜</a>
                             </li>
                             <li>
                                 <a href="file:///C:/wamp/www/J-sen/j-sen.jp/tokai/city_660.htm">浜松</a>
