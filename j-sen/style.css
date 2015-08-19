@@ -4316,6 +4316,11 @@ ul.guideList3 li {
     padding: 28px 0 0;
     width: 93px;
 }
+
+
+#topSection .jobStaSelect2 .staTTL p {
+    background-position: 0 -216px;
+}
 #topSection #jobCheckTable table th p, #topSection .jobStaSelect2 .jobAreaTTL p{
     background-position: 0 -178px;
 }
@@ -4328,6 +4333,16 @@ ul.guideList3 li {
     overflow: hidden;
     padding: 20px 0 0;
     width: 103px;
+}
+
+
+#topSection .jobStaSelect2 a.timeBtnSmall {
+    background-position: -582px -50px;
+}
+
+
+#topSection .jobStaSelect2 .staTTL a, #topSection .jobStaSelect2 a.areaBtnSmall {
+    background-position: -366px -50px;
 }
 
 #topSection .jobStaSelect2 .jobAreaTTL a, #topSection .jobStaSelect2 a.staBtnSmall {
