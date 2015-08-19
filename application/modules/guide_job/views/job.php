@@ -26,7 +26,7 @@
                         <ul>
                             <?php foreach($job as $key => $value){?>
                             <li>
-                                <p id="iconType01"><input type="checkbox" name="job[]" value="<?php echo $value['system_work_name']?>">
+                                <p id="<?php echo $value['system_work_name']?>"><input type="checkbox" name="job[]" value="<?php echo $value['system_work_name']?>">
                                 <a href="<?php echo base_url();?>guide_job/list_work/<?php echo $value['system_work_name']?>"><?php echo $value['system_work_name']?></a>
                                 </a>
 								<?php echo '('.$value['sl'].')';?>
