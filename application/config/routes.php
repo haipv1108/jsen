@@ -84,43 +84,39 @@ $route['translate_uri_dashes'] = FALSE;
 $router['scanner'] = "scanner/scanner/index";
 
 // area_page
-$router['area_page'] = "area_page/area_page/index";
-$router['area_page/kanto'] = "area_page/area_page/kanto";
-$router['area_page/tokai'] = "area_page/area_page/tokai";
-$router['area_page/kansai'] = "area_page/area_page/kansai";
-$router['area_page/tohoku'] = "area_page/area_page/tohoku";
-$router['area_page/chugoku'] = "area_page/area_page/chugoku";
-$router['area_page/hokuriku'] = "area_page/area_page/hokuriku";
-$router['area_page/kyusyu'] = "area_page/area_page/kyusyu";
+$router['kanto'] = "kanto/kanto";
+$router['tokai'] = "tokai/tokai";
+$router['kansai'] = "kansai/kansai";
+$router['tohoku'] = "tohoku/tohoku";
+$router['chugoku'] = "chugoku/chugoku";
+$router['hokuriku'] = "hokuriku/hokuriku";
+$router['kyusyu'] = "kyusyu/kyusyu";
 
-//user
-$router['chugoku'] = 'chugoku/index';
-$router['hokuriku'] = 'hokuriku/index';
-$router['kansai'] = 'kansai/index';
-$router['kyusyu'] = 'kyusyu/index';
-$router['tokai'] = 'tokai/index';
-$router['kanto'] = 'kanto/index';
 
 // guide_area
 $router['guide_area'] = 'guide_area/guide_area/index';
 $router['guide_area/city'] = 'guide_area/guide_area/city';
+$router['guide_area/list_work'] = 'guide_area/guide_area/list_work';
+$router['guide_area/list_work'] = 'guide_area/guide_area/list_work';
 
 
 // line
 $router['guide_line'] = 'guide_line/guide_line/index';
 $router['guide_line/line'] = 'guide_line/guide_line/line';
 $router['guide_line/station'] = 'guide_line/guide_line/station';
+$router['guide_line/list_work/([0-9\-]+)'] = 'guide_line/guide_line/list_work/$1';
 
 //job
 $router['guide_job'] = 'guide_job/guide_job/index';
 $router['guide_job/job'] = 'guide_job/guide_job/job';
+$router['guide_job/list_work'] = 'guide_job/guide_job/list_work';
 
 //feature
 $router['guide_feature'] = 'guide_feature/guide_feature/index';
 $router['guide_feature/feature'] = 'guide_feature/guide_feature/feature';
 
-
-
+//work
+$router['work'] = 'work/work/index';
 
 
 
