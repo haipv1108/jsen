@@ -95,17 +95,27 @@ $router['kyusyu'] = "kyusyu/kyusyu";
 // guide_area
 $router['guide_area'] = 'guide_area/guide_area/index';
 $router['guide_area/city'] = 'guide_area/guide_area/city';
+$router['guide_area/list_work'] = 'guide_area/guide_area/list_work';
+$router['guide_area/list_work'] = 'guide_area/guide_area/list_work';
 
 
 // line
 $router['guide_line'] = 'guide_line/guide_line/index';
 $router['guide_line/line'] = 'guide_line/guide_line/line';
 $router['guide_line/station'] = 'guide_line/guide_line/station';
+$router['guide_line/list_work/([0-9\-]+)'] = 'guide_line/guide_line/list_work/$1';
 
 //job
 $router['guide_job'] = 'guide_job/guide_job/index';
 $router['guide_job/job'] = 'guide_job/guide_job/job';
+$router['guide_job/list_work'] = 'guide_job/guide_job/list_work';
 
 //feature
 $router['guide_feature'] = 'guide_feature/guide_feature/index';
 $router['guide_feature/feature'] = 'guide_feature/guide_feature/feature';
+
+//work
+$router['work'] = 'work/work/index';
+
+
+

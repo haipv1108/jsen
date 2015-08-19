@@ -47,7 +47,13 @@
 				</div>
 				<div class="col2">
 					<ul class="pagination">
-						<?php if(isset($paginator) && !empty($paginator)) echo $paginator;?>
+						<li class="next">
+							<a href="../sorry/toobusy.html">次へ</a>
+						</li>
+						<li class="openSkipPaginationPopup">
+							<a href="../sorry/toobusy.html">2</a>
+						</li>
+						<li class="current">1</li>
 					</ul>
 				</div>
 			</div><!--searchPager-->
@@ -188,7 +194,13 @@
 				</div>
 				<div class="col2">
 					<ul class="pagination">
-						<?php if(isset($paginator) && !empty($paginator)) echo $paginator;?>
+						<li class="next">
+							<a href="../sorry/toobusy.html">次へ</a>
+						</li>
+						<li class="openSkipPaginationPopup">
+							<a href="../sorry/toobusy.html">2</a>
+						</li>
+						<li class="current">1</li>
 					</ul>
 				</div>
 			</div><!--searchPager-->

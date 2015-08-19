@@ -44,11 +44,12 @@ class Mguide_area extends CI_Model{
 	}
 	public function list_work($id, $number, $offset){
 		$query = $this->db->query("
-								SELECT DISTINCT station_work.work_id, work_name, work_title, work_image_url, work_guild_station, work_content1,work_time 
-								FROM station_work,main_work 
-								WHERE station_work.city_id ={$id}
-								AND station_work.work_id = main_work.work_id 
-								LIMIT {$number},{$offset}
+									SELECT DISTINCT station_work.work_id, work_name, work_title, work_image_url, work_guild_station, work_content1,work_time
+									FROM station_work, main_work
+									WHERE
+										station_work.city_id = {$id}
+									AND station_work.work_id = main_work.work_id
+									LIMIT {$offset}, {$number}
 								");
 		if($query->num_rows()>0)
 			return $query->result_array();

@@ -51,7 +51,6 @@
    
 </head>
 
-<body id="<?php echo isset($id_body)? $id_body: '';?>">
 <body id="<?php if(isset($id_body)) echo $id_body;?>">
 	<?php if(isset($keisaiHeaderBar)){?>
     <div id="keisaiHeaderBar">
