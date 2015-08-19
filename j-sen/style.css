@@ -27,6 +27,12 @@ ul::after {
     visibility: hidden;
 }
 
+pre {
+    padding: 0 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, ol, div, img {
     font-size: 12px;
     margin: 0;
@@ -3083,13 +3089,7 @@ ul.guideList3 li a, ul.guideList4 li a {
     margin-bottom: 10px;
 }
 
-#resultBox3 h2 {
-    border-bottom: 2px solid #29a1ec;
-    font-size: 200%;
-    font-weight: bold;
-    margin-bottom: 0;
-    padding: 15px 0;
-}
+
 #resultBox3 p {
     border-bottom: 2px solid #29a1ec;
     font-size: 200%;
@@ -4263,9 +4263,7 @@ ul.guideList3 li {
     float: left;
 }
 
-#topSection .jobStaSelect ul li.jobSelect p {
-    background-position: 0 -178px;
-}
+
 
 #topSection .jobStaSelect ul li.jobSelect p, #topSection .jobStaSelect ul li.staSelect p, #topSection .jobStaSelect ul li.timeSelect p {
     background: url("image/search_panel_ttl.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -4277,6 +4275,20 @@ ul.guideList3 li {
     width: 93px;
 }
 
+
+#topSection .jobStaSelect ul li.timeSelect p {
+    background-position: 0 -289px;
+    margin-right: 5px;
+    width: 100px;
+}
+
+#topSection .jobStaSelect ul li.jobSelect p {
+    background-position: 0 -178px;
+}
+
+#topSection .jobStaSelect ul li.staSelect p {
+    background-position: 0 -216px;
+}
 #topSection .jobStaSelect ul li a.selectBtn {
     background: url("image/search_panel_btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     display: block;
@@ -5478,4 +5490,124 @@ a.reSelectBtnMin {
     margin: 0;
     padding: 0 5px 0 0;
 }
+
+#midSection .sheet_type {
+    background: url("image/search_sub_dot.png") repeat-x scroll 0 0 #FAFCFE;
+    padding: 5px 10px;
+}
+
+#midSection .sheet_type p {
+    color: #0C6D9D;
+    font-weight: bold;
+    padding: 0 5psx 5px 0;
+}
+
+#midSection .sheet_type ul li {
+    float: left;
+    padding: 0 5px 5px 0;
+}
 /*--------------end city_1_feature....htm*/
+/*-------------begin new_member-------*/
+#memberVisual {
+    margin-bottom: 15px;
+}
+
+h3.memberNewTTL01 {
+    background: rgba(0, 0, 0, 0) url("image/member/member_new_ttl01.png") no-repeat scroll 0 0;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 32px 0 0;
+    width: 786px;
+}
+
+.memberTable {
+    background: rgba(0, 0, 0, 0) url("image/member/member_table_back.png") repeat-y scroll 0 0;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 766px;
+}
+.memberTable table {
+    border: 1px solid #99bce3;
+    border-collapse: collapse;
+    width: 100%;
+}
+.memberTable table th {
+    background: rgba(0, 0, 0, 0) url("image/member/member_th_back.png") no-repeat scroll 0 0;
+    border-bottom: 1px solid #99bce3;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    width: 130px;
+}
+.memberTable table th.title {
+    background: rgba(0, 0, 0, 0) url("image/member/member_th_back.png") no-repeat scroll 0 0;
+    border-bottom: 1px solid #99bce3;
+    font-weight: bold;
+    padding: 10px;
+    width: 145px !important;
+}
+.memberTable table th img {
+    margin-bottom: -4px;
+}
+.memberTable table td.iconArea {
+    background: rgba(0, 0, 0, 0) url("image/member/member_td_icon_back.png") no-repeat scroll 0 0;
+    border-bottom: 1px solid #99bce3;
+    padding: 10px 5px;
+    text-align: center;
+    width: 35px;
+}
+.memberTable table td.iconArea2 {
+    background: #fff url("image/member/member_td_txt_back.png") repeat-y scroll left center;
+    border-bottom: 1px solid #99bce3;
+    padding: 10px 5px;
+    width: 35px;
+}
+.memberTable table td.txt {
+    background: #fff url("image/member/member_td_txt_back.png") repeat-y scroll left center;
+    border-bottom: 1px solid #99bce3;
+    padding: 10px;
+    width: 556px;
+}
+.memberTable table td.txt2 {
+    background: #fff url("image/member/member_td_txt_back.png") repeat-y scroll left center;
+    border-bottom: 1px solid #99bce3;
+    padding: 2px;
+}
+.memberTable table td.agreeArea {
+    background: #fff none repeat scroll 0 0;
+    padding: 10px;
+}
+.memberTable table td.agreeArea p {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 7px;
+}
+.memberTable table td.agreeArea .textAgreementDiv {
+    border: 1px solid #ccc;
+    height: 130px;
+    overflow: auto;
+    padding: 10px;
+}
+
+#memberSubmitArea {
+    background: rgba(0, 0, 0, 0) url("image/member/member_submit_back.png") no-repeat scroll 0 0;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+#memberSubmitArea input.submitBtn {
+    display: block;
+    margin: 10px auto;
+    width: 314px;
+}
+
+#memberSubmitArea .agreeCheck {
+    background: #ffc none repeat scroll 0 0;
+    margin: 0 auto;
+    padding: 5px;
+    width: 430px;
+}
+/*-------------end new_member-------*/
