@@ -22,7 +22,7 @@
 						
 						<li>
 							<input type="checkbox" name="city[]" value='<?php echo $v['city_id']?>' class="childCheckbox39600" />
-							<a href="<?php echo base_url();?>guide_area/list_work/<?php echo $v['city_id']?>">
+							<a href="<?php echo base_url();?>guide_area/list_work/<?php echo $v['city_id']?>/1">
 								<?php echo $v['city_name'];?> 
 							</a>
 							<?php
