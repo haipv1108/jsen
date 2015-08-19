@@ -7,7 +7,7 @@
 
 				<?php foreach ($line as $ka => $va) {	?>
 					<h3 class="guideTTLh3"><?php echo $va['area_line_name']; ?></h3>
-					<ul class="guideList1">
+					<ul class="guideList3">
 				<?php foreach ($line_name[$va['area_line_name']] as $kp => $vp) {?>
 					<li>
 						<a href="<?php echo base_url();?>guide_line/station/<?php echo $vp['line_id'];?>"><?php echo $vp['line_name'];?></a>

@@ -2584,14 +2584,14 @@ em {
     z-index: 2000;
 }
 .popupMultibox .inner {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_top.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_top.png") no-repeat scroll 0 0;
     padding: 0 10px;
 }
 .popupMultibox .inner .cont {
     width: 700px;
 }
 .popupMultibox .inner .cont h3 {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_inner_ttl.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_inner_ttl.png") no-repeat scroll 0 0;
     display: block;
     font-size: 12px;
     height: 0;
@@ -2601,7 +2601,7 @@ em {
     width: 673px;
 }
 .popupMultibox .inner .cont h4 {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_inner_mttl.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_inner_mttl.png") no-repeat scroll 0 0;
     display: block;
     font-size: 12px;
     height: 0;
@@ -2624,7 +2624,7 @@ em {
     font-weight: bold;
 }
 .popupMultibox .inner .cont .tBox1 p.right {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_inner_graf.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_inner_graf.png") no-repeat scroll 0 0;
     display: block;
     height: 0;
     overflow: hidden;
@@ -2642,7 +2642,7 @@ em {
     width: 390px;
 }
 .popupMultibox .inner .cont .tBox2 .leftArea p.ttlPoint1 {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_inner_point1.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_inner_point1.png") no-repeat scroll 0 0;
     font-size: 15px;
     font-weight: bold;
     height: 34px;
@@ -2656,14 +2656,14 @@ em {
     padding: 0;
 }
 .popupMultibox .inner .cont .tBox2 .rightAreatop {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_inner_sn1.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_inner_sn1.png") no-repeat scroll 0 0;
     display: block;
     height: 0;
     overflow: hidden;
     padding: 131px 0 0;
 }
 .popupMultibox .inner .cont .tBox2 .leftArea p.ttlPoint2 {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_inner_point2.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_inner_point2.png") no-repeat scroll 0 0;
     font-size: 15px;
     font-weight: bold;
     height: 34px;
@@ -2671,7 +2671,7 @@ em {
     padding: 10px 0 0 37px;
 }
 .popupMultibox .inner .cont .tBox2 .rightAreabtm {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_inner_sn2.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_inner_sn2.png") no-repeat scroll 0 0;
     display: block;
     height: 0;
     overflow: hidden;
@@ -2687,7 +2687,7 @@ em {
     width: 81px;
 }
 .popupMultibox .closeBtn a {
-    background: transparent url("/img/common/popupMulti_close.png") no-repeat scroll 0 -1px;
+    background: transparent url("image/popupMulti_close.png") no-repeat scroll 0 -1px;
     display: block;
     height: 0;
     overflow: hidden;
@@ -2695,10 +2695,10 @@ em {
     width: 81px;
 }
 .popupMultibox .closeBtn a:hover {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_close.png") no-repeat scroll 0 -25px;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_close.png") no-repeat scroll 0 -25px;
 }
 .popupMultibox .endline {
-    background: rgba(0, 0, 0, 0) url("/img/common/popupMulti_bg_bot.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("image/popupMulti_bg_bot.png") no-repeat scroll 0 0;
     height: 20px;
 }
 .popupMultibox .endline hr {
@@ -2930,18 +2930,18 @@ ul.listType2 li a {
     border-bottom: 1px solid #d0def4;
     border-left: 3px solid #6ca6e4;
     border-right: 1px solid #d0def4;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
     padding: 2px 8px 2px;
     position: relative;
 	font-size: 12px;
     width: 790px;
-    height: 30px;
-    margin-left: 10px
+    height: 24px;
+    line-height: 26px;
 }
 
 ul.guideList1 {
     margin-bottom: 0px;
-    padding: 12px 10px 10px;
+    padding: 0 10px 10px;
 }
 
 ul.guideList1 li {
@@ -4034,81 +4034,81 @@ ul.guideList3 li {
   margin-bottom: 20px;
 }
 .blueBox ul.featureList li {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 22px;
   margin-bottom: 10px;
   width: 235px;
   float: left;
 }
-#iconFeature01 {
+#traffic {
   background: url(image/icon_search.gif) no-repeat 0 -200px;
 }
-  #iconFeature02 {
+#week {
   background: url(image/icon_search.gif) no-repeat 0 -480px;
 }
-#iconFeature03 {
+#day {
   background: url(image/icon_search.gif) no-repeat 0 -40px;
 }
-#iconFeature04 {
+#free-cloth {
   background: url(image/icon_search.gif) no-repeat 0 -680px;
 }
-#iconFeature05 {
+#uniform {
   background: url(image/icon_search.gif) no-repeat 0 -240px;
 }
-#iconFeature06 {
+#entry {
   background: url(image/icon_search.gif) no-repeat 0 -520px;
 }
-#iconFeature07 {
+#age {
   background: url(image/icon_search.gif) no-repeat 0 -640px;
 }
-#iconFeature08 {
+#school {
   background: url(image/icon_search.gif) no-repeat 0 -80px;
 }
-#iconFeature09 {
+#meat {
   background: url(image/icon_search.gif) no-repeat 0 -720px;
 }
-#iconFeature10 {
+#people {
   background: url(image/icon_search.gif) no-repeat 0 -280px;
 }
-#iconFeature11 {
+#active {
   background: url(image/icon_search.gif) no-repeat 0 -760px;
 }
-#iconFeature12 {
+#language {
   background: url(image/icon_search.gif) no-repeat 0 -600px;
 }
-#iconFeature13 {
+#skill {
   background: url(image/icon_search.gif) no-repeat 0 -320px;
 }
-#iconFeature14 {
+#bike {
   background: url(image/icon_search.gif) no-repeat 0 -800px;
 }
-#iconFeature15 {
+#car {
   background: url(image/icon_search.gif) no-repeat 0 -360px;
 }
-#iconFeature16 {
+#nosmoke {
   background: url(image/icon_search.gif) no-repeat 0 -840px;
 }
-#iconFeature17 {
+#smoke {
   background: url(image/icon_search.gif) no-repeat 0 -400px;
 }
-#iconFeature18 {
+#oneday {
   background: url(image/icon_search.gif) no-repeat 0 -560px;
 }
-#iconFeature19 {
+#color {
   background: url(image/icon_search.gif) no-repeat 0 -160px;
 }
-#iconFeature20 {
+#daytime {
   background: url(image/icon_search.gif) no-repeat 0 0px;
 }
-#iconFeature21 {
+#short {
   background: url(image/icon_search.gif) no-repeat 0 -120px;
 }
-#iconFeature22 {
+#unexperienced {
   background: url(image/icon_search.gif) no-repeat 0 -880px;
 }
-#iconFeature23 {
+#permanent {
   background: url(image/icon_search.gif) no-repeat 0 -440px;
 }
-#iconFeature24 {
+#temporary {
   background: url(image/icon_search.gif) no-repeat 0 -920px;
 }
 
@@ -5611,3 +5611,67 @@ h3.memberNewTTL01 {
     width: 430px;
 }
 /*-------------end new_member-------*/
+
+/*------------- Phan chinh sua CSS cua Giap -----------------*/
+#guideBox .inner {
+    padding: 0 10px;
+}
+#content h3.guideTTLh3 {
+    background: #e9f3fe url("image/guide_blue_ttl.png") repeat-x scroll 0 0;
+    border-bottom: 1px solid #d0def4;
+    border-left: 3px solid #6ca6e4;
+    border-right: 1px solid #d0def4;
+    margin-bottom: 0 0 10px;
+    padding: 2px 8px 2px;
+    position: relative;
+    line-height: 30px;
+}
+ul.guideList3, ul.guideList4 {
+    margin-bottom: 0px;
+    padding: 0 10px 10px;
+}
+.blueBox ul li {
+    float: left;
+    margin-bottom: 10px;
+    width: 360px;
+}
+.blueBox ul li p {
+    padding-left: 24px;
+}
+#office {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -960px;
+}
+#digital {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1200px;
+}
+#enter {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1160px;
+}
+#mass {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1240px;
+}
+#food {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1000px;
+}
+#sales {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1280px;
+}
+#institution {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1080px;
+}
+#transport {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1320px;
+}
+#create {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1120px;
+}
+#medical {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1360px;
+}
+#teacher {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1040px;
+}
+#beauty {
+    background: rgba(0, 0, 0, 0) url("image/icon_search.gif") no-repeat scroll 0 -1400px;
+}
+/*------------- End Giap's CSS ------------------------*/

@@ -29,9 +29,9 @@
                     <input type="hidden" name="area" value="(cac vung))">
                     <input type="hidden" name="city[]" value="1">
                     <div class="blueBox">
-                        <ul>
+                        <ul class="featureList">
                             <?php foreach ($feature_name as $key => $value) { ?>
-                            <li>
+                            <li id= "<?php echo $value['feature_name'];?>">
                                 <input type="checkbox" class="limitCheckbox" name="feature[]" value="<?php echo $value['feature_name'];?>">
                                 <a href="<?php echo base_url(); ?>guide_feature/list_work/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
                                 (<?php echo $count_work_feature[$value['feature_name']];?>)                             
