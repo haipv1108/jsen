@@ -26,4 +26,18 @@ class Guide_job extends MX_Controller{
 		$data['tempplate'] = 'job';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
+	public function list_work($str = ''){
+		$list_work = $this->mguide_job->list_work($str);
+		if(isset($list_work) && !empty($list_work)){
+			$data = array(
+							'list_work' => $list_work,
+							'work_position' => $this->mguide_job->work_position($str)
+						);
+		}else{
+			$data['message'] = 'Data not found';
+		}
+		$data['tempplate'] = 'list_work';
+		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
+	}
+	
 }

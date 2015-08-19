@@ -27,17 +27,17 @@
                             <?php foreach($job as $key => $value){?>
                             <li>
                                 <p id="iconType01"><input type="checkbox" name="job[]" value="<?php echo $value['system_work_name']?>">
-                                <a href="<?php echo base_url();?>(vung)/city_(city_id)_job_<?php echo $value['system_work_name']?>.htm"><?php echo $value['system_work_name']?></a>
+                                <a href="<?php echo base_url();?>guide_job/list_work/<?php echo $value['system_work_name']?>"><?php echo $value['system_work_name']?></a>
                                 </a>
+								<?php echo '('.$value['sl'].')';?>
                                 </p>
-                                <span class="searchBox_txt_type">└ (feature_name cua tung vung)営業、電話・メール、事務・受付・経理、その他</span>
                             </li>
                             <?php }?>                                                            
                         </ul>
                     </div>
 
                     <div id="searchBtn" class="guideSearchBtn">
-                        <p><input type="image" alt="この条件で探す" onmouseover="this.src='/img/guide/guide_search_btn_o.png'" onmouseout="this.src='/img/guide/guide_search_btn.png'"  src="/img/guide/guide_search_btn.png"></p>
+                        <p><input type="image" alt="この条件で探す" onmouseover="this.src='template/frontend/image/guide_search_btn_o.png'" onmouseout="this.src='template/frontend/image/guide_search_btn.png'"  src="template/frontend/image/guide_search_btn.png"></p>
                     </div>
                 </form>
             </div>
