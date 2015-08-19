@@ -475,7 +475,7 @@
 														昼&#12288;：11時～17時
 														夕方：15時～19時
 														夜&#12288;：18時～22時
-														深夜：22時～5時" src="../../../image/hint_icon.png" class="hintBtnToolTip" id="timeHintBtn" style="position: relative;"/>
+														深夜：22時～5時" src="template/frontend/image/hint_icon.png" class="hintBtnToolTip" id="timeHintBtn" style="position: relative;"/>
 												</th>
 												<td class="timeTD">
 													<ul class="timeCheck">
@@ -642,7 +642,7 @@
 											<label for="newarrival_checkbox">
 												<input type="checkbox" value="newarrival" name="custom" id="newarrival_checkbox">新着のアルバイト
 											</label>
-											<img id="newarrivalHintBtn" class="hintBtnToolTip" src="../../../image/hint_icon.png" assistance="掲載開始から7日
+											<img id="newarrivalHintBtn" class="hintBtnToolTip" src="template/frontend/image/hint_icon.png" assistance="掲載開始から7日
 											以内のアルバイト
 											です">
 										</li>
@@ -654,7 +654,7 @@
 						<div class="underSection">
 							<p style="display: none;" class="actionP_02" id="searchButtonSpotlightArrow"></p>
 							<p>
-								<input type="image" src="../../../image/search_btn.png" onmouseout="this.src='../../../image/search_btn.png'" onmouseover="this.src='../../../image/search_btn_o.png'" alt="検索する">
+								<input type="image" src="template/frontend/image/search_btn.png" onmouseout="this.src='template/frontend/image/search_btn.png'" onmouseover="this.src='template/frontend/image/search_btn_o.png'" alt="検索する">
 							</p>
 							<p class="txtLink">
 								<a rel="nofollow" href="../../member/new">この条件のお知らせメールを受信</a>
@@ -827,7 +827,7 @@
 		
 		<div class="bigBanner">
 			<a href="../../cp/11810cp/index.html">
-				<img width="840" height="120" alt="7月限定！毎週火曜日は「いいバイトの日」祝い金11,810（いいバイト）円贈呈" src="../../../image/bnr_11810cp_840x120.png"/>
+				<img width="840" height="120" alt="7月限定！毎週火曜日は「いいバイトの日」祝い金11,810（いいバイト）円贈呈" src="template/frontend/image/bnr_11810cp_840x120.png"/>
 			</a>
 		</div><!--bigBanner_quang cao giua bai dang-->
 		<div class="btnNextPage mod-center">
@@ -869,12 +869,12 @@
 				<span></span>
 			</h3>
 			<div id="trendword_bg">
-				<img id="trendword_img" alt="フリーワード検索" src="../../../image/freeword.gif"/>
+				<img id="trendword_img" alt="フリーワード検索" src="template/frontend/image/freeword.gif"/>
 				<form method="GET" action="../../search/">
 					<input type="hidden" value="tohoku" name="area"/>
 					<input id="trendword_input" class="HeaderSearch_input" type="text" accesskey="S" size="24" name="freeword"/>
 					<input type="hidden" value="1" name="from_top"/>
-					<input id="trendword_btn" type="image" alt="フリーワード検索をする" src="../../../image/search_button.png" value="検索" name="SearchAs"/>
+					<input id="trendword_btn" type="image" alt="フリーワード検索をする" src="template/frontend/image/search_button.png" value="検索" name="SearchAs"/>
 				</form>
 				<p>例）短期 高校生 シフト制</p>
 				<ul id="attentionList">
