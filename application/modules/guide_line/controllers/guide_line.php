@@ -55,7 +55,7 @@ class Guide_line extends MX_Controller{
 		}else{
 			$data['message'] = 'Data not found';
 		}
-		$data['tempplate'] = 'list_work';
+		$data['tempplate'] = 'kanto/home/list_work';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }

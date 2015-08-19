@@ -8,9 +8,6 @@
 	<meta name="author" content="Persiden.C.Kid" />
 
     <link rel="stylesheet" type="text/css" href="template/frontend/style.css"/>
-    <link rel="stylesheet" type="text/css" href="template/frontend/style_city.css"/>
-    <link rel="stylesheet" type="text/css" href="template/frontend/style_new_member.css"/>
-    <link rel="stylesheet" type="text/css" href="template/frontend/style_search.css"/>
     <meta http-equiv="Content-Language" content="ja">
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

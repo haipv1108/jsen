@@ -61,16 +61,6 @@ class Mguide_line extends CI_Model{
 									AND line_id = {$id}
 									GROUP BY station.station_id
 								");
-		/*$query = $this->db->query("
-									SELECT DISTINCT station.station_id, count(station_work.work_id) as sl
-									FROM station, station_work, main_work, position, apply
-									WHERE station.station_id = station_work.station_id
-									AND line_id = {$id}
-									AND station_work.word_id = main_work.work_id
-									AND main_work.work_id = position.work_id
-									AND position.work_id = apply.work_id
-									GROUP BY station.station_id
-								");*/
 		if($query->num_rows()>0)
 			return $query->result_array();
 		else return false;
