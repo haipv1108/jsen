@@ -20,16 +20,18 @@ class Guide_line extends MX_Controller{
 	}
 	public function line($id = 0){
 		$line = $this->mguide_line->get_line($id);
-		if(isset($line)){
+		if(isset($line) && !empty($line)){
 			foreach($line as $key => $val){
 				$line_name[$val['area_line_name']] = $this->mguide_line->get_line_name($val['area_line_name']);
 			}
-		}
-		$data = array(
+			$data = array(
 						'line' => $line,
 						'line_name' => $line_name,
 						'tempplate' =>'line'
 					);
+		}else{
+			$data['message'] = 'Data not found';
+		}
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function station($id = 0){
@@ -40,6 +42,8 @@ class Guide_line extends MX_Controller{
 							'station' => $station,
 							'count_work' => $this->mguide_line->count_work($id)
 						);
+		}else{
+			$data['message'] = 'Data not found';
 		}
 		$data['tempplate'] = 'station';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);

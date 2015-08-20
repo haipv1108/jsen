@@ -20,8 +20,10 @@ class Guide_job extends MX_Controller{
 	}
 	public function job($id = 0){
 		$job = $this->mguide_job->get_job($id);
-		if(isset($job)){
+		if(isset($job) && !empty($job)){
 			$data['job'] = $job;
+		}else{
+			$data['message'] = 'Data not found';
 		}
 		$data['tempplate'] = 'job';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);

@@ -24,15 +24,17 @@
                     <input type="hidden" name="city[]" value="1">
                     <div class="blueBox">
                         <ul>
-                            <?php foreach($job as $key => $value){?>
-                            <li>
-                                <p id="<?php echo $value['system_work_name']?>"><input type="checkbox" name="job[]" value="<?php echo $value['system_work_name']?>">
-                                <a href="<?php echo base_url();?>guide_job/list_work/<?php echo $value['system_work_name']?>"><?php echo $value['system_work_name']?></a>
-                                </a>
-								<?php echo '('.$value['sl'].')';?>
-                                </p>
-                            </li>
-                            <?php }?>                                                            
+						<?php if(isset($job) && !empty($job)){?>
+								<?php foreach($job as $key => $value){?>
+								<li>
+									<p id="<?php echo $value['system_work_name']?>"><input type="checkbox" name="job[]" value="<?php echo $value['system_work_name']?>">
+									<a href="<?php echo base_url();?>guide_job/list_work/<?php echo $value['system_work_name']?>"><?php echo $value['system_work_name']?></a>
+									</a>
+									<?php echo '('.$value['sl'].')';?>
+									</p>
+								</li>
+								<?php }
+						}else if(isset($message) && !empty($message)) echo $message;?>                                                        
                         </ul>
                     </div>
 
