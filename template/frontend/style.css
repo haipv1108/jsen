@@ -427,7 +427,7 @@ body {
 }
 #midArea .menuArea .naviArea ul li#naviTohoku a{
     background-position: -183px -360px;
-    width: 76px;
+    width: 75px;
 }
 #midArea .menuArea .naviArea ul li#naviHokuriku a{
     background-position: -258px -360px;
@@ -456,7 +456,7 @@ body {
 }
 #p-tohoku #headerInner #midArea .menuArea .naviArea ul li#naviTohoku a{
     background-position: -183px -180px;
-    width: 138px;
+    width: 137px;
 }
 #p-hokuriku #headerInner #midArea .menuArea .naviArea ul li#naviHokuriku a{
     background-position: -259px -240px;
@@ -494,7 +494,7 @@ body {
 }
 #midArea .menuArea .naviArea ul li#naviTohoku a:hover{
     background-position: -183px -390px;
-    width: 76px;
+    width: 75px;
 }
 #midArea .menuArea .naviArea ul li#naviHokuriku a:hover{
     background-position: -258px -390px;
