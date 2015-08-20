@@ -19,15 +19,14 @@
 
             <div class="inner">
                 <p class="blueTTL">特徴を選択してください</p>
-                <form action="/search/" method="get" onsubmit="return Lvs.Guide.alert(document.getElementsByName('job[]'), '特徴');">
-                    <input type="hidden" name="area" value="(cac vung))">
-                    <input type="hidden" name="city[]" value="1">
+                <form action="" method="post">
+                    <input type="hidden" name="area" value="<?php echo isset($job['area_name'])?$job['area_name']: 'khong co dl';?>">
                     <div class="blueBox">
                         <ul>
                             <?php foreach($job as $key => $value){?>
                             <li>
-                                <p id="<?php echo $value['system_work_name']?>"><input type="checkbox" name="job[]" value="<?php echo $value['system_work_name']?>">
-                                <a href="<?php echo base_url();?>guide_job/list_work/<?php echo $value['system_work_name']?>"><?php echo $value['system_work_name']?></a>
+                                <p id="<?php echo $value['system_work_name'];?>"><input type="checkbox" name="job[]" value="<?php echo $value['system_work_name'];?>">
+                                <a href="<?php echo base_url();?>guide_job/list_work/<?php echo $value['system_work_name'];?>"><?php echo $value['system_work_name'];?></a>
                                 </a>
 								<?php echo '('.$value['sl'].')';?>
                                 </p>
@@ -37,7 +36,7 @@
                     </div>
 
                     <div id="searchBtn" class="guideSearchBtn">
-                        <p><input type="image" alt="この条件で探す" onmouseover="this.src='template/frontend/image/guide_search_btn_o.png'" onmouseout="this.src='template/frontend/image/guide_search_btn.png'"  src="template/frontend/image/guide_search_btn.png"></p>
+                        <p><input type="submit" name="submit" alt="この条件で探す" onmouseover="this.src='template/frontend/image/guide_search_btn_o.png'" onmouseout="this.src='template/frontend/image/guide_search_btn.png'"  src="template/frontend/image/guide_search_btn.png"></p>
                     </div>
                 </form>
             </div>
