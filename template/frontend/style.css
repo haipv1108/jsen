@@ -1852,7 +1852,6 @@ a:link{
 
 #featureMapBox .jobType ul li a,
 #jobMapBox .jobType ul li a{
-    background: url(image/icon_search.gif) no-repeat scroll 0 0;
     padding: 3px 0 3px 21px;
 }
 #jobMapBox .jobType ul li a#iconType01{ background-position: 0 -960px;}
