@@ -699,15 +699,21 @@
 				</p>
 			</div>
 			<div class="col2">
-				<ul class="pagination">
-					<li class="next">
-						<a href="../../sorry/toobusy.html">次へ</a>
-					</li>
-					<li class="openSkipPaginationPopup">
-						<a href="../../sorry/toobusy.html">2</a>
-					</li>
-					<li class="current">1</li>
-				</ul>
+<!-- 				<div class="pagination">
+					<?php if ($current_page != 1){ ?>
+					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>" title="First Page">&laquo; First</a>
+					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>/if($current_page>1) echo $current_page-1; else echo $current_page;?>" title="Previous Page">&laquo;Previous</a>
+					<?php }?>
+					...
+					<?php for($count=$current_page-2;$count <= $total_page && $count <= $current_page+2 && $count >= $current_page-2;$count++){ ?>
+					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name."/".$count;?>" class="<?php if($current_page==$count) echo"number current"; else echo"number";?>" title="<?php echo $count;?>"><?php echo $count;?></a>
+					<?php } ?>
+					...
+					<?php if($current_page !=$total_page){?>
+					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>/if($current_page>1) echo $current_page-1; else echo $current_page;?>" title="Next Page">Next &raquo;</a>
+					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name."/".$total_page;?>" title="Last Page">Last &raquo;</a>
+					<?php }?> 
+				 </div> <!-- End of pagination -->  -->
 			</div>
 		</div><!--searchPager-->
 		
@@ -737,8 +743,8 @@
 				<div class="detail clearfix">
 					<table>
 						<tbody>
-							<?php 	if(isset($work_position) && !empty($work_position)){
-										foreach($work_position as $k1=>$v1){?>
+							<?php if(isset($work_position) && !empty($work_position)){
+										foreach($work_position[$v['work_id']] as $k1=>$v1){?>
 											<tr>
 												<th><?php echo $v1['position_name'];?></th>
 												<td> <?php echo $v1['position_salary'];?></td>

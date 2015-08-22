@@ -5,14 +5,13 @@ class Admin extends MX_Controller {
 		parent::__construct();
 
 		$this->load->model('madmin');
-		$this->load->helper(array('form', 'url'));
+		$this->load->helper(array('form', 'url','my_check_manager'));
 		$this->load->library(array('form_validation','session','pagination','email'));
 	 }
 	 
 	public function index()
 	{
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==3){
+		if(check_login(3)){
 			$data = array(
 						'user'=>$this->session->userdata('user'),
 						'meta_title'=>'Home Page',
@@ -20,14 +19,11 @@ class Admin extends MX_Controller {
 						'template'=> 'backend/home/index'
 						);
 			$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 	public function view($sort ='username',$page = 1)
 	{
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==3){
+		if(check_login(3)){
 			$config = array(
 						'base_url' => base_url().'admin/view',
 						'total_rows' => $this->madmin->count_all(),
@@ -56,14 +52,10 @@ class Admin extends MX_Controller {
 						'total_page'=>$total_page
 						);
 			$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
-	
 	public function add(){
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==3){
+		if(check_login(3)){
 			$data = array(
 						'user' => $this->session->userdata('user'),
 						'meta_title' => 'Add User',
@@ -82,11 +74,11 @@ class Admin extends MX_Controller {
 				$this->form_validation->set_rules('gender', 'gender', 'required');
 				$this->form_validation->set_rules('current_job', 'current_job', 'required');
 				$this->form_validation->set_rules('birthday', 'birthday', 'required');
-				$this->form_validation->set_rules('level', 'Level', 'required'); 
+				$this->->set_rules('level', 'Level', 'required'); 
 				$this->form_validation->set_error_delimiters('<div class="input-notification error png_bg">', '</div>');
 				if($this->form_validation->run() == TRUE){
 					$salt = "testt";
-					$a_Userinfo = array(
+					$a_Userinfo = arrform_validationay(
 											'user_name' => $this->input->post('user_name'),
 											'user_name_furi' => $this->input->post('user_name_furi'),
 											'mail_address' => $this->input->post('mail_address'),
@@ -139,13 +131,10 @@ class Admin extends MX_Controller {
 				}
 			}
 			$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 	public function edit($id = 0){
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==3){
+		if(check_login(3)){
 			$data = array(
 						'user' => $this->session->userdata('user'),
 						'meta_title' => 'Edit User',
@@ -198,13 +187,10 @@ class Admin extends MX_Controller {
 				}
 				$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
 			}
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 	public function delete($id = 0){
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==3){
+		if(check_login(3)){
 			$data = array(
 						'user' => $this->session->userdata('user'),
 						'meta_title' => 'Delete User',
@@ -234,15 +220,12 @@ class Admin extends MX_Controller {
 				}
 				$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
 			}
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 
 	public function manage_page($id){
 			
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==3){
+		if(check_login(3)){
 
 		// check box
 		if($this->input->post('submit')){
@@ -270,8 +253,6 @@ class Admin extends MX_Controller {
 				$data['view_article'] = $check;
 				$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
 			}
-		}else{
-			redirect(base_url().'user/login');
 		}
 	}
 

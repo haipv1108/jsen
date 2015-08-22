@@ -23,7 +23,7 @@ class Guide_area extends MX_Controller{
 	
 	public function city($id =0){
 		//Y tuong: search tat ca city dua theo area 
-		$id = $id<1?1:$id;
+		$id = check_int($id);
 		$list_city = $this->mguide_area->get_city($id);
 		if(isset($list_city) && !empty($list_city)){
 			$data = array(
@@ -42,7 +42,7 @@ class Guide_area extends MX_Controller{
 						'base_url' => base_url().'guide_area/list_work',
 						'total_rows' => $this->mguide_area->count_work($id),
 						'per_page' => 10,
-						'prev_link'  => '&lt;',
+						'prev_link'  => 'Prev;',
 						'next_link'  => '&gt;',
 						'last_link'  => 'Last',
 						'first_link' => 'First',
@@ -54,6 +54,7 @@ class Guide_area extends MX_Controller{
 		$page = ($page > $total_page)?$total_page:$page;
 		$page = ($page < 1)?1:$page;
 		$list_work = $this->mguide_area->list_work($id, $page,$page*$config['per_page']);
+		
 
 		if(isset($list_work) && !empty($list_work)){
 			$data = array(
