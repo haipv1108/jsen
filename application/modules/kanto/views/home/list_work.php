@@ -3,7 +3,6 @@
 		<div id="resultBox3">
 			<p>函館市のバイト</p>
 		</div><!--resultBox3-->
-
 		<div id="searchPanel">
 			<div class="searchPanelInner">
 				<div class="searchPanelInner2">
@@ -41,9 +40,13 @@
 														<div class="mainTown">
 															<ul class="clearfix">
 																<li class="checkedArea">
-																	<label for="city_1">
-																		<input type="checkbox" checked="checked" value="1" name="city[]" id="city_1">北海道
-																	</label>
+																	<?php 	if(isset($area_name) && !empty($area_name)){
+																				foreach($area_name as $k=>$v){?>
+																					<label for="">
+																						<input type="checkbox" value="" name="city[]"><?php echo $v['area_name'];?>
+																					</label>
+																	<?php		}
+																			}?>
 																</li>
 																			
 																<li id="selectAreaAgain">
@@ -75,66 +78,18 @@
 													<th><span class="jobTTL">職種</span></th>
 													<td colspan="3">
 														<ul class="li_job">
-															<li class="li_job01">
-																<label for="work_type_01">
-																	<input type="checkbox" value="office" id="work_type_01"> オフィス系
-																</label>
-															</li>
-															<li class="li_job02">
-																<label for="work_type_02">
-																	<input type="checkbox" value="digital" id="work_type_02"> デジタル・クリエイティブ系
-																</label>
-															</li>
-															<li class="li_job03">
-																<label for="work_type_03">
-																	<input type="checkbox" value="enter" id="work_type_03"> エンターテインメント系
-																</label>
-															</li>
-															<li class="li_job04">
-																	<label for="work_type_04">
-																		<input type="checkbox" value="mass" id="work_type_04"> マスコミ系
-																	</label>
-															</li>
-															<li class="li_job01">
-																<label for="work_type_05">
-																	<input type="checkbox" value="food" id="work_type_05"> フード系
-																</label>
-															</li>
-															<li class="li_job02">
-																<label for="work_type_06">
-																	<input type="checkbox" value="sales" id="work_type_06"> 販売・ファッション・レンタル
-																</label>
-															</li>
-															<li class="li_job03">
-																<label for="work_type_07">
-																	<input type="checkbox" value="institution" id="work_type_07"> 施設・サービス系
-																</label>
-															</li>
-															<li class="li_job04">
-																<label for="work_type_08">
-																	<input type="checkbox" value="transport" id="work_type_08"> 配送・物流系
-																</label>
-															</li>
-															<li class="li_job01">
-															   <label for="work_type_09">
-																	<input type="checkbox" value="create" id="work_type_09"> 軽作業・製造系
-																</label>
-															</li>
-															<li class="li_job02">
-																<label for="work_type_10">
-																	<input type="checkbox" value="medical" id="work_type_10"> 医療・福祉系
-																</label>
-															</li>
-															<li class="li_job03">
-																<label for="work_type_11">
-																	<input type="checkbox" value="teacher" id="work_type_11"> 講師・インストラクター
-																</label>
-															</li>
-															<li class="li_job04">
-																<label for="work_type_12">
-																	<input type="checkbox" value="beauty" id="work_type_12"> ビューティー系
-																</label>
-															</li>
+														<?php if(isset($list_feature) && !empty($list_feature)){
+																		$i = 1;
+																		foreach($list_feature as $k=>$v){?>
+																			<li class="li_job01">
+																				<label for="work_type_0<?php echo $i;?>">
+																					<input type="checkbox" value="<?php echo $v['system_work_name'];?>"><?php echo $v['system_work_name'];?>
+																				</label>
+																			</li>
+															<?php			$i = (++$i)==5?1:$i;
+																		}
+																	}
+																	?>
 														</ul>
 														<div style="display:none;" id="open_01" class="sheet_type clearfix">
 														<p>オフィス系の業種</p>
@@ -481,7 +436,7 @@
 													<ul class="timeCheck">
 														<li class="time1">
 															<label for="cb1" class="checkbox_unchecked">早朝</label>
-															<input type="checkbox" value="1" class="crirHiddenJS" name="time[]" id="cb1">
+															<input type="checkbox" value="1" class="crirHiddenJS" check = 'checked' name="time[]" id="cb1">
 														</li>
 														<li class="time2">
 															<label for="cb2" class="checkbox_unchecked">朝</label>
@@ -524,7 +479,7 @@
 								</div>
 							</div>
 						</div><!--searchWhiteBox-->
-
+					</form>
 						<div id="moreSearchOption" class="searchWhiteBox">
 							<div id="optionTable">
 								<div class="inner">
