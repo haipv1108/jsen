@@ -94,8 +94,9 @@
                                     <?php foreach ($gwork as $key => $value) {?>
                                         <li>
                                             <label>
-                                                <!-- <input type="checkbox" value="<?php echo $value['name'];?>" name="job[]"> -->
+                                                <input type="checkbox" value="<?php echo $value['name'];?>" name="job[]"> 
                                                 <a id="<?php echo $value['name'];?>" href="<?php echo base_url();?>kanto/special/<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                                (<?php echo ($value['count_work'])?>)
                                             </label>
                                         </li>
                                     <?php }?>
@@ -129,8 +130,11 @@
                                          ?>
                                                 <?php foreach ($feature_name as $key => $value) { ?>
                                                <li = id="<?php echo $value['feature_name'];?>">
+                                                    <label>
+                                                    <input type="checkbox" value="<?php echo $value['feature_name'];?>" name="feature[]"> 
                                                     <a href="<?php echo base_url();?>kanto/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
                                                     (<?php echo $count_work_feature[$value['feature_name']];?>)                             
+                                                    </label>
                                                 </li>
                                                 <span></span>                                                  
                                                     <?php }?>

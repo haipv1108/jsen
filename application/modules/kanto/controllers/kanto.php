@@ -123,6 +123,11 @@ class Kanto extends MX_Controller {
 		 					'list_work' => $list_work,
 		 					'work_position'=> $work_position,
 		 					'tempplate' => 'kanto/home/list_work',
+		 					'current_page' => $page,
+							'total_page' => $total_page,
+							'area_name'=>'kanto',
+							'page'=> 'special',
+							'page_name' => $gwork
 		 				);
 		 }else{
 		 	$data['message'] = 'Data not found';
@@ -159,6 +164,7 @@ class Kanto extends MX_Controller {
 		 					'list_work' => $list_work,
 		 					'work_position'=> $work_position,
 		 					'tempplate' => 'kanto/home/list_work',
+
 		 				);
 		 }else{
 		 	$data['message'] = 'Data not found';
