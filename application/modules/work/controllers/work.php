@@ -15,6 +15,7 @@ class Work extends MX_Controller{
 							'work_apply'=>$this->mwork->work_apply($id_str),
 							'work_photo'=>$this->mwork->work_photo($id_str),
 							'work_feature'=>$this->mwork->work_feature($id_str)
+							'count' => count_work_helper(),
 						);
 		}else{
 			$data['message'] = 'Data not found';

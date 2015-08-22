@@ -14,7 +14,8 @@ class Guide_line extends MX_Controller{
 				$prefecture[$value['area_name']] = $this->mguide_line->get_prefecture($value['area_name']);
 			}
 		$data['area'] = $area;
-		$data['prefecture'] = $prefecture;						
+		$data['prefecture'] = $prefecture;		
+		$data['count'] = count_work_helper();		
 		$data['tempplate'] = 'guide_line';		
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
@@ -30,12 +31,10 @@ class Guide_line extends MX_Controller{
 						'line_name' => $line_name,
 						'tempplate' =>'line'
 					);
-<<<<<<< HEAD
-=======
 		}else{
 			$data['message'] = 'Data not found';
->>>>>>> 49aedb7cca16987eda62ab3825232e797de473ab
 		}
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function station($id = 0){
@@ -49,6 +48,7 @@ class Guide_line extends MX_Controller{
 		}else{
 			$data['message'] = 'Data not found';
 		}
+		$data['count'] = count_work_helper();
 		$data['tempplate'] = 'station';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
@@ -65,6 +65,7 @@ class Guide_line extends MX_Controller{
 		}else{
 			$data['message'] = 'Data not found';
 		}
+		$data['count'] = count_work_helper();
 		$data['tempplate'] = 'kanto/home/list_work';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}

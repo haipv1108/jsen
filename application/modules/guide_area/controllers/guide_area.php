@@ -16,7 +16,8 @@ class Guide_area extends MX_Controller{
 				$prefecture[$value['area_name']] = $this->mguide_area->get_prefecture($value['area_name']);
 			}
 		$data['area'] = $area;
-		$data['prefecture'] = $prefecture;						
+		$data['prefecture'] = $prefecture;	
+		$data['count'] = count_work_helper();
 		$data['tempplate'] = 'guide_area';		
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
@@ -33,39 +34,30 @@ class Guide_area extends MX_Controller{
 		}else{
 			$data['message'] = 'Data not found';
 		}
+		$data['count'] = count_work_helper();
 		$data['tempplate'] = 'city';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function list_work($id = 0, $page = 1){
-		$id = $id<1?1:$id;
-		$config = array(
-						'base_url' => base_url().'guide_area/list_work',
-						'total_rows' => $this->mguide_area->count_work($id),
-						'per_page' => 10,
-						'prev_link'  => 'Prev;',
-						'next_link'  => '&gt;',
-						'last_link'  => 'Last',
-						'first_link' => 'First',
-						'use_page_numbers' => TRUE
-						);
+		//pagination
+		$total = $this->mguide_area->count_work($id);
+		$config = config_pagination_helper('guide_area/list_work', $total);
 		$this->pagination->initialize($config); 
-		
-		$total_page = ceil($config['total_rows']/$config['per_page']);
-		$page = ($page > $total_page)?$total_page:$page;
-		$page = ($page < 1)?1:$page;
-		$list_work = $this->mguide_area->list_work($id, $page,$page*$config['per_page']);
-		
-
+		$page = page_process_helper($config, $page);
+		//end of pagination
+		$offset = $page * $config['per_page'];
+		$list_work = $this->mguide_area->list_work($id, $offset, $config["per_page"]);
 		if(isset($list_work) && !empty($list_work)){
 			$data = array(
 							'list_work' => $list_work,
 							'work_position'=> $this->mguide_area->work_position($id),
-							'paginator' => $this->pagination->create_links(),
+							'paginator'=> $this->pagination->create_links(),
 						);
 		}else{
 			$data['message'] = 'Data not found';
 		}
-		$data['tempplate'] = 'kanto/home/list_work';
+		$data['count'] = count_work_helper();
+		$data['tempplate'] = 'list_work';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }
