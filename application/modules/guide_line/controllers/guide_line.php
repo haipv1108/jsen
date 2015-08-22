@@ -54,7 +54,9 @@ class Guide_line extends MX_Controller{
 		if(isset($list_work) && !empty($list_work)){
 			$data = array(
 							'list_work' => $list_work,
-							'work_position'=> $this->mguide_line->work_position($id)
+							'work_position'=> $this->mguide_line->work_position($id),
+							'list_feature'=> feature_helper(),
+							'area_name'=>area_name_helper()
 						);
 		}else{
 			$data['message'] = 'Data not found';
