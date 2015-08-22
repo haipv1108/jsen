@@ -1,5 +1,4 @@
-
- <div id="wrapper">
+<div id="wrapper">
         <div id="mainContents">
             <div id="article">
                 <div id="arbeitSearchBox">
@@ -36,7 +35,7 @@
                                         <input type="hidden" value="kyusyu" name="area">
                                         <input type="hidden" value="1" name="from_top">
                                         <input class="fwtext" type="text" onblur="if (!this.value) { this.value='フリーワード検索';}" onfocus="if (this.value == 'フリーワード検索') { this.value='' }" value="フリーワード検索" name="freeword">
-                                        <input class="fwBtn" type="image" alt="検索" src="../../image//home/fwsearch_btn.png" onmouseout="this.src='../../image/fwsearch_btn.png'" onmouseover="this.src='../../image/fwsearch_btn_o.png'">
+                                        <input class="fwBtn" type="image" alt="検索" src="template/frontend/image//home/fwsearch_btn.png" onmouseout="this.src='template/frontend/image/fwsearch_btn.png'" onmouseover="this.src='template/frontend/image/fwsearch_btn_o.png'">
                                     </form>
                                 </div>
                             </div>
@@ -51,9 +50,9 @@
                             <div class="aMap">
                                 <ul class="idTabs">
                                 <?php if(isset($prefecture) && !empty($prefecture)){ ?> 
-                                    <?php foreach ($prefecture['関東'] as $key => $value) {?>
+                                    <?php foreach ($prefecture['九州・沖縄'] as $key => $value) {?>
                                     <li class="am<?php if($value['id']>9) echo $value['id']; else echo "0".$value['id'];?>">
-                                        <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                        <a href="<?php echo base_url();?>guide_area/city/<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
                                     </li>
                                     <?php }?>
                                     <?php }else{echo "can't load prefecture";}?>
@@ -70,9 +69,9 @@
                             <div class="aMap">
                                 <ul>
                                 <?php if(isset($prefecture) && !empty($prefecture)){ ?> 
-                                    <?php foreach ($prefecture['関東'] as $key => $value) {?>
+                                    <?php foreach ($prefecture['九州・沖縄'] as $key => $value) {?>
                                     <li class="am<?php echo $value['id']>9?$value['id']:"0".$value['id'];?>">
-                                        <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                        <a href="<?php echo base_url();?>guide_line/line/<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
                                         </li>
                                     <?php }?>
                                     <?php }else{echo "can't load prefecture";}?>
@@ -92,20 +91,19 @@
                                     <input type="hidden" value="kyusyu" name="area">
                                     <ul>
                                     <?php if(isset($gwork)&& !empty($gwork)){?>
-                                    <?php $i=1; foreach ($gwork as $key => $value) {?>
+                                    <?php foreach ($gwork as $key => $value) {?>
                                         <li>
                                             <label>
                                                 <input type="checkbox" value="<?php echo $value['name'];?>" name="job[]">
-                                                <a id="iconType<?php echo ($i++>9)?$i:"0".$i;?>" href="/kyusyu/job_<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
+                                                <a id="<?php echo $value['name'];?>" href="<?php echo base_url();?>kyusyu/special/<?php echo $value['name'];?>"><?php echo $value['name'];?></a>
                                             </label>
-                                            <span>└ 営業、事務、受付...</span>
                                         </li>
                                     <?php }?>
                                     <?php }else echo "can't load group work";?>
                                     </ul>
                                     
                                     <p class="searchBtn">
-                                        <input type="image" alt="検索" onmouseout="this.src='../../image/s_search_btn.png'" onmouseover="this.src='../../image/s_search_btn_o.png'" src="../../image/s_search_btn.png">
+                                        <input type="image" alt="検索" onmouseout="this.src='template/frontend/image/s_search_btn.png'" onmouseover="this.src='template/frontend/image/s_search_btn_o.png'" src="template/frontend/image/s_search_btn.png">
                                     </p>
                                 </form>
                             </div>
@@ -130,10 +128,11 @@
                                             if(isset($count_work_feature) && !empty($count_work_feature)){
                                          ?>
                                                 <?php foreach ($feature_name as $key => $value) { ?>
-                                               <li>
-                                                    <a href="/kyusyu/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                               <li = id="<?php echo $value['feature_name'];?>">
+                                                    <a href="<?php echo base_url();?>kyusyu/feature/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
                                                     (<?php echo $count_work_feature[$value['feature_name']];?>)                             
-                                                </li>                                                  
+                                                </li>
+                                                <span></span>                                                  
                                                     <?php }?>
                                         <?php 
                                             }else{echo "can't count work follow feature";}
@@ -141,7 +140,7 @@
                                     </ul>
 
                                     <p class="searchBtn">
-                                    <input type="image" alt="検索" onmouseout="this.src='../../image/s_search_btn.png'" onmouseover="this.src='../../image/s_search_btn_o.png'" src="../../image/s_search_btn.png">
+                                    <input type="image" alt="検索" onmouseout="this.src='template/frontend/image/s_search_btn.png'" onmouseover="this.src='template/frontend/image/s_search_btn_o.png'" src="template/frontend/image/s_search_btn.png">
                                     </p>
                                 </form>
                             </div>
@@ -197,7 +196,7 @@
                                     </p>
                                     </form>
                                     <p class="searchBtn">
-                                        <input id="nminFormSubmitButton" type="image" src="../../image/s_search_btn.png" onmouseover="this.src='../../image/s_search_btn_o.png'" onmouseout="this.src='../../image/s_search_btn.png'" alt="検索">
+                                        <input id="nminFormSubmitButton" type="image" src="template/frontend/image/s_search_btn.png" onmouseover="this.src='template/frontend/image/s_search_btn_o.png'" onmouseout="this.src='template/frontend/image/s_search_btn.png'" alt="検索">
                                     </p>
                                 </div>
                             </div>
@@ -237,9 +236,9 @@
                             <div class="aMap">
                                 <ul>
                                 <?php if(isset($prefecture)&& !empty($prefecture)){?>
-                                    <?php foreach ($prefecture['関東'] as $key => $value) {?>
+                                    <?php foreach ($prefecture['九州・沖縄'] as $key => $value) {?>
                                     <li class="am<?php echo $value['id']>9?$value['id']:"0".$value['id'];?>">
-                                        <a href="/guide_area<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                        <a href="<?php echo base_url();?>guide_area/city/<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
                                         </li>
                                     <?php }?>
                                     <?php }else{echo "can't load prefecture";}?>

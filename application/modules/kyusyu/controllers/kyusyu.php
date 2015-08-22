@@ -4,9 +4,15 @@ class Kyusyu extends MX_Controller {
 		parent::__construct();
 		$this->load->helper(array( 'url'));
 		$this->load->model('mkyusyu');
+		$this->load->library(array('pagination'));
 	}
 
 	public function index(){
+		$checkbox = $this->input->get('job');
+		$job_search = $this->input->get('job_search');
+		if(isset($job_search))
+			print_r($checkbox);
+
 		$area = $this->mkyusyu->get_area();
 		foreach ($area as $key => $value) {
 			$prefecture[$value['area_name']] = $this->mkyusyu->get_prefecture($value['area_name']);
@@ -46,9 +52,26 @@ class Kyusyu extends MX_Controller {
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL); 
 	}
 
-	public function feature($feature_name = 0){
-		if($feature_name == 0) $feature_name = "age";
-		$list_work = $this->mkyusyu->list_work($feature_name,"九州・沖縄");
+	public function feature($feature_name = 0, $page = 1){
+	// pagination
+		$bf = $this->mkyusyu->count_work_feature($feature_name,'九州・沖縄');
+		$config = array(
+						'base_url' => base_url().'kyusyu/feature',
+						'total_rows' => $bf['COUNT(work_id)'],
+						'per_page' => 10,
+						'prev_link'  => '&lt;',
+						'next_link'  => '&gt;',
+						'last_link'  => 'Last',
+						'first_link' => 'First',
+						'use_page_numbers' => TRUE
+						);
+            $this->pagination->initialize($config); 
+			$total_page = ceil($config['total_rows']/$config['per_page']);
+			$page = ($page > $total_page)?$total_page:$page;
+			$page = ($page < 1)?1:$page;
+			//$page = $page - 1;
+	//end of pagination
+		$list_work = $this->mkyusyu->list_work($feature_name,"九州・沖縄",$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
 		foreach ($list_work as $key => $value) {
 			$work_position[$value['work_id']]  = $this->mkyusyu->work_position($value['work_id']);
@@ -66,9 +89,25 @@ class Kyusyu extends MX_Controller {
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
-	public function special($gwork = 0){
-		if($gwork == 0) $gwork = "beauty";
-		$list_work = $this->mkyusyu->list_work_follow_group($gwork,"九州・沖縄");
+	public function special($gwork = 0,$page = 1){
+	//pagination
+		$bf = $this->mkyusyu->count_gwork($gwork,'九州・沖縄');
+		$config = array(
+						'base_url' => base_url().'kyusyu/special',
+						'total_rows' => $bf['count_work'],
+						'per_page' => 10,
+						'prev_link'  => '&lt;',
+						'next_link'  => '&gt;',
+						'last_link'  => 'Last',
+						'first_link' => 'First',
+						'use_page_numbers' => TRUE
+						);
+            $this->pagination->initialize($config); 
+			$total_page = ceil($config['total_rows']/$config['per_page']);
+			$page = ($page > $total_page)?$total_page:$page;
+			$page = ($page < 1)?1:$page;
+	//end of pagination
+		$list_work = $this->mkyusyu->list_work_follow_group($gwork,"九州・沖縄",$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
 		foreach ($list_work as $key => $value) {
 			$work_position[$value['work_id']]  = $this->mkyusyu->work_position($value['work_id']);
@@ -86,15 +125,30 @@ class Kyusyu extends MX_Controller {
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
-	public function station($station_id = 0){
-		if($station_id == 0) $station_id = "69";
-		$list_work = $this->mkyusyu->list_work_follow_station($station_id);
+	public function station($station_id = 0, $page = 1){
+		//pagination
+		$bf = $this->mkyusyu->count_work_ninkiarea($station_id);
+		$config = array(
+						'base_url' => base_url().'kyusyu/station',
+						'total_rows' => $bf['COUNT(work_id)'],
+						'per_page' => 10,
+						'prev_link'  => '&lt;',
+						'next_link'  => '&gt;',
+						'last_link'  => 'Last',
+						'first_link' => 'First',
+						'use_page_numbers' => TRUE
+						);
+            $this->pagination->initialize($config); 
+			$total_page = ceil($config['total_rows']/$config['per_page']);
+			$page = ($page > $total_page)?$total_page:$page;
+			$page = ($page < 1)?1:$page;
+	//end of pagination
+		$list_work = $this->mkyusyu->list_work_follow_station($station_id,$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
 		foreach ($list_work as $key => $value) {
 			$work_position[$value['work_id']]  = $this->mkyusyu->work_position($value['work_id']);
 		}
 	}
-
 		 if(isset($list_work) && !empty($list_work)){
 		 	$data = array(
 		 					'list_work' => $list_work,
@@ -108,5 +162,3 @@ class Kyusyu extends MX_Controller {
 	}
 
 }
-
-	

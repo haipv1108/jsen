@@ -16,21 +16,17 @@ class Member extends MX_Controller {
 	{
 		// Kiem tra dang nhap
 		// Neu chua dang nhap -> chuyen den login
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==2){
+		check_login(2){
 			$data['user'] = $this->session->userdata('user'); 
 			$data['meta_title'] = 'Home Page';
 			$data['active'] = 'member-homepage';
 			$data['template'] = 'backend/home/index';
 			$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 	public function view($sort ='createon',$page = 1)
 	{
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==2){
+		check_login(2){
 			$config = array(
 						'base_url' => base_url().'/member/view',
 						'total_rows' => $this->mmember->count_all(),
@@ -59,14 +55,11 @@ class Member extends MX_Controller {
 						'total_page'=>$total_page
 						);
 			$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 	public function add()
 	{
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==2){
+		check_login(2){
 			if($this->input->post('submit')){
 				$this->form_validation->set_rules('title', 'Title', 'trim|required|min_length[3]|max_length[255]');
 				$this->form_validation->set_rules('content','Content', 'trim|required');
@@ -96,13 +89,10 @@ class Member extends MX_Controller {
 						);
 			//$data['feature'] = $this->mmember->get_feature();
 			$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 	public function edit($work_id = 0){
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==2){
+		check_login(2){
 			$data = array(
 						'user' => $this->session->userdata('user'),
 						'meta_title' => 'Edit_page',
@@ -141,13 +131,10 @@ class Member extends MX_Controller {
 				}else{}
 				$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
 			}
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 	public function delete($work_id){
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==2){
+		check_login(2){
 			$data = array(
 						'user' => $this->session->userdata('user'),
 						'meta_title' => 'Delete Page',
@@ -175,14 +162,11 @@ class Member extends MX_Controller {
 				}
 				$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
 			}
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 	// edit profile
 	public function profile(){
-		$user = $this->session->userdata('user');
-		if($user['logged_in'] && $user['level'] ==2){
+		check_login(2){
 			$data = array(
 						'user' => $this->session->userdata('user'),
 						'meta_title' => 'Edit Profile',
@@ -216,8 +200,6 @@ class Member extends MX_Controller {
 				}
 			}
 			$this->load->view('backend/layouts/home',isset($data)?$data:NULL);
-		}else{
-			redirect(base_url().'home/login');
 		}
 	}
 }

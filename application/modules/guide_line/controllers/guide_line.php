@@ -19,6 +19,7 @@ class Guide_line extends MX_Controller{
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function line($id = 0){
+		$id = check_int($id);
 		$line = $this->mguide_line->get_line($id);
 		if(isset($line) && !empty($line)){
 			foreach($line as $key => $val){
@@ -35,7 +36,7 @@ class Guide_line extends MX_Controller{
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function station($id = 0){
-		$id = $id<1?1:$id;
+		$id = check_int($id);
 		$station = $this->mguide_line->get_station($id);
 		if(isset($station) && !empty($station)){
 			$data = array(
@@ -49,7 +50,7 @@ class Guide_line extends MX_Controller{
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function list_work($id = 0){
-		$id = $id<1?1:$id;
+		check_int($id);
 		$list_work = $this->mguide_line->list_work($id);
 		if(isset($list_work) && !empty($list_work)){
 			$data = array(

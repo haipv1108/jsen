@@ -73,8 +73,19 @@ class Mhokuriku extends CI_Model{
 			return $query->result_array();
 		else return false;
 	}
+	public function count_gwork($gwork,$area_name){
+		$query = $this->db->query(" SELECT count(work_id) as count_work 
+									FROM system_work,prefecture
+									WHERE system_work.prefecture_id = prefecture.prefecture_id
+									AND prefecture.area_name = '{$area_name}'
+									AND system_work.system_work_name = '{$gwork}'
+									");
+				if($query->row_array()>0)
+			return $query->row_array();
+		else return false;
+	}
 
-	public function list_work($feature_name,$area_name){
+	public function list_work($feature_name,$area_name,$offset,$number){
 		$query = $this->db->query("
 								SELECT DISTINCT feature.work_id,work_name, work_title, work_image_url, work_guild_station, work_content1, work_time 
 								FROM feature,prefecture,main_work
@@ -82,7 +93,7 @@ class Mhokuriku extends CI_Model{
 								AND main_work.work_id = feature.work_id
 								AND prefecture.area_name = '{$area_name}'
 								AND feature.feature_list like '%{$feature_name}%'
-								LIMIT 10
+								LIMIT $number,$offset
 								");
 		if($query->num_rows()>0)
 			return $query->result_array();
@@ -99,26 +110,31 @@ class Mhokuriku extends CI_Model{
 		else return false;
 	}
 
-	public function list_work_follow_group($gwork,$area_name){
+	public function list_work_follow_group($gwork,$area_name,$offset,$number){
 		$query = $this->db->query(" SELECT DISTINCT system_work.work_id,work_name, work_title, work_image_url, work_guild_station, work_content1, work_time 
 									FROM system_work,prefecture,main_work 
 									WHERE system_work.prefecture_id = prefecture.prefecture_id 
 									AND main_work.work_id = system_work.work_id 
 									AND prefecture.area_name = '{$area_name}' 
-									AND system_work.system_work_name = '{$gwork}' LIMIT 10");
+									AND system_work.system_work_name = '{$gwork}' 
+									LIMIT $number,$offset
+									");
 		if($query->row_array()>0)
 			return $query->result_array();
 		else return false;
 	}
 
-	public function list_work_follow_station($station_id){
+	public function list_work_follow_station($station_id,$offset,$number){
 		$query = $this->db->query(" SELECT DISTINCT main_work.work_id,work_name, work_title, work_image_url, work_guild_station, work_content1, work_time 
 									FROM main_work, station_work
 									WHERE main_work.work_id = station_work.work_id
-									AND station_work.station_id = {$station_id}");
+									AND station_work.station_id = {$station_id}
+									LIMIT $number,$offset
+									");
 		if($query->row_array()>0)
 			return $query->result_array();
 		else return false;
 	}
+
 
 }
