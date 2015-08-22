@@ -19,49 +19,45 @@ class Guide_job extends MX_Controller{
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function job($id = 0){
-		//$id = check_int($id);
 		$job = $this->mguide_job->get_job($id);
-		if(isset($job)){
+		if(isset($job) && !empty($job)){
 			$data['job'] = $job;
+			$data['prefecture_id'] = $id;
 		}
 
 		if($this->input->post('submit')){
 			$checkbox_job = $this->input->post('job[]');
-			
-			$this->list_work1($checkbox_job);
+			foreach ($checkbox_job as $key => $value) {
+				$list_work [$value] = $this->mguide_job->list_work($value, $id);
+				if(isset($list_work) && !empty($list_work)){
+					$work_position[$value] = $this->mguide_job->work_position($value, $id);
+				}else{
+					$data['message'] = 'Data not found';
+				}
+			}
+			$data = array(
+								'list_work' => $list_work,
+								'work_position' => $work_position
+							);
+			$data['tempplate'] = 'kanto/home/list_work_choose';
+			$this->load->view('home_page/frontend/layouts/home_page', isset($data)?$data:NULL);
 		} else {
 			$data['tempplate'] = 'job';
 			$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
-			
 		}
-		//sql = select uu from wger ano = 'o' or ano = 'i'
-
-		
 	}
-	public function list_work($str = ''){
-		$list_work = $this->mguide_job->list_work($str);
+	public function list_work($str = '', $id = 0){
+		$list_work = $this->mguide_job->list_work($str, $id);
 		if(isset($list_work) && !empty($list_work)){
 			$data = array(
 							'list_work' => $list_work,
-							'work_position' => $this->mguide_job->work_position($str)
+							'work_position' => $this->mguide_job->work_position($str, $id)
 						);
 		}else{
 			$data['message'] = 'Data not found';
 		}
+		print_r($data);
 		$data['tempplate'] = 'kanto/home/list_work';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
-	}
-	private function list_work1($checkbox_job){
-		$list_work = $this->mguide_job->list_work1($checkbox_job);
-		if(isset($list_work) && !empty($list_work)){
-			$data = array(
-							'list_work' => $list_work,
-							'work_position' => $this->mguide_job->work_position1($checkbox_job)
-						);
-		} else{
-			$data['message'] = 'Data not found.';
-		}
-		$data['tempplate'] = 'kanto/home/list_work';
-		$this->load->view('home_page/frontend/layouts/home_page', isset($data)?$data:NULL);
 	}
 }
