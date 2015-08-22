@@ -23,6 +23,7 @@
                     <input type="hidden" name="area" value="<?php echo isset($job['area_name'])?$job['area_name']: 'khong co dl';?>">
                     <div class="blueBox">
                         <ul>
+						<?php if(isset($job) && !empty($job)){?>
                             <?php foreach($job as $key => $value){?>
                             <li>
                                 <p id="<?php echo $value['system_work_name'];?>"><input type="checkbox" name="job[]" value="<?php echo $value['system_work_name'];?>">
@@ -31,7 +32,8 @@
 								<?php echo '('.$value['sl'].')';?>
                                 </p>
                             </li>
-                            <?php }?>                                                            
+                            <?php }?>
+						<?php }?>
                         </ul>
                     </div>
 

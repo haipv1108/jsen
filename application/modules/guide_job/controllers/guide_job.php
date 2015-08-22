@@ -21,8 +21,10 @@ class Guide_job extends MX_Controller{
 	public function job($id = 0){
 		//$id = check_int($id);
 		$job = $this->mguide_job->get_job($id);
-		if(isset($job)){
+		if(isset($job) && !empty($job)){
 			$data['job'] = $job;
+		}else{
+			$data['message'] = 'Data not found';
 		}
 
 		if($this->input->post('submit')){

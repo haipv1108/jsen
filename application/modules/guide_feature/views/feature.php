@@ -30,6 +30,7 @@
                     <input type="hidden" name="city[]" value="1">
                     <div class="blueBox">
                         <ul class="featureList">
+							<?php if(isset($feature_name) && !empty($feature_name))?>
                             <?php foreach ($feature_name as $key => $value) { ?>
                             <li id= "<?php echo $value['feature_name'];?>">
                                 <input type="checkbox" class="limitCheckbox" name="feature[]" value="<?php echo $value['feature_name'];?>">

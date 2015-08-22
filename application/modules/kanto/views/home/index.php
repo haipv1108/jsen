@@ -52,7 +52,7 @@
                                 <?php if(isset($prefecture) && !empty($prefecture)){ ?> 
                                     <?php foreach ($prefecture['関東'] as $key => $value) {?>
                                     <li class="am<?php if($value['id']>9) echo $value['id']; else echo "0".$value['id'];?>">
-                                        <a href="<?php echo base_url();?>guide_area/city/<?php echo $value['id'];?>.htm"><?php echo $value['name'];?></a>
+                                        <a href="/guide_area<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
                                     </li>
                                     <?php }?>
                                     <?php }else{echo "can't load prefecture";}?>
