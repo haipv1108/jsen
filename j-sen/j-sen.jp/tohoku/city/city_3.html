@@ -161,7 +161,125 @@
                                                         <a href="javascript:void(0)" class="lineWindowOpenBtn">駅・路線で検索</a>
                                                         <a href="javascript:void(0)" class="timeBtnSmall timeWindowOpenBtn">通勤時間</a>
                                                     </div>
-                                                    <div class="areaCheckList mainListArea" id="jobCheckTable">
+                                                    <div class="mainListArea" id="search_panel_guide_link_list">
+                                                        <p class="selectedArea">
+                                                            <a href="/tohoku/city_3.htm">
+                                                                <strong>函館市</strong>
+                                                            </a>
+                                                            <span>&nbsp;</span>
+                                                            <a class="reSelectBtnMin areaWindowOpenBtn" href="javascript:void(0);">再選択する</a>
+                                                            <input type="hidden" name="city[]" id="search_panel_guide_link_parent" value="3">
+                                                        </p>
+                                                        <ul class="itemList clearfix">
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="3" checked="checked">
+                                                                <a href="/tohoku/station_3.htm">桔梗</a>
+                                                                <span>（3）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="2">
+                                                                <a href="/tohoku/station_2.htm">五稜郭</a>
+                                                                <span>（40）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="1">
+                                                                <a href="/tohoku/station_1.htm">函館</a>
+                                                                <span>（22）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="582">
+                                                                <a href="/tohoku/station_582.htm">五稜郭公園前</a>
+                                                                <span>（22）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="583">
+                                                                <a href="/tohoku/station_583.htm">中央病院前</a>
+                                                                <span>（10）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="581">
+                                                                <a href="/tohoku/station_581.htm">杉並町</a>
+                                                                <span>（7）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="580">
+                                                                <a href="/tohoku/station_580.htm">柏木町</a>
+                                                                <span>（6）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="579">
+                                                                <a href="/tohoku/station_579.htm">深堀町</a>
+                                                                <span>（6）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="589">
+                                                                <a href="/tohoku/station_589.htm">松風町</a>
+                                                                <span>（5）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="574">
+                                                                <a href="/tohoku/station_574.htm">湯の川</a>
+                                                                <span>（5）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="586">
+                                                                <a href="/tohoku/station_586.htm">昭和橋</a>
+                                                                <span>（4）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="590">
+                                                                <a href="/tohoku/station_590.htm">函館駅前</a>
+                                                                <span>（4）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="575">
+                                                                <a href="/tohoku/station_575.htm">湯の川温泉</a>
+                                                                <span>（4）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="578">
+                                                                <a href="/tohoku/station_578.htm">競馬場前(函館)</a>
+                                                                <span>（3）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="587">
+                                                                <a href="/tohoku/station_587.htm">千歳町(北海道)</a>
+                                                                <span>（3）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="584">
+                                                                <a href="/tohoku/station_584.htm">千代台</a>
+                                                                <span>（3）</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="itemList clearfix" id="hidden_guide_link" style="overflow: hidden; display: none;">
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="588">
+                                                                <a href="/tohoku/station_588.htm">新川町(函館)</a>
+                                                                <span>（2）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="576">
+                                                                <a href="/tohoku/station_576.htm">市民会館前</a>
+                                                                <span>（2）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="585">
+                                                                <a href="/tohoku/station_585.htm">堀川町</a>
+                                                                <span>（2）</span>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="station[]" value="577">
+                                                                <a href="/tohoku/station_577.htm">駒場車庫前</a>
+                                                                <span>（1）</span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="detailBtnArea">
+                                                            <a class="closeDetail guide_links_toggle" href="javascript:void(0);" style="display: none;">閉じる</a>
+                                                            <a style="" class="moreDetail guide_links_toggle" href="javascript:void(0);">すべて表示する</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="areaCheckList mainListArea" id="jobCheckTable" style="display: none;">
                                                         <div class="clearfix">
                                                             <div class="leftArea">
                                                                 <div class="mainTown">
@@ -180,7 +298,48 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div style="display: none;" class="stationCheckList staTTL">
+                                                        <p>駅／路線</p>
+                                                        <a href="javascript:void(0)" class="areaWindowOpenBtn">勤務地で検索</a>
+                                                        <a href="javascript:void(0)" class="timeBtnSmall timeWindowOpenBtn">通勤時間</a>
+                                                    </div>
+                                                    <div style="display: none;" class="mainListArea stationCheckList" id="stationCheckTable">
+                                                        <div class="clearfix">
+                                                            <ul class="checkList">
+                                                                <li id="selectLineAgain"><a class="reSelectBtnMin lineWindowOpenBtn" href="javascript:void(0)">再選択する</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div style="display: none;" class="timeAreaTTL">
+                                                        <p>通勤時間</p>
+                                                        <a href="javascript:void(0)" class="areaBtnSmall areaWindowOpenBtn">勤務地で検索</a>
+                                                        <a href="javascript:void(0)" class="staBtnSmall lineWindowOpenBtn">駅・路線で検索</a>
+                                                    </div>
+                                                    <div style="display: none;" class="mainListArea" id="timeCheckTable">
+                                                        <div class="clearfix">
+                                                            <div class="leftArea">
+                                                                <div id="timeResultBox">
+                                                                    <p class="timeResult">
+                                                                        <strong id="timeResultStationName">駅</strong>から電車で
+                                                                        <strong id="timeResultMinutes">分</strong>以内
+                                                                        <span id="timeResultTimes"></span>
+                                                                        <input type="hidden" value="" class="timeResultHiddenItems" name="nmin[name]" id="timeResultHiddenName">
+                                                                        <input type="hidden" value="" class="timeResultHiddenItems" name="nmin[time]" id="timeResultHiddenTime">
+                                                                        <input type="hidden" value="" class="timeResultHiddenItems" name="nmin[n]" id="timeResultHiddenN">
+                                                                    </p>
+                                                                    <a class="reSelectBtnMin timeWindowOpenBtn" href="javascript:void(0)">再選択する</a>
+                                                                </div>
+                                                            </div>
+                                                            <div style="display: none;" id="timeResultList">
+                                                                <ul>
+                                                                    <li class="btn">
+                                                                        <a href="javascript:void(0)" class="reSelectBtnMin timeWindowOpenBtn" id="selectTimeAgain">再選択する</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--jobStaSelect2-->
                                                 <div id="matchNumber">
                                                     <p class="matchTTL">この条件にマッチした求人</p>
                                                     <p class="matchNum clearfix">
