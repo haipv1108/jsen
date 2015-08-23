@@ -3082,6 +3082,20 @@ ul.guideList3 li a, ul.guideList4 li a {
     padding: 10px;
     text-align: center;
 }
+.guideSearchBtn p input, .timeSearchBtn p input{
+    background: url(image/guide_search_btn.png) no-repeat scroll 0 0;
+    overflow: hidden;
+    height: 40px; width: 194px;
+    margin-top: 12px;
+    line-height: 80px;
+}
+.guideSearchBtn p input:hover, .timeSearchBtn p input:hover{
+    background: url(image/guide_search_btn_o.png) no-repeat scroll 0 0;
+    overflow: hidden;
+    height: 40px; width: 194px;
+    margin-top: 12px;
+    line-height: 80px;
+}
 /**area1 end*************************************/
 /*search*/
 #resultBox3 {

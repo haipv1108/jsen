@@ -25,6 +25,7 @@ class Guide_feature extends MX_Controller{
 			$bf1 = $this->mguide_feature->count_work_feature($value['feature_name'], $pre_id);
 			$count_work_feature[$value['feature_name']] = $bf1['COUNT(work_id)'];
 		}
+<<<<<<< HEAD
 		$data = array(
 			'tempplate' => 'feature',	
 			'meta_title' => 'Feature',
@@ -33,13 +34,43 @@ class Guide_feature extends MX_Controller{
 			'count' => count_work_helper()
 				);
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
+=======
+		
+ 		if($this->input->post('submit')){
+ 			$checkbox_feature = $this->input->post('feature[]');
+ 			print_r($checkbox_feature);
+			foreach ($checkbox_feature as $key => $value) {
+				$list_work [$value] = $this->mguide_feature->list_work($value, $pre_id);
+				if(isset($list_work) && !empty($list_work)){
+					$work_position[$value] = $this->mguide_feature->work_position($value, $pre_id);
+				}else{
+					$data['message'] = 'Data not found';
+				}
+			}
+			$data = array(
+								'list_work' => $list_work,
+								'work_position' => $work_position
+							);
+			$data['tempplate'] = 'kanto/home/list_work_choose';
+			$this->load->view('home_page/frontend/layouts/home_page', isset($data)?$data:NULL);
+ 		}else {
+ 			$data = array(
+ 							'feature_name' => $feature_name,
+ 							'count_work_feature' => $count_work_feature,
+							'tempplate' => 'feature',	
+							'meta_title' => 'Feature',
+						);
+			$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
+ 		}
+		
+>>>>>>> ee32895ffed70de7c5e9d255a98964b26aa7b2d5
 	}
-	public function list_work($feature_name = ''){
-		$list_work = $this->mguide_feature->list_work($feature_name);
+	public function list_work($feature_name = '', $pre_id = 0){
+		$list_work = $this->mguide_feature->list_work($feature_name, $pre_id);
 		if(isset($list_work) && !empty($list_work)){
 			$data = array(
 						'list_work' => $list_work,
-						'work_position' => $this->mguide_feature->work_position($feature_name) 
+						'work_position' => $this->mguide_feature->work_position($feature_name, $pre_id) 
 						);
 		} else{
 			$data['message'] = 'Data not found.';
