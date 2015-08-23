@@ -30,11 +30,8 @@ class Guide_line extends MX_Controller{
 						'line_name' => $line_name,
 						'tempplate' =>'line'
 					);
-<<<<<<< HEAD
-=======
 		}else{
 			$data['message'] = 'Data not found';
->>>>>>> 49aedb7cca16987eda62ab3825232e797de473ab
 		}
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
