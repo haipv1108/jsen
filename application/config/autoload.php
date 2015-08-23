@@ -60,7 +60,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('pagination');
 
 
 /*
@@ -88,7 +88,8 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('my_check_input','url','my_check_manager','my_pagination');
+
+$autoload['helper'] = array('my_check_input','url','my_check_manager','my_search','my_pagi','my_pagination');
 
 
 /*

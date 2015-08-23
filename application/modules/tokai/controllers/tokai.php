@@ -40,7 +40,7 @@ class tokai extends MX_Controller {
 			'prefecture' => $prefecture,
 			'tempplate' => 'tokai/home/index',	
 			'meta_title' => '東海',
-			'count' => $this->mtokai->get_count_work(),
+			'count' => count_work_helper(),
 			'gwork'=> $this->mtokai->get_gwork("東海"),
 			'ninki_area'=> $ninki_area,
 			'feature_name'=>$feature_name,
@@ -91,6 +91,7 @@ class tokai extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
@@ -132,6 +133,7 @@ class tokai extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
@@ -173,6 +175,7 @@ class tokai extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 

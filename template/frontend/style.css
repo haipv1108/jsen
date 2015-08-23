@@ -427,7 +427,7 @@ body {
 }
 #midArea .menuArea .naviArea ul li#naviTohoku a{
     background-position: -183px -360px;
-    width: 76px;
+    width: 75px;
 }
 #midArea .menuArea .naviArea ul li#naviHokuriku a{
     background-position: -258px -360px;
@@ -456,7 +456,7 @@ body {
 }
 #p-tohoku #headerInner #midArea .menuArea .naviArea ul li#naviTohoku a{
     background-position: -183px -180px;
-    width: 138px;
+    width: 137px;
 }
 #p-hokuriku #headerInner #midArea .menuArea .naviArea ul li#naviHokuriku a{
     background-position: -259px -240px;
@@ -494,7 +494,7 @@ body {
 }
 #midArea .menuArea .naviArea ul li#naviTohoku a:hover{
     background-position: -183px -390px;
-    width: 76px;
+    width: 75px;
 }
 #midArea .menuArea .naviArea ul li#naviHokuriku a:hover{
     background-position: -258px -390px;
@@ -3081,6 +3081,20 @@ ul.guideList3 li a, ul.guideList4 li a {
     background: #c1dbf5 none repeat scroll 0 0;
     padding: 10px;
     text-align: center;
+}
+.guideSearchBtn p input, .timeSearchBtn p input{
+    background: url(image/guide_search_btn.png) no-repeat scroll 0 0;
+    overflow: hidden;
+    height: 40px; width: 194px;
+    margin-top: 12px;
+    line-height: 80px;
+}
+.guideSearchBtn p input:hover, .timeSearchBtn p input:hover{
+    background: url(image/guide_search_btn_o.png) no-repeat scroll 0 0;
+    overflow: hidden;
+    height: 40px; width: 194px;
+    margin-top: 12px;
+    line-height: 80px;
 }
 /**area1 end*************************************/
 /*search*/

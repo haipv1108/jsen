@@ -25,11 +25,10 @@
                 <p class="blueTTL">職種を選択してください
                		<span class="orangeTxt">※特徴は２つまで選択可能です</span>
                 </p>
-                <form action="/search/" method="get" onsubmit="return Lvs.Guide.alert(document.getElementsByName('feature[]'), '職種');">
+                <form action="" method="post">
                     <input type="hidden" name="area" value="(cac vung))">
-                    <input type="hidden" name="city[]" value="1">
                     <div class="blueBox">
-                        <ul class="featureList">
+                        <ul class="featureList">                
                             <?php foreach ($feature_name as $key => $value) { ?>
                             <li id= "<?php echo $value['feature_name'];?>">
                                 <input type="checkbox" class="limitCheckbox" name="feature[]" value="<?php echo $value['feature_name'];?>">
@@ -41,7 +40,7 @@
                     </div>
 
                     <div id="searchBtn" class="guideSearchBtn">
-                        <p><input type="image" alt="この条件で探す" onmouseover="this.src='template/frontend/image/guide_search_btn_o.png'" onmouseout="this.src='template/frontend/image/guide_search_btn.png'"  src="template/frontend/image/guide_search_btn.png"></p>
+                        <p><input type="submit" name="submit" value="submit" /></p>
                     </div>
                 </form>
             </div>

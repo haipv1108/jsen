@@ -31,22 +31,24 @@ class Mguide_feature extends CI_Model{
 			return $query->row_array();
 		else return false;
 	}
-	public function list_work($feature_name){
+	public function list_work($feature_name, $pre_id){
 		$query = $this->db->query("	SELECT DISTINCT feature.work_id,work_name, work_title, work_image_url, work_guild_station, work_content1, work_time
 									FROM feature, main_work
 									WHERE
 										feature_list like '%{$feature_name}%'
+									AND prefecture_id = {$pre_id}
 									AND feature.work_id = main_work.work_id
 								");
 		if($query->num_rows()>0){
 			return $query->result_array();
 		}else return false;
 	}
-	public function work_position($feature_name){
+	public function work_position($feature_name, $pre_id){
 		$query = $this->db->query("	SELECT DISTINCT position_name, position_salary
 									FROM feature, position
 									WHERE
 										feature_list like '%{$feature_name}%'
+									AND prefecture_id = {$pre_id}
 									AND feature.work_id = position.work_id
 									LIMIT 3
 								");

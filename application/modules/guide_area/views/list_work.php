@@ -3,6 +3,7 @@
 		<div id="resultBox3">
 			<p>函館市のバイト</p>
 		</div><!--resultBox3-->
+
 		<div id="searchPanel">
 			<div class="searchPanelInner">
 				<div class="searchPanelInner2">
@@ -40,13 +41,9 @@
 														<div class="mainTown">
 															<ul class="clearfix">
 																<li class="checkedArea">
-																	<?php 	if(isset($area_name_helper) && !empty($area_name_helper)){
-																				foreach($area_name_helper as $k=>$v){?>
-																					<label for="">
-																						<input type="checkbox" value="" name="city[]"><?php echo $v['area_name'];?>
-																					</label>
-																	<?php		}
-																			}?>
+																	<label for="city_1">
+																		<input type="checkbox" checked="checked" value="1" name="city[]" id="city_1">北海道
+																	</label>
 																</li>
 																			
 																<li id="selectAreaAgain">
@@ -78,18 +75,66 @@
 													<th><span class="jobTTL">職種</span></th>
 													<td colspan="3">
 														<ul class="li_job">
-														<?php if(isset($list_feature) && !empty($list_feature)){
-																		$i = 1;
-																		foreach($list_feature as $k=>$v){?>
-																			<li class="li_job01">
-																				<label for="work_type_0<?php echo $i;?>">
-																					<input type="checkbox" value="<?php echo $v['system_work_name'];?>"><?php echo $v['system_work_name'];?>
-																				</label>
-																			</li>
-															<?php			$i = (++$i)==5?1:$i;
-																		}
-																	}
-																	?>
+															<li class="li_job01">
+																<label for="work_type_01">
+																	<input type="checkbox" value="office" id="work_type_01"> オフィス系
+																</label>
+															</li>
+															<li class="li_job02">
+																<label for="work_type_02">
+																	<input type="checkbox" value="digital" id="work_type_02"> デジタル・クリエイティブ系
+																</label>
+															</li>
+															<li class="li_job03">
+																<label for="work_type_03">
+																	<input type="checkbox" value="enter" id="work_type_03"> エンターテインメント系
+																</label>
+															</li>
+															<li class="li_job04">
+																	<label for="work_type_04">
+																		<input type="checkbox" value="mass" id="work_type_04"> マスコミ系
+																	</label>
+															</li>
+															<li class="li_job01">
+																<label for="work_type_05">
+																	<input type="checkbox" value="food" id="work_type_05"> フード系
+																</label>
+															</li>
+															<li class="li_job02">
+																<label for="work_type_06">
+																	<input type="checkbox" value="sales" id="work_type_06"> 販売・ファッション・レンタル
+																</label>
+															</li>
+															<li class="li_job03">
+																<label for="work_type_07">
+																	<input type="checkbox" value="institution" id="work_type_07"> 施設・サービス系
+																</label>
+															</li>
+															<li class="li_job04">
+																<label for="work_type_08">
+																	<input type="checkbox" value="transport" id="work_type_08"> 配送・物流系
+																</label>
+															</li>
+															<li class="li_job01">
+															   <label for="work_type_09">
+																	<input type="checkbox" value="create" id="work_type_09"> 軽作業・製造系
+																</label>
+															</li>
+															<li class="li_job02">
+																<label for="work_type_10">
+																	<input type="checkbox" value="medical" id="work_type_10"> 医療・福祉系
+																</label>
+															</li>
+															<li class="li_job03">
+																<label for="work_type_11">
+																	<input type="checkbox" value="teacher" id="work_type_11"> 講師・インストラクター
+																</label>
+															</li>
+															<li class="li_job04">
+																<label for="work_type_12">
+																	<input type="checkbox" value="beauty" id="work_type_12"> ビューティー系
+																</label>
+															</li>
 														</ul>
 														<div style="display:none;" id="open_01" class="sheet_type clearfix">
 														<p>オフィス系の業種</p>
@@ -436,7 +481,7 @@
 													<ul class="timeCheck">
 														<li class="time1">
 															<label for="cb1" class="checkbox_unchecked">早朝</label>
-															<input type="checkbox" value="1" class="crirHiddenJS" check = 'checked' name="time[]" id="cb1">
+															<input type="checkbox" value="1" class="crirHiddenJS" name="time[]" id="cb1">
 														</li>
 														<li class="time2">
 															<label for="cb2" class="checkbox_unchecked">朝</label>
@@ -479,7 +524,7 @@
 								</div>
 							</div>
 						</div><!--searchWhiteBox-->
-					</form>
+
 						<div id="moreSearchOption" class="searchWhiteBox">
 							<div id="optionTable">
 								<div class="inner">
@@ -654,30 +699,9 @@
 				</p>
 			</div>
 			<div class="col2">
-				<div class="pagination">
-				<?php if(
-						(isset($current_page) && !empty($current_page))
-						&& (isset($total_page) && !empty($total_page))
-						&& (isset($area_name) && !empty($area_name))
-						&& (isset($page) && !empty($page))
-						&& (isset($page_name) && !empty($page_name))
-						){ ?>
-							<?php if ($current_page > 1){ ?>
-								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>" title="First Page">&laquo; First</a>
-								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>/if($current_page>1) echo $current_page-1; else echo $current_page;?>" title="Previous Page">&laquo;Previous</a>
-							<?php }?>
-							<?php if($current_page>3) echo "...";?>
-							<?php for($count=$current_page-2;$count <= $total_page && $count <= $current_page+2 && $count >= $current_page-2;$count++){ 
-								if($count>0){?>
-								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name."/".$count;?>" class="<?php if($current_page==$count) echo"number current"; else echo"number";?>" title="<?php echo $count;?>"><?php echo $count;?></a>
-							<?php }} ?>
-							<?php if($current_page+2 <$total_page) echo "...";?>
-							<?php if($current_page !=$total_page){?>
-								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>/if($current_page>1) echo $current_page-1; else echo $current_page;?>" title="Next Page">Next &raquo;</a>
-								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name."/".$total_page;?>" title="Last Page">Last &raquo;</a>
-							<?php }?> 
-						<?php }?>
-				 </div> <!-- End of pagination --> 
+				<ul class="pagination">
+					<?php echo isset($paginator)?$paginator:"Khong co du lieu";?>
+				</ul>
 			</div>
 		</div><!--searchPager-->
 		
@@ -707,8 +731,8 @@
 				<div class="detail clearfix">
 					<table>
 						<tbody>
-							<?php if(isset($work_position) && !empty($work_position)){
-										foreach($work_position[$v['work_id']] as $k1=>$v1){?>
+							<?php 	if(isset($work_position) && !empty($work_position)){
+										foreach($work_position as $k1=>$v1){?>
 											<tr>
 												<th><?php echo $v1['position_name'];?></th>
 												<td> <?php echo $v1['position_salary'];?></td>
@@ -815,13 +839,7 @@
 			</div>
 			<div class="col2">
 				<ul class="pagination">
-					<li class="next">
-						<a href="../../sorry/toobusy.html">次へ</a>
-					</li>
-					<li class="openSkipPaginationPopup">
-						<a href="../../sorry/toobusy.html">2</a>
-					</li>
-					<li class="current">1</li>
+					<?php echo $paginator;?>
 				</ul>
 			</div>
 		</div><!--searchPager-->

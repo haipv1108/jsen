@@ -18,22 +18,23 @@ class Mguide_job extends CI_Model{
 			return $query->result_array();
 		else return false;
 	}
-	public function get_job($id = 0){
-		$query = $this->db->query("
-									SELECT system_work_name, count(work_id) as sl
-									FROM system_work
-									GROUP BY system_work_name
+	public function get_job($id){
+		$query = $this->db->query(" SELECT sw.system_work_name, table1.sl
+									FROM (system_work as sw) LEFT JOIN (SELECT system_work_name, count(work_id) as sl
+														FROM (system_work as sw) LEFT JOIN (prefecture as p) ON sw.prefecture_id = 										p.prefecture_id
+														WHERE sw.prefecture_id = {$id}
+														GROUP BY system_work_name,area_name) as table1 ON sw.system_work_name = table1.system_work_name
+									GROUP BY sw.system_work_name
 									");
-									/* Day moi la truy van ten chung loai cong viec, van chua co phan dem so luong cong viev (count) */
 		if($query->row_array() >0)
 			return $query->result_array();
 		else return false;
 	}
-	public function list_work($str){
+	public function list_work($str, $id){
 		$query = $this->db->query("
 									SELECT DISTINCT station_work.work_id, work_name, work_title, work_image_url, work_guild_station, work_content1, work_time
 									FROM station_work, main_work, system_work
-									WHERE system_work_name = '{$str}' 
+									WHERE system_work_name = '{$str}' AND prefecture_id = {$id}
 									AND system_work.work_id = station_work.work_id 
 									AND station_work.work_id = main_work.work_id
 
@@ -42,12 +43,12 @@ class Mguide_job extends CI_Model{
 			return $query->result_array();
 		else return false;
 	}
-	public function work_position($str){
+	public function work_position($str, $id){
 		$query = $this->db->query("
 									SELECT DISTINCT position_name, position_salary
 									FROM system_work, position
 									WHERE
-										system_work_name = '{$str}'
+										system_work_name = '{$str}' AND prefecture_id = {$id}
 									AND system_work.work_id = position.work_id
 									LIMIT 3
 								");

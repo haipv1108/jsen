@@ -40,7 +40,7 @@ class Kanto extends MX_Controller {
 			'prefecture' => $prefecture,
 			'tempplate' => 'kanto/home/index',	
 			'meta_title' => '関東',
-			'count' => $this->mkanto->get_count_work(),
+			'count' => count_work_helper(),
 			'gwork'=> $this->mkanto->get_gwork("関東"),
 			'ninki_area'=> $ninki_area,
 			'feature_name'=>$feature_name,
@@ -53,21 +53,19 @@ class Kanto extends MX_Controller {
 	}
 
 	public function feature($feature_name = 0, $page = 1){
-	// pagination
-		$bf = $this->mkanto->count_work_feature($feature_name,'関東');
-		$config = config_pagination_helper('kanto/feature', $bf['COUNT(work_id)']);
-		$this->pagination->initialize($config); 
-		$page = page_process_helper($config, $page);
-		$total_page = ceil($config["total_rows"] / $config["per_page"]);
-	//end of pagination
-		
-
+		//pagination
+			$bf = $this->mkanto->count_work_feature($feature_name,'関東');
+			$config = config_pagination_helper('kanto/feature', $bf['COUNT(work_id)']);
+			$this->pagination->initialize($config); 
+			$page = page_process_helper($config, $page);
+			$total_page = ceil($config["total_rows"] / $config["per_page"]);
+		//end of pagination
 		$list_work = $this->mkanto->list_work($feature_name,"関東",$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
-		foreach ($list_work as $key => $value) {
-			$work_position[$value['work_id']]  = $this->mkanto->work_position($value['work_id']);
+			foreach ($list_work as $key => $value) {
+				$work_position[$value['work_id']]  = $this->mkanto->work_position($value['work_id']);
+			}
 		}
-	}
 		 if(isset($list_work) && !empty($list_work)){
 		 	$data = array(
 		 					'list_work' => $list_work,
@@ -82,26 +80,16 @@ class Kanto extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
 	public function special($gwork = 0,$page = 1){
 	//pagination
 		$bf = $this->mkanto->count_gwork($gwork,'関東');
-		$config = array(
-						'base_url' => base_url().'kanto/special',
-						'total_rows' => $bf['count_work'],
-						'per_page' => 10,
-						'prev_link'  => '&lt;',
-						'next_link'  => '&gt;',
-						'last_link'  => 'Last',
-						'first_link' => 'First',
-						'use_page_numbers' => TRUE
-						);
-            $this->pagination->initialize($config); 
-			$total_page = ceil($config['total_rows']/$config['per_page']);
-			$page = ($page > $total_page)?$total_page:$page;
-			$page = ($page < 1)?1:$page;
+		$config = config_pagination_helper('kanto/special', $bf['count_work']);
+		$this->pagination->initialize($config); 
+		$page = page_process_helper($config, $page);
 	//end of pagination
 		$list_work = $this->mkanto->list_work_follow_group($gwork,"関東",$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
@@ -123,34 +111,25 @@ class Kanto extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
 	public function station($station_id = 0, $page = 1){
 		//pagination
 		$bf = $this->mkanto->count_work_ninkiarea($station_id);
-		$config = array(
-						'base_url' => base_url().'kanto/station',
-						'total_rows' => $bf['COUNT(work_id)'],
-						'per_page' => 10,
-						'prev_link'  => '&lt;',
-						'next_link'  => '&gt;',
-						'last_link'  => 'Last',
-						'first_link' => 'First',
-						'use_page_numbers' => TRUE
-						);
-            $this->pagination->initialize($config); 
-			$total_page = ceil($config['total_rows']/$config['per_page']);
-			$page = ($page > $total_page)?$total_page:$page;
-			$page = ($page < 1)?1:$page;
-	//end of pagination
+		$bf = $this->mkanto->count_gwork($gwork,'関東');
+		$config = config_pagination_helper('kanto/station', $bf['COUNT(work_id)']);
+		$this->pagination->initialize($config); 
+		$page = page_process_helper($config, $page);
+		//end of pagination
 		$list_work = $this->mkanto->list_work_follow_station($station_id,$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
-		foreach ($list_work as $key => $value) {
-			$work_position[$value['work_id']]  = $this->mkanto->work_position($value['work_id']);
+			foreach ($list_work as $key => $value) {
+				$work_position[$value['work_id']]  = $this->mkanto->work_position($value['work_id']);
+			}
 		}
-	}
-		 if(isset($list_work) && !empty($list_work)){
+		if(isset($list_work) && !empty($list_work)){
 		 	$data = array(
 		 					'list_work' => $list_work,
 		 					'work_position'=> $work_position,
@@ -164,6 +143,7 @@ class Kanto extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
