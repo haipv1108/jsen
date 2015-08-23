@@ -55,22 +55,13 @@ class Kanto extends MX_Controller {
 	public function feature($feature_name = 0, $page = 1){
 	// pagination
 		$bf = $this->mkanto->count_work_feature($feature_name,'関東');
-		$config = array(
-						'base_url' => base_url().'kanto/feature',
-						'total_rows' => $bf['COUNT(work_id)'],
-						'per_page' => 10,
-						'prev_link'  => '&lt;',
-						'next_link'  => '&gt;',
-						'last_link'  => 'Last',
-						'first_link' => 'First',
-						'use_page_numbers' => TRUE,
-						);
-            $this->pagination->initialize($config); 
-			$total_page = ceil($config['total_rows']/$config['per_page']);
-			$page = ($page > $total_page)?$total_page:$page;
-			$page = ($page < 1)?1:$page;
-			//$page = $page - 1;
+		$config = config_pagination_helper('kanto/feature', $bf['COUNT(work_id)']);
+		$this->pagination->initialize($config); 
+		$page = page_process_helper($config, $page);
+		$total_page = ceil($config["total_rows"] / $config["per_page"]);
 	//end of pagination
+		
+
 		$list_work = $this->mkanto->list_work($feature_name,"関東",$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
 		foreach ($list_work as $key => $value) {
@@ -164,7 +155,11 @@ class Kanto extends MX_Controller {
 		 					'list_work' => $list_work,
 		 					'work_position'=> $work_position,
 		 					'tempplate' => 'kanto/home/list_work',
-
+		 					'current_page' => $page,
+							'total_page' => $total_page,
+							'area_name'=>'kanto',
+							'page'=> 'station',
+							'page_name' => $station_id
 		 				);
 		 }else{
 		 	$data['message'] = 'Data not found';
