@@ -33,12 +33,30 @@ class Guide_area extends MX_Controller{
 		}else{
 			$data['message'] = 'Data not found';
 		}
-		$data['tempplate'] = 'city';
-		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
+		if($this->input->post('submit')){
+			$checkbox_city = $this->input->post('city[]');
+			foreach ($checkbox_city as $key => $value) {
+				// Danh sach cac cong viec
+				$list_work [$value] = $this->mguide_area->list_work($value);	
+			}
+			echo '<pre>'; print_r($list_work); echo '</pre>';
+			$list_work2 = $this->mguide_area->arrayCopy($list_work);
+			echo '<pre>'; print_r($list_work2); echo '</pre>';
+			$data = array(
+							'list_work' => $list_work2
+							);
+			$data['tempplate'] = 'kanto/home/list_work_choose2';
+			$this->load->view('home_page/frontend/layouts/home_page', isset($data)?$data:NULL);
+			
+		} else {
+			$data['tempplate'] = 'city';
+			$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
+		}
+		
 	}
 	public function list_work($id = 0, $page = 1){
 		$id = $id<1?1:$id;
-		$config = array(
+		/*$config = array(
 						'base_url' => base_url().'guide_area/list_work',
 						'total_rows' => $this->mguide_area->count_work($id),
 						'per_page' => 10,
@@ -54,17 +72,20 @@ class Guide_area extends MX_Controller{
 		$page = ($page > $total_page)?$total_page:$page;
 		$page = ($page < 1)?1:$page;
 		$list_work = $this->mguide_area->list_work($id, $page,$page*$config['per_page']);
-
-		if(isset($list_work) && !empty($list_work)){
+		*/
+		$list_work = $this->mguide_area->list_work($id);
+		echo '<pre>'; print_r($list_work); echo '</pre>';
+		$list_work2 = $this->mguide_area->arrayCopy2($list_work);
+			echo '<pre>'; print_r($list_work2); echo '</pre>';
+		if(isset($list_work2) && !empty($list_work2)){
 			$data = array(
-							'list_work' => $list_work,
-							'work_position'=> $this->mguide_area->work_position($id),
-							'paginator' => $this->pagination->create_links(),
+							'list_work' => $list_work2
+							//'paginator' => $this->pagination->create_links(),
 						);
 		}else{
 			$data['message'] = 'Data not found';
 		}
-		$data['tempplate'] = 'kanto/home/list_work';
+		$data['tempplate'] = 'kanto/home/list_work_choose';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }

@@ -29,11 +29,11 @@
                     <input type="hidden" name="area" value="(cac vung))">
                     <div class="blueBox">
                         <ul class="featureList">
-                       
+
                             <?php foreach ($feature_name as $key => $value) { ?>
                             <li id= "<?php echo $value['feature_name'];?>">
                                 <input type="checkbox" class="limitCheckbox" name="feature[]" value="<?php echo $value['feature_name'];?>">
-                                <a href="<?php echo base_url(); ?>guide_feature/list_work/<?php echo $value['feature_name'];?>"><?php echo $value['feature_name'];?></a>
+                                <a href="<?php echo base_url(); ?>guide_feature/list_work/<?php echo $value['feature_name'];?>/<?php echo $prefecture_id;?>"><?php echo $value['feature_name'];?></a>
                                 (<?php echo $count_work_feature[$value['feature_name']];?>)                             
                             </li>                                                  
                                 <?php }?>                                                   
