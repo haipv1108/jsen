@@ -24,23 +24,20 @@ class Guide_job extends MX_Controller{
 		if(isset($job) && !empty($job)){
 			$data['job'] = $job;
 			$data['prefecture_id'] = $id;
+		} else{
+			$data['message'] = 'Data not found';
 		}
 
 		if($this->input->post('submit')){
 			$checkbox_job = $this->input->post('job[]');
 			foreach ($checkbox_job as $key => $value) {
-				$list_work [$value] = $this->mguide_job->list_work($value, $id);
-				if(isset($list_work) && !empty($list_work)){
-					$work_position[$value] = $this->mguide_job->work_position($value, $id);
-				}else{
-					$data['message'] = 'Data not found';
-				}
+				$list_work2[$value] = $this->mguide_job->list_work($value, $id);
 			}
+			$list_work = $this->mguide_job->arrayCopy($list_work2);
 			$data = array(
-								'list_work' => $list_work,
-								'work_position' => $work_position
+								'list_work' => $list_work
 							);
-			$data['tempplate'] = 'kanto/home/list_work_choose';
+			$data['tempplate'] = 'kanto/home/list_work_choose2';
 			$this->load->view('home_page/frontend/layouts/home_page', isset($data)?$data:NULL);
 		} else {
 			$data['tempplate'] = 'job';
@@ -49,11 +46,11 @@ class Guide_job extends MX_Controller{
 		}
 	}
 	public function list_work($str = '', $id = 0){
-		$list_work = $this->mguide_job->list_work($str, $id);
+		$list_work2 = $this->mguide_job->list_work($str, $id);
+		$list_work = $this->mguide_job->arrayCopy2($list_work2);
 		if(isset($list_work) && !empty($list_work)){
 			$data = array(
-							'list_work' => $list_work,
-							'work_position' => $this->mguide_job->work_position($str, $id)
+							'list_work' => $list_work
 						);
 		}else{
 			$data['message'] = 'Data not found';
@@ -73,7 +70,7 @@ class Guide_job extends MX_Controller{
 			$data['message'] = 'Data not found.';
 		}
 		$data['count'] = count_work_helper();
-		$data['tempplate'] = 'kanto/home/list_work';
+		$data['tempplate'] = 'kanto/home/list_work_choose';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }

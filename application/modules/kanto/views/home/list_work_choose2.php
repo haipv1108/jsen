@@ -721,8 +721,9 @@
 		</div><!--favoriteMeritBox-->
 		<?php
 		if(isset($list_work) && !empty($list_work)){
-				//if(isset($val) && !empty($val)){
-			foreach ($list_work as $k => $v) {?>
+			foreach($list_work as $key=>$val){
+				if(isset($val) && !empty($val)){
+				foreach ($val as $k => $v) {?>
 				<div class="searchResultBox">
 					<p id="searchResultBox_h2" class="clearfix">
 						<a href="../<?php echo $v['work_id'];?>/y.html"><?php echo $v['work_title'];?></a>
@@ -805,7 +806,7 @@
 						</dl>
 					</div><!--info-->
 				</div><!--searchResultBox-->
-		<?php	}
+		<?php	}}}
 		}else{
 			if(isset($message) && !empty($message)){
 				echo $message;

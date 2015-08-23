@@ -1,29 +1,30 @@
 <div id="wapper">
 	<div id="content">
 		<div id="guideBox">
-			<h3 class="guideTTLh3">
-				<input type="checkbox" name="city[]" id="parent1" value="1" class="parentCheckbox">
-				<a href="/tohoku/line_1.htm"> <!--  Di den bang loc cong viec va cac cong viec gioi thieu -->
-					<?php
-						$i = 0;
-						if(isset($list_city) && !empty($list_city))
-							foreach($list_city as $k => $v){
-								echo $v['prefecture_name'];
-								if($i == 0) break;
-							}
-						else{
-							echo '</a>';
-							if(isset($message) && !empty($message)) echo $message;
-						}
-					?>
-			</h3>
-			<ul class="guideList4">
-				<?php if(isset($list_city) && !empty($list_city))
-						foreach($list_city as $k => $v){?>
-							
+			<div class="inner" id="selectCity">
+				<form action="" method="post">
+					<h3 class="guideTTLh3">
+						<input type="checkbox" name="city[]" id="parent1" value="1" class="parentCheckbox">
+						<a href="/tohoku/line_1.htm"> <!--  Di den bang loc cong viec va cac cong viec gioi thieu -->
+							<?php
+								$i = 0;
+								if(isset($list_city) && !empty($list_city)){
+									foreach($list_city as $k => $v){
+										echo $v['prefecture_name'];
+										if($i == 0) break;
+									}
+								}else{
+									echo $message; die;
+								}
+							?>
+						</a>
+					</h3>
+
+					<ul class="guideList4">
+						<?php foreach($list_city as $k => $v){?>
 							<li>
 								<input type="checkbox" name="city[]" value='<?php echo $v['city_id']?>' class="childCheckbox39600" />
-								<a href="<?php echo base_url();?>guide_area/list_work/<?php echo $v['city_id']?>/1">
+								<a href="<?php echo base_url();?>guide_area/list_work/<?php echo $v['city_id']?>">
 									<?php echo $v['city_name'];?> 
 								</a>
 								<?php
@@ -41,7 +42,13 @@
 									}
 								?>
 							</li>
-				<?php }?>
+						<?php }?>
+					</ul>
+					<div id="searchBtn" class="guideSearchBtn">
+		                <p><input type="submit" name="submit" value="submit" /></p>
+		            </div>
+	            </form>
+	        </div>
 		</div>
 	</div>
 </div>
