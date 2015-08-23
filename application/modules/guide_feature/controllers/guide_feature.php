@@ -28,23 +28,18 @@ class Guide_feature extends MX_Controller{
 		
  		if($this->input->post('submit')){
  			$checkbox_feature = $this->input->post('feature[]');
- 			print_r($checkbox_feature);
 			foreach ($checkbox_feature as $key => $value) {
-				$list_work [$value] = $this->mguide_feature->list_work($value, $pre_id);
-				if(isset($list_work) && !empty($list_work)){
-					$work_position[$value] = $this->mguide_feature->work_position($value, $pre_id);
-				}else{
-					$data['message'] = 'Data not found';
-				}
+				$list_work2[$value] = $this->mguide_feature->list_work($value, $pre_id);
 			}
+			$list_work = $this->mguide_feature->arrayCopy($list_work2);
 			$data = array(
-								'list_work' => $list_work,
-								'work_position' => $work_position
+								'list_work' => $list_work
 							);
-			$data['tempplate'] = 'kanto/home/list_work_choose';
+			$data['tempplate'] = 'kanto/home/list_work_choose2';
 			$this->load->view('home_page/frontend/layouts/home_page', isset($data)?$data:NULL);
  		}else {
  			$data = array(
+ 							'prefecture_id' => $pre_id,
  							'feature_name' => $feature_name,
  							'count_work_feature' => $count_work_feature,
 							'tempplate' => 'feature',	
@@ -52,20 +47,19 @@ class Guide_feature extends MX_Controller{
 						);
 			$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
  		}
-		
 	}
 	public function list_work($feature_name = '', $pre_id = 0){
-		$list_work = $this->mguide_feature->list_work($feature_name, $pre_id);
+		$list_work2 = $this->mguide_feature->list_work($feature_name, $pre_id);
+		$list_work = $this->mguide_feature->arrayCopy2($list_work2);
 		if(isset($list_work) && !empty($list_work)){
 			$data = array(
-						'list_work' => $list_work,
-						'work_position' => $this->mguide_feature->work_position($feature_name, $pre_id) 
+						'list_work' => $list_work
 						);
 		} else{
 			$data['message'] = 'Data not found.';
 		}
 		$data['count'] = count_work_helper();
-		$data['tempplate'] = 'kanto/home/list_work';
+		$data['tempplate'] = 'kanto/home/list_work_choose';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	

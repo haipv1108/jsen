@@ -86,7 +86,7 @@ class Hokuriku extends MX_Controller {
 							'total_page' => $total_page,
 							'area_name'=>'hokuriku',
 							'page'=> 'feature',
-							'page_name' => $feature_name
+							'page_name' => $feature_name,
 							'count' => count_work_helper(),
 		 				);
 		 }else{

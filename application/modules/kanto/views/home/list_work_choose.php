@@ -721,16 +721,16 @@
 		</div><!--favoriteMeritBox-->
 		<?php
 		if(isset($list_work) && !empty($list_work)){
-			foreach($list_work as $key=>$val){
-				foreach ($val as $k => $v) {?>
+				//if(isset($val) && !empty($val)){
+			foreach ($list_work as $k => $v) {?>
 				<div class="searchResultBox">
 					<p id="searchResultBox_h2" class="clearfix">
-						<a href="../123/y.html"><?php echo $v['work_title'];?></a>
+						<a href="../<?php echo $v['work_id'];?>/y.html"><?php echo $v['work_title'];?></a>
 						<span class="icon iconPickup">[PICK UP]</span>
 					</p>
 					<div class="lead clearfix">
 						<p class="txt clearfix">
-							<a href="../../123/y.html">レジ・サッカー、品出し、ポーターアルバイト募集!働きやすい環境をご用意◎</a>
+							<a href="../../<?php echo $v['work_id'];?>/y.html">レジ・サッカー、品出し、ポーターアルバイト募集!働きやすい環境をご用意◎</a>
 						</p>
 						<p class="iwaikin bnrBaito20000">応募後、採用決定で！祝い金5,000円</p>
 					</div>
@@ -738,14 +738,16 @@
 						<div class="detail clearfix">
 							<table>
 								<tbody>
-									<?php 	if(isset($work_position) && !empty($work_position)){
-												foreach($work_position as $k1=>$v1){?>
-													<tr>
-														<th><?php echo $v1['position_name'];?></th>
-														<td> <?php echo $v1['position_salary'];?></td>
-													</tr>
-										<?php	}
-											}?>
+									<tr>
+										<td class="jobs" colspan="2">
+										<?php foreach ($v['position_name'] as $k1 => $v1) {?>
+											<dl class="job">
+												<dt><?php echo $v1;?></dt>
+												<dd><?php echo $v['position_salary'][$k1];?></dd>
+											</dl>
+										<?php }?>
+										</td>
+									</tr>
 									<tr>
 										<th>勤務時間</th>
 										<td> <?php echo $v['work_time'];?></td>
@@ -758,8 +760,8 @@
 							</table>
 							<div class="photoArea">
 								<div class="photo">
-									<a href="../../123/y.html">
-									<img class="lazy_photo" alt="ソフトバンク株式会社 北海道函館市昭和アルバイト写真" original="https://lvimg.jp/job/img/job_pict/99/296299/big.jpg/180x135-f1" src="https://<?php echo $v['work_image_url'];?>" style="display: inline;"/>
+									<a href="../../<?php echo $v['work_id'];?>/y.html">
+									<img style="height: 137px; width: 182px;>" class="lazy_photo" alt="ソフトバンク株式会社 北海道函館市昭和アルバイト写真" original="https://lvimg.jp/job/img/job_pict/99/296299/big.jpg/180x135-f1" src="https://<?php echo $v['work_image_url'];?>" style="display: inline;"/>
 									</a>
 								</div>
 							</div>
@@ -803,7 +805,7 @@
 						</dl>
 					</div><!--info-->
 				</div><!--searchResultBox-->
-		<?php	}}
+		<?php	}
 		}else{
 			if(isset($message) && !empty($message)){
 				echo $message;

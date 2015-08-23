@@ -53,13 +53,15 @@ class Kanto extends MX_Controller {
 	}
 
 	public function feature($feature_name = 0, $page = 1){
-		//pagination
-			$bf = $this->mkanto->count_work_feature($feature_name,'関東');
-			$config = config_pagination_helper('kanto/feature', $bf['COUNT(work_id)']);
-			$this->pagination->initialize($config); 
-			$page = page_process_helper($config, $page);
-			$total_page = ceil($config["total_rows"] / $config["per_page"]);
-		//end of pagination
+
+	// pagination
+		$bf = $this->mkanto->count_work_feature($feature_name,'関東');
+		$config = config_pagination_helper('kanto/feature', $bf['COUNT(work_id)']);
+		$this->pagination->initialize($config); 
+		$page = page_process_helper($config, $page);
+		$total_page = ceil($config["total_rows"] / $config["per_page"]);
+	//end of pagination
+
 		$list_work = $this->mkanto->list_work($feature_name,"関東",$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
 			foreach ($list_work as $key => $value) {
@@ -90,6 +92,7 @@ class Kanto extends MX_Controller {
 		$config = config_pagination_helper('kanto/special', $bf['count_work']);
 		$this->pagination->initialize($config); 
 		$page = page_process_helper($config, $page);
+		$total_page = ceil($config["total_rows"] / $config["per_page"]);
 	//end of pagination
 		$list_work = $this->mkanto->list_work_follow_group($gwork,"関東",$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
@@ -118,10 +121,10 @@ class Kanto extends MX_Controller {
 	public function station($station_id = 0, $page = 1){
 		//pagination
 		$bf = $this->mkanto->count_work_ninkiarea($station_id);
-		$bf = $this->mkanto->count_gwork($gwork,'関東');
 		$config = config_pagination_helper('kanto/station', $bf['COUNT(work_id)']);
 		$this->pagination->initialize($config); 
 		$page = page_process_helper($config, $page);
+		$total_page = ceil($config["total_rows"] / $config["per_page"]);
 		//end of pagination
 		$list_work = $this->mkanto->list_work_follow_station($station_id,$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){

@@ -14,7 +14,7 @@ class Work extends MX_Controller{
 							'work_position'=>$this->mwork->work_position($id_str),
 							'work_apply'=>$this->mwork->work_apply($id_str),
 							'work_photo'=>$this->mwork->work_photo($id_str),
-							'work_feature'=>$this->mwork->work_feature($id_str)
+							'work_feature'=>$this->mwork->work_feature($id_str),
 							'count' => count_work_helper(),
 						);
 		}else{
