@@ -25,16 +25,6 @@ class Guide_feature extends MX_Controller{
 			$bf1 = $this->mguide_feature->count_work_feature($value['feature_name'], $pre_id);
 			$count_work_feature[$value['feature_name']] = $bf1['COUNT(work_id)'];
 		}
-<<<<<<< HEAD
-		$data = array(
-			'tempplate' => 'feature',	
-			'meta_title' => 'Feature',
-			'feature_name'=>$feature_name,
-			'count_work_feature' => $count_work_feature,
-			'count' => count_work_helper()
-				);
-		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
-=======
 		
  		if($this->input->post('submit')){
  			$checkbox_feature = $this->input->post('feature[]');
@@ -63,7 +53,6 @@ class Guide_feature extends MX_Controller{
 			$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
  		}
 		
->>>>>>> ee32895ffed70de7c5e9d255a98964b26aa7b2d5
 	}
 	public function list_work($feature_name = '', $pre_id = 0){
 		$list_work = $this->mguide_feature->list_work($feature_name, $pre_id);

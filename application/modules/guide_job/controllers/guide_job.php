@@ -74,10 +74,6 @@ class Guide_job extends MX_Controller{
 		}
 		$data['count'] = count_work_helper();
 		$data['tempplate'] = 'kanto/home/list_work';
-		$this->load->view('home_page/frontend/layouts/home_page', isset($data)?$data:NULL);
-	}
-		print_r($data);
-		$data['tempplate'] = 'kanto/home/list_work';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 }
