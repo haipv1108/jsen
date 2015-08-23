@@ -52,7 +52,7 @@ class Mguide_job extends CI_Model{
 			return $query->result_array();
 		else return false;
 	}
-	public function arrayCopy( array $array ) {
+	public function arrayCopy( $array ) {
         $result = array();
         $check =""; // kiem tra swork_id
 
@@ -84,7 +84,7 @@ class Mguide_job extends CI_Model{
         }
         return $result;
 	}
-	public function arrayCopy2( array $array ) {
+	public function arrayCopy2( $array ) {
         $result = array();
         $check =""; // kiem tra swork_id
         $key_array = 0;

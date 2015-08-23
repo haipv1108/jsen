@@ -69,10 +69,8 @@ class Guide_line extends MX_Controller{
 		$list_work2 = $this->mguide_line->arrayCopy2($list_work);
 		if(isset($list_work2) && !empty($list_work2)){
 			$data = array(
-							'list_work' => $list_work,
-							'work_position'=> $this->mguide_line->work_position($id),
 							'list_feature'=> feature_helper(),
-							'area_name'=>area_name_helper()
+							'area_name'=>area_name_helper(),
 							'list_work' => $list_work2
 						);
 		}else{

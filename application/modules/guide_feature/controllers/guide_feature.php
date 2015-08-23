@@ -58,12 +58,8 @@ class Guide_feature extends MX_Controller{
 		} else{
 			$data['message'] = 'Data not found.';
 		}
-<<<<<<< HEAD
 		$data['count'] = count_work_helper();
-		$data['tempplate'] = 'kanto/home/list_work';
-=======
 		$data['tempplate'] = 'kanto/home/list_work_choose';
->>>>>>> 7a00113c5352aac15f0e2761199c1f6194b7bd3b
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	
