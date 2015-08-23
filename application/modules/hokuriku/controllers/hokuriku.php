@@ -40,7 +40,7 @@ class Hokuriku extends MX_Controller {
 			'prefecture' => $prefecture,
 			'tempplate' => 'hokuriku/home/index',	
 			'meta_title' => '甲信越・北陸',
-			'count' => $this->mhokuriku->get_count_work(),
+			'count' => count_work_helper(),
 			'gwork'=> $this->mhokuriku->get_gwork("甲信越・北陸"),
 			'ninki_area'=> $ninki_area,
 			'feature_name'=>$feature_name,
@@ -82,6 +82,7 @@ class Hokuriku extends MX_Controller {
 		 					'list_work' => $list_work,
 		 					'work_position'=> $work_position,
 		 					'tempplate' => 'kanto/home/list_work',
+							'count' => count_work_helper(),
 		 				);
 		 }else{
 		 	$data['message'] = 'Data not found';
@@ -120,6 +121,7 @@ class Hokuriku extends MX_Controller {
 		 					'tempplate' => 'kanto/home/list_work',
 		 				);
 		 }else{
+			$data['count'] = count_work_helper();
 		 	$data['message'] = 'Data not found';
 		 }
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
@@ -158,6 +160,7 @@ class Hokuriku extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 

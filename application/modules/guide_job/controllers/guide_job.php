@@ -15,7 +15,8 @@ class Guide_job extends MX_Controller{
 			}
 		$data['area'] = $area;
 		$data['prefecture'] = $prefecture;						
-		$data['tempplate'] = 'guide_job';		
+		$data['tempplate'] = 'guide_job';	
+		$data['count'] = count_work_helper();		
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 	public function job($id = 0){
@@ -33,6 +34,7 @@ class Guide_job extends MX_Controller{
 			$this->list_work1($checkbox_job);
 		} else {
 			$data['tempplate'] = 'job';
+			$data['count'] = count_work_helper();
 			$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 			
 		}
@@ -50,6 +52,7 @@ class Guide_job extends MX_Controller{
 		}else{
 			$data['message'] = 'Data not found';
 		}
+		$data['count'] = count_work_helper();
 		$data['tempplate'] = 'kanto/home/list_work';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
@@ -63,6 +66,7 @@ class Guide_job extends MX_Controller{
 		} else{
 			$data['message'] = 'Data not found.';
 		}
+		$data['count'] = count_work_helper();
 		$data['tempplate'] = 'kanto/home/list_work';
 		$this->load->view('home_page/frontend/layouts/home_page', isset($data)?$data:NULL);
 	}

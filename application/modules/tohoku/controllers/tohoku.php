@@ -40,7 +40,7 @@ class Tohoku extends MX_Controller {
 			'prefecture' => $prefecture,
 			'tempplate' => 'tohoku/home/index',	
 			'meta_title' => '北海道・東北',
-			'count' => $this->mtohoku->get_count_work(),
+			'count' => count_work_helper(),
 			'gwork'=> $this->mtohoku->get_gwork("北海道・東北"),
 			'ninki_area'=> $ninki_area,
 			'feature_name'=>$feature_name,
@@ -86,6 +86,7 @@ class Tohoku extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
@@ -122,6 +123,7 @@ class Tohoku extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 
@@ -158,6 +160,7 @@ class Tohoku extends MX_Controller {
 		 }else{
 		 	$data['message'] = 'Data not found';
 		 }
+		$data['count'] = count_work_helper();
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
 	}
 

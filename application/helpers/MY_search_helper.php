@@ -1,10 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-if (!function_exists('sort_work')){
-/**
-	* Search on header and footer
-*/
+if (!function_exists('feature_helper')){
 	function feature_helper(){
 		$ci = & get_instance();
 		$ci->load->database();
@@ -16,6 +13,8 @@ if (!function_exists('sort_work')){
 			return $query->result_array();
 		else return false;
 	}
+}
+if (!function_exists('area_name_helper')){
 	function area_name_helper(){
 		$ci = & get_instance();
 		$ci->load->database();
@@ -24,6 +23,16 @@ if (!function_exists('sort_work')){
 								");
 		if($query->num_rows()>0)
 			return $query->result_array();
+		else return false;
+	}
+}
+if (!function_exists('count_work_helper')){
+	function count_work_helper(){
+		$ci = & get_instance();
+		$ci->load->database();
+		$query = $ci->db->query('SELECT count(DISTINCT `work_id`) as work FROM `system_work`');
+		if($query->row_array()>0)
+			return $query->row_array();
 		else return false;
 	}
 }

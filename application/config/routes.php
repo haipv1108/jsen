@@ -96,7 +96,7 @@ $router['kyusyu'] = "kyusyu/kyusyu";
 $router['guide_area'] = 'guide_area/guide_area/index';
 $router['guide_area/city'] = 'guide_area/guide_area/city';
 $router['guide_area/list_work'] = 'guide_area/guide_area/list_work';
-$router['guide_area/list_work'] = 'guide_area/guide_area/list_work';
+$router['guide_area/list_work/([0-9\-]+)'] = 'guide_area/guide_area/list_work/$1';
 
 
 // line
