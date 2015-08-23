@@ -654,21 +654,30 @@
 				</p>
 			</div>
 			<div class="col2">
-<!-- 				<div class="pagination">
-					<?php if ($current_page != 1){ ?>
-					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>" title="First Page">&laquo; First</a>
-					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>/if($current_page>1) echo $current_page-1; else echo $current_page;?>" title="Previous Page">&laquo;Previous</a>
-					<?php }?>
-					...
-					<?php for($count=$current_page-2;$count <= $total_page && $count <= $current_page+2 && $count >= $current_page-2;$count++){ ?>
-					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name."/".$count;?>" class="<?php if($current_page==$count) echo"number current"; else echo"number";?>" title="<?php echo $count;?>"><?php echo $count;?></a>
-					<?php } ?>
-					...
-					<?php if($current_page !=$total_page){?>
-					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>/if($current_page>1) echo $current_page-1; else echo $current_page;?>" title="Next Page">Next &raquo;</a>
-					<a href="<?php echo base_url().$area_name."/".$page."/".$page_name."/".$total_page;?>" title="Last Page">Last &raquo;</a>
-					<?php }?> 
-				 </div> <!-- End of pagination -->  -->
+				<div class="pagination">
+				<?php if(
+						(isset($current_page) && !empty($current_page))
+						&& (isset($total_page) && !empty($total_page))
+						&& (isset($area_name) && !empty($area_name))
+						&& (isset($page) && !empty($page))
+						&& (isset($page_name) && !empty($page_name))
+						){ ?>
+							<?php if ($current_page > 1){ ?>
+								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>" title="First Page">&laquo; First</a>
+								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>/if($current_page>1) echo $current_page-1; else echo $current_page;?>" title="Previous Page">&laquo;Previous</a>
+							<?php }?>
+							<?php if($current_page>3) echo "...";?>
+							<?php for($count=$current_page-2;$count <= $total_page && $count <= $current_page+2 && $count >= $current_page-2;$count++){ 
+								if($count>0){?>
+								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name."/".$count;?>" class="<?php if($current_page==$count) echo"number current"; else echo"number";?>" title="<?php echo $count;?>"><?php echo $count;?></a>
+							<?php }} ?>
+							<?php if($current_page+2 <$total_page) echo "...";?>
+							<?php if($current_page !=$total_page){?>
+								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name;?>/if($current_page>1) echo $current_page-1; else echo $current_page;?>" title="Next Page">Next &raquo;</a>
+								<a href="<?php echo base_url().$area_name."/".$page."/".$page_name."/".$total_page;?>" title="Last Page">Last &raquo;</a>
+							<?php }?> 
+						<?php }?>
+				 </div> <!-- End of pagination --> 
 			</div>
 		</div><!--searchPager-->
 		
