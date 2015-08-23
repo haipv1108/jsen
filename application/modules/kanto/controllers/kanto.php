@@ -53,12 +53,14 @@ class Kanto extends MX_Controller {
 	}
 
 	public function feature($feature_name = 0, $page = 1){
-		//pagination
-			$bf = $this->mkanto->count_work_feature($feature_name,'関東');
-			$config = config_pagination_helper('kanto/feature', $bf['COUNT(work_id)']);
-			$this->pagination->initialize($config); 
-			$page = page_process_helper($config, $page);
-		//end of pagination
+	// pagination
+		$bf = $this->mkanto->count_work_feature($feature_name,'関東');
+		$config = config_pagination_helper('kanto/feature', $bf['COUNT(work_id)']);
+		$this->pagination->initialize($config); 
+		$page = page_process_helper($config, $page);
+		$total_page = ceil($config["total_rows"] / $config["per_page"]);
+	//end of pagination
+		
 		$list_work = $this->mkanto->list_work($feature_name,"関東",$config['per_page'],$page*$config['per_page']);
 		if(isset($list_work) && !empty($list_work)){
 			foreach ($list_work as $key => $value) {
@@ -133,7 +135,11 @@ class Kanto extends MX_Controller {
 		 					'list_work' => $list_work,
 		 					'work_position'=> $work_position,
 		 					'tempplate' => 'kanto/home/list_work',
-
+		 					'current_page' => $page,
+							'total_page' => $total_page,
+							'area_name'=>'kanto',
+							'page'=> 'station',
+							'page_name' => $station_id
 		 				);
 		 }else{
 		 	$data['message'] = 'Data not found';

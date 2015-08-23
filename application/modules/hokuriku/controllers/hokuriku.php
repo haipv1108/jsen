@@ -83,6 +83,11 @@ class Hokuriku extends MX_Controller {
 		 					'work_position'=> $work_position,
 		 					'tempplate' => 'kanto/home/list_work',
 							'count' => count_work_helper(),
+							'current_page' => $page,
+							'total_page' => $total_page,
+							'area_name'=>'hokuriku',
+							'page'=> 'feature',
+							'page_name' => $feature_name
 		 				);
 		 }else{
 		 	$data['message'] = 'Data not found';
@@ -119,6 +124,11 @@ class Hokuriku extends MX_Controller {
 		 					'list_work' => $list_work,
 		 					'work_position'=> $work_position,
 		 					'tempplate' => 'kanto/home/list_work',
+							'current_page' => $page,
+							'total_page' => $total_page,
+							'area_name'=>'hokuriku',
+							'page'=> 'special',
+							'page_name' => $gwork
 		 				);
 		 }else{
 			$data['count'] = count_work_helper();
@@ -156,6 +166,11 @@ class Hokuriku extends MX_Controller {
 		 					'list_work' => $list_work,
 		 					'work_position'=> $work_position,
 		 					'tempplate' => 'kanto/home/list_work',
+		 					'current_page' => $page,
+							'total_page' => $total_page,
+							'area_name'=>'hokuriku',
+							'page'=> 'station',
+							'page_name' => $station_id
 		 				);
 		 }else{
 		 	$data['message'] = 'Data not found';
