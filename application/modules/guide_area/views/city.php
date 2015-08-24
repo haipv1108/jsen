@@ -14,14 +14,15 @@
 										if($i == 0) break;
 									}
 								}else{
-									echo $message; die;
+									//echo $message; die;
 								}
 							?>
 						</a>
 					</h3>
 
 					<ul class="guideList4">
-						<?php foreach($list_city as $k => $v){?>
+						<?php if(isset($list_city) && !empty($list_city)){
+						foreach($list_city as $k => $v){?>
 							<li>
 								<input type="checkbox" name="city[]" value='<?php echo $v['city_id']?>' class="childCheckbox39600" />
 								<a href="<?php echo base_url();?>guide_area/list_work/<?php echo $v['city_id']?>">
@@ -42,7 +43,7 @@
 									}
 								?>
 							</li>
-						<?php }?>
+						<?php }}?>
 					</ul>
 					<div id="searchBtn" class="guideSearchBtn">
 		                <p><input type="submit" name="submit" value="submit" /></p>
