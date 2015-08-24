@@ -98,38 +98,37 @@ class Guide_area extends MX_Controller{
 
 	public function list_work($id = 0, $page = 1){
 		$id = $id<1?1:$id;
-	//pagination
-		$bf = $this->mguide_area->count_gwork($id);
-		//echo $bf['count_work'];
-		$config = config_pagination_helper('guide_area/list_work', $bf['count_work']);
+		/*$config = array(
+						'base_url' => base_url().'guide_area/list_work',
+						'total_rows' => $this->mguide_area->count_work($id),
+						'per_page' => 10,
+						'prev_link'  => '&lt;',
+						'next_link'  => '&gt;',
+						'last_link'  => 'Last',
+						'first_link' => 'First',
+						'use_page_numbers' => TRUE
+						);
 		$this->pagination->initialize($config); 
-		$page = page_process_helper($config, $page);
-		$total_page = ceil($config["total_rows"] / $config["per_page"]);
-	//end of pagination
-		$list_work = $this->mguide_area->list_work($id);
-		if(isset($list_work) && !empty($list_work)){
-		foreach ($list_work as $key => $value) {
-			$work_position[$value['work_id']]  = $this->mguide_area->work_position($value['work_id']);
-		//print_r($work_position[$value['work_id']]);
-			}
-		}
 		
-		if(isset($list_work) && !empty($list_work)){
-		 	$data = array(
-		 					'list_work' => $list_work,
-		 					'work_position'=> $work_position,
-		 					'tempplate' => 'kanto/home/list_work',
-		 					'current_page' => $page,
-							'total_page' => $total_page,
-							'area_name'=>'guide_area',
-							'page'=> 'list_work',
-							'page_name' => $id
-		 				);
-		 }else{
-		 	$data['message'] = 'Data not found';
-		 }
+		$total_page = ceil($config['total_rows']/$config['per_page']);
+		$page = ($page > $total_page)?$total_page:$page;
+		$page = ($page < 1)?1:$page;
+		$list_work = $this->mguide_area->list_work($id, $page,$page*$config['per_page']);
+		*/
+		$list_work = $this->mguide_area->list_work($id);
+		echo '<pre>'; print_r($list_work); echo '</pre>';
+		$list_work2 = $this->mguide_area->arrayCopy2($list_work);
+			echo '<pre>'; print_r($list_work2); echo '</pre>';
+		if(isset($list_work2) && !empty($list_work2)){
+			$data = array(
+							'list_work' => $list_work2
+							//'paginator' => $this->pagination->create_links(),
+						);
+		}else{
+			$data['message'] = 'Data not found';
+		}
 		$data['count'] = count_work_helper();
+		$data['tempplate'] = 'kanto/home/list_work_choose';
 		$this->load->view('home_page/frontend/layouts/home_page',isset($data)?$data:NULL);
-
 	}
 }
