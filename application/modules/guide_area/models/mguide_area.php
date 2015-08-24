@@ -63,7 +63,7 @@ class Mguide_area extends CI_Model{
 			return $query->result_array();
 		else return false;
 	}
-	public function arrayCopy( array $array ) {
+	public function arrayCopy( $array ) {
         $result = array();
         $check =""; // kiem tra swork_id
         $key_array = 0; // luu lai gia tri cua work bi trung
@@ -94,13 +94,13 @@ class Mguide_area extends CI_Model{
         }
         return $result;
 	}
-	public function arrayCopy2( array $array ) {
+	public function arrayCopy2( $array ) {
         $result = array();
         $check =""; // kiem tra swork_id
         $key_array = 0;
 
     	foreach( $array as $key => $val ) {
-    		echo "Key: ".$key_array."<br>";
+    		//echo "Key: ".$key_array."<br>";
         	if(strcmp($check, $val['work_id']) == 0){
         		$key_array--;
         		$result[$key_array]['position_name'][] = $val['position_name'];
