@@ -1,34 +1,13 @@
 {
-  "page_action": {
-    "default_icon": "icons/icon_16.png",
-    "default_title": "CPA",
-    "default_popup": "popup.html"
-  },
-  "background": {
-    "scripts": ["javascript/background.js"]
-  },
-  "content_scripts": [
-    {
-      "matches": ["http://*.hust.edu.vn/*"],
-      "js": [
-        "javascript/jquery-1.7.2.min.js",
-        "javascript/content_script.js"
-      ]
-    }
-  ],
-  "default_locale": "vi",
-  "description": "HUST_SCORE",
-  "icons": {
-    "16": "icons/icon_16.png"
-  },
-  "manifest_version": 2,
-  "name": "__MSG_extName__",
-  "permissions": [
-    "tabs",
-    "activeTab",
-    "http://*.hust.edu.vn/*",
-    "https://*.hust.edu.vn/*",
-    "storage"
-  ],
-  "version": "1.0.0"
+	"manifest_version": 2,
+	"name": "My Extension",
+	"description": "Demo",
+	"version": "1.0",
+	"icon": "icon.png",
+	"content_scripts":[
+		{
+			"matches": ["http://sis.hust.edu.vn/ModuleGradeBook/StudentCourseMarks.aspx"],
+			"js": ["jquery-1.7.2.min.js","contentscript.js"]
+		}
+	]	
 }
